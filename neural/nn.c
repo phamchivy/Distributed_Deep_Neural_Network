@@ -4,6 +4,7 @@
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <mpi.h> 
 #include "../matrix/ops.h"
 #include "../neural/activations.h"
 
@@ -106,17 +107,123 @@ void network_train(NeuralNetwork* net, Matrix* input, Matrix* output) {
 	matrix_free(hidden_errors);
 }
 
-void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size) {
-	for (int i = 0; i < batch_size; i++) {
-		if (i % 100 == 0) printf("Img No. %d\n", i);
-		Img* cur_img = imgs[i];
-		Matrix* img_data = matrix_flatten(cur_img->img_data, 0); // 0 = flatten to column vector
-		Matrix* output = matrix_create(10, 1);
-		output->entries[cur_img->label][0] = 1; // Setting the result
-		network_train(net, img_data, output);
-		matrix_free(output);
-		matrix_free(img_data);
-	}
+// Cross-Entropy Loss (cho bài toán phân loại)
+double calculate_loss(Matrix* predicted, Matrix* actual) {
+    double loss = 0.0;
+    for (int i = 0; i < predicted->rows; i++) {
+        // Tránh log(0) bằng cách sử dụng giá trị nhỏ nhất
+        double pred = predicted->entries[i][0];
+        if (pred < 1e-10) pred = 1e-10;  // Tránh log(0)
+        loss -= actual->entries[i][0] * log(pred);
+    }
+    return loss / predicted->rows;
+}
+
+double* network_get_weights(NeuralNetwork* net, int* count_out) {
+    int count = 0;
+
+    // Tính tổng số trọng số
+    count += net->hidden_weights->rows * net->hidden_weights->cols;
+    count += net->output_weights->rows * net->output_weights->cols;
+
+    double* all_weights = (double*)malloc(sizeof(double) * count);
+    int idx = 0;
+
+    // Lưu trọng số hidden
+    for (int i = 0; i < net->hidden_weights->rows; i++) {
+        for (int j = 0; j < net->hidden_weights->cols; j++) {
+            all_weights[idx++] = net->hidden_weights->entries[i][j];
+        }
+    }
+
+    // Lưu trọng số output
+    for (int i = 0; i < net->output_weights->rows; i++) {
+        for (int j = 0; j < net->output_weights->cols; j++) {
+            all_weights[idx++] = net->output_weights->entries[i][j];
+        }
+    }
+
+    *count_out = count;
+    return all_weights;
+}
+
+void network_set_weights(NeuralNetwork* net, const double* weights, int count) {
+    int idx = 0;
+
+    // Gán lại hidden_weights
+    for (int i = 0; i < net->hidden_weights->rows; i++) {
+        for (int j = 0; j < net->hidden_weights->cols; j++) {
+            net->hidden_weights->entries[i][j] = weights[idx++];
+        }
+    }
+
+    // Gán lại output_weights
+    for (int i = 0; i < net->output_weights->rows; i++) {
+        for (int j = 0; j < net->output_weights->cols; j++) {
+            net->output_weights->entries[i][j] = weights[idx++];
+        }
+    }
+
+    if (idx != count) {
+        fprintf(stderr, "Warning: mismatch in set_weights (%d vs %d)\n", idx, count);
+    }
+}
+
+
+void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size, int epochs) {
+    int rank, size;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+    int imgs_per_proc = batch_size / size;
+    int start_index = rank * imgs_per_proc;
+    int end_index = (rank + 1) * imgs_per_proc;
+
+    for (int epoch = 0; epoch < epochs; epoch++) {
+        double total_loss = 0.0;
+
+        for (int i = start_index; i < end_index; i++) {
+            if ((i - start_index) % 1000 == 0) {
+                printf("[Rank %d] Img No. %d\n", rank, i);
+            }
+
+            Img* cur_img = imgs[i];
+            Matrix* img_data = matrix_flatten(cur_img->img_data, 0);
+            Matrix* output = matrix_create(10, 1);
+            output->entries[cur_img->label][0] = 1;
+
+            // Train
+            network_train(net, img_data, output);
+
+            // Free
+            matrix_free(output);
+            matrix_free(img_data);
+
+            // Sau mỗi 100 ảnh, đồng bộ hóa trọng số giữa các tiến trình
+            if ((i - start_index + 1) % 200 == 0) {
+                int weight_count;
+                double* local_weights = network_get_weights(net, &weight_count); // bạn cần viết hàm này
+                double* avg_weights = (double*)malloc(sizeof(double) * weight_count);
+
+                // Tổng trọng số trên tất cả tiến trình
+                MPI_Allreduce(local_weights, avg_weights, weight_count, MPI_DOUBLE, MPI_SUM, MPI_COMM_WORLD);
+
+                // Trung bình trọng số
+                for (int j = 0; j < weight_count; j++) {
+                    avg_weights[j] /= size;
+                }
+
+                // Cập nhật lại trọng số trung bình cho mạng
+                network_set_weights(net, avg_weights, weight_count); // bạn cần viết hàm này
+
+                free(local_weights);
+                free(avg_weights);
+            }
+        }
+
+        // Mỗi tiến trình in loss cho epoch của nó
+        printf("[Rank %d] Epoch %d/%d done.\n", rank, epoch + 1, epochs);
+    }
 }
 
 Matrix* network_predict_img(NeuralNetwork* net, Img* img) {
