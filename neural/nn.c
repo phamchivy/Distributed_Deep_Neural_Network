@@ -169,17 +169,32 @@ void network_set_weights(NeuralNetwork* net, const double* weights, int count) {
     }
 }
 
-void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size) {
-	for (int i = 0; i < batch_size; i++) {
-		if (i % 100 == 0) printf("Img No. %d\n", i);
-		Img* cur_img = imgs[i];
-		Matrix* img_data = matrix_flatten(cur_img->img_data, 0); // 0 = flatten to column vector
-		Matrix* output = matrix_create(10, 1);
-		output->entries[cur_img->label][0] = 1; // Setting the result
-		network_train(net, img_data, output);
-		matrix_free(output);
-		matrix_free(img_data);
-	}
+void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size, int epochs) {
+    for (int epoch = 0; epoch < epochs; epoch++) {
+        double total_loss = 0.0;
+        for (int i = 0; i < batch_size; i++) {
+            if (i % 100 == 0) printf("Img No. %d\n", i);
+
+            Img* cur_img = imgs[i];
+            Matrix* img_data = matrix_flatten(cur_img->img_data, 0); // 0 = flatten to column vector
+            Matrix* output = matrix_create(10, 1);
+            output->entries[cur_img->label][0] = 1; // Setting the result
+
+            // Train on this image
+            network_train(net, img_data, output);
+
+            // Calculate loss
+            //double loss = calculate_loss(output, net->output);
+            //total_loss += loss;
+
+            // Clean up
+            matrix_free(output);
+            matrix_free(img_data);
+        }
+
+        // In ra loss mỗi epoch
+        printf("Epoch %d/%d: Loss = %f\n", epoch + 1, epochs, batch_size);
+    }
 }
 
 void network_train_batch_imgs_allreduce(NeuralNetwork* net, Img** imgs, int batch_size, int epochs) {
