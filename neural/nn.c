@@ -169,8 +169,20 @@ void network_set_weights(NeuralNetwork* net, const double* weights, int count) {
     }
 }
 
+void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size) {
+	for (int i = 0; i < batch_size; i++) {
+		if (i % 100 == 0) printf("Img No. %d\n", i);
+		Img* cur_img = imgs[i];
+		Matrix* img_data = matrix_flatten(cur_img->img_data, 0); // 0 = flatten to column vector
+		Matrix* output = matrix_create(10, 1);
+		output->entries[cur_img->label][0] = 1; // Setting the result
+		network_train(net, img_data, output);
+		matrix_free(output);
+		matrix_free(img_data);
+	}
+}
 
-void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size, int epochs) {
+void network_train_batch_imgs_allreduce(NeuralNetwork* net, Img** imgs, int batch_size, int epochs) {
     int rank, size;
     MPI_Comm_rank(MPI_COMM_WORLD, &rank);
     MPI_Comm_size(MPI_COMM_WORLD, &size);
@@ -224,6 +236,139 @@ void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size, in
         // Mỗi tiến trình in loss cho epoch của nó
         printf("[Rank %d] Epoch %d/%d done.\n", rank, epoch + 1, epochs);
     }
+}
+
+void network_train_batch_imgs_params(NeuralNetwork* net, Img** imgs, int batch_size, int epochs) {
+    int rank, size;
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+    int weight_count = 0;
+    double* weights_buffer = NULL;
+
+    // Rank 1 sẽ khởi tạo weight_count một lần rồi broadcast cho các rank khác
+    if (rank == 1) {
+        double* temp = network_get_weights(net, &weight_count);
+        free(temp);
+    }
+
+    // Broadcast weight_count cho toàn bộ các tiến trình
+    MPI_Bcast(&weight_count, 1, MPI_INT, 1, MPI_COMM_WORLD);
+
+    // Tính số ảnh mỗi rank xử lý (có phần dư)
+    int base = batch_size / (size - 1);
+    int remainder = batch_size % (size - 1);
+    int imgs_per_proc, start_index, end_index;
+
+    if (rank > 0) {
+        int extra = (rank - 1 < remainder) ? 1 : 0;
+        imgs_per_proc = base + extra;
+        start_index = (rank - 1) * base + ((rank - 1 < remainder) ? (rank - 1) : remainder);
+        end_index = start_index + imgs_per_proc;
+    }
+
+    // Rank 0: Thu thập và trung bình trọng số từ các rank khác
+    if (rank == 0) {
+        weights_buffer = (double*)malloc(sizeof(double) * weight_count);
+
+        for (int epoch = 0; epoch < epochs; epoch++) {
+            int batches = base / 100; // Tổng số batch = tổng ảnh / batch size
+
+            for (int batch = 0; batch < batches; batch++) {
+                double* sum_weights = (double*)calloc(weight_count, sizeof(double));
+
+                for (int src = 1; src < size; src++) {
+                    MPI_Recv(weights_buffer, weight_count, MPI_DOUBLE, src, 0, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+					printf("[Rank 0] Received weights from Rank %d.\n", src);
+					fflush(stdout);
+                    for (int i = 0; i < weight_count; i++) {
+                        sum_weights[i] += weights_buffer[i];
+                    }
+                }
+
+                // Trung bình trọng số
+                for (int i = 0; i < weight_count; i++) {
+                    sum_weights[i] /= (size - 1);
+                }
+
+				network_set_weights(net, sum_weights, weight_count);
+				printf("[Rank %d] save weight\n", rank);
+        		fflush(stdout);
+
+                // Gửi lại trọng số trung bình cho tất cả rank
+                for (int dest = 1; dest < size; dest++) {
+                    MPI_Send(sum_weights, weight_count, MPI_DOUBLE, dest, 1, MPI_COMM_WORLD);
+					printf("[Rank 0] Bcast weights to Rank %d.\n", dest);
+					fflush(stdout);
+                }
+
+                free(sum_weights);
+            }
+
+            printf("[Rank 0] Epoch %d/%d done.\n", epoch + 1, epochs);
+            fflush(stdout);
+        }
+
+        free(weights_buffer);
+    } 
+    // Rank > 0: Train mạng neural và gửi trọng số sau mỗi batch
+    else {
+        for (int epoch = 0; epoch < epochs; epoch++) {
+            for (int i = start_index; i < end_index; i++) {
+                if ((i - start_index) % 1000 == 0) {
+                    printf("[Rank %d] Img No. %d\n", rank, i);
+                    fflush(stdout);
+                }
+
+                Img* cur_img = imgs[i];
+                Matrix* img_data = matrix_flatten(cur_img->img_data, 0);
+                Matrix* output = matrix_create(10, 1);
+                output->entries[cur_img->label][0] = 1;
+
+                network_train(net, img_data, output);
+
+                matrix_free(output);
+                matrix_free(img_data);
+
+                // Gửi trọng số sau mỗi 200 ảnh (1 batch) hoặc cuối tập
+                if ((i - start_index + 1) % 100 == 0 || i == end_index - 1) {
+                    if (weights_buffer) free(weights_buffer);
+                    weights_buffer = network_get_weights(net, &weight_count);
+					
+					printf("[Rank %d] Sending weights to Rank 0 at image %d\n", rank, i);
+					fflush(stdout);
+                    MPI_Send(weights_buffer, weight_count, MPI_DOUBLE, 0, 0, MPI_COMM_WORLD);
+                    MPI_Recv(weights_buffer, weight_count, MPI_DOUBLE, 0, 1, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+
+                    network_set_weights(net, weights_buffer, weight_count);
+
+                    free(weights_buffer);
+                    weights_buffer = NULL;
+                }
+            }
+
+            printf("[Rank %d] Epoch %d/%d done.\n", rank, epoch + 1, epochs);
+            fflush(stdout);
+        }
+    }
+
+    // Cuối cùng, rank 1 gửi trọng số cuối cùng về rank 0 để lưu hoặc test
+	/*
+    if (rank == 1) {
+        double* final_weights = network_get_weights(net, &weight_count);
+        MPI_Send(final_weights, weight_count, MPI_DOUBLE, 0, 2, MPI_COMM_WORLD);
+		printf("[Rank %d] Send net to rank 0\n", rank);
+        fflush(stdout);
+        free(final_weights);
+    } else if (rank == 0) {
+        double* received_weights = (double*)malloc(sizeof(double) * weight_count);
+        MPI_Recv(received_weights, weight_count, MPI_DOUBLE, 1, 2, MPI_COMM_WORLD, MPI_STATUS_IGNORE);
+		printf("[Rank %d] received net from rank 1\n", rank);
+        fflush(stdout);
+        network_set_weights(net, received_weights, weight_count);
+        free(received_weights);
+    }
+	*/
 }
 
 Matrix* network_predict_img(NeuralNetwork* net, Img* img) {
