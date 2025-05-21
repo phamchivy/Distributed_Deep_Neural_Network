@@ -1,0 +1,12 @@
+version: "3.9"
+
+services:
+  slaver:
+    build: .
+    command: ./train 
+    deploy:
+      resources:
+        limits:
+          cpus: "2.0"      # Docker Compose v3 yêu cầu phần này khi dùng với swarm mode
+    cpuset: "0-1"          # Chỉ cho phép container dùng CPU core 0 và 1
+
