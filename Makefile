@@ -15,7 +15,7 @@ TARGET = app
 PREDICT = predict
 
 # Default target
-all: $(TARGET)
+all: $(TARGET) $(PREDICT)
 
 # Build the app
 $(TARGET): train.c $(OBJ)
@@ -31,4 +31,4 @@ $(PREDICT): predict.c $(OBJ)
 
 # Clean target
 clean:
-	rm -f matrix/*.o neural/*.o util/*.o *.o $(TARGET)
+	rm -f matrix/*.o neural/*.o util/*.o *.o $(TARGET) $(PREDICT)

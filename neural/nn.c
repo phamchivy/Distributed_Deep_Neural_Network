@@ -5,6 +5,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
+#include <math.h>
 //#include <mpi.h> 
 #include "../matrix/ops.h"
 #include "../neural/activations.h"
@@ -30,7 +31,7 @@ NeuralNetwork* network_create(int input, int hidden, int output, double lr) {
 	return net;
 }
 
-void network_train(NeuralNetwork* net, Matrix* input, Matrix* output) {
+double network_train(NeuralNetwork* net, Matrix* input, Matrix* output) {
 	// Feed forward
 	Matrix* hidden_inputs	= dot(net->hidden_weights, input);
 	Matrix* hidden_outputs = apply(sigmoid, hidden_inputs);
@@ -39,23 +40,29 @@ void network_train(NeuralNetwork* net, Matrix* input, Matrix* output) {
 
 	// Find errors
 	Matrix* output_errors = subtract(output, final_outputs);
+	double loss = 0.0;
+	for (int i = 0; i < output->rows; i++) {
+		double diff = output->entries[i][0] - final_outputs->entries[i][0];
+		loss += diff * diff;
+	}
+
 	Matrix* transposed_mat = transpose(net->output_weights);
 	Matrix* hidden_errors = dot(transposed_mat, output_errors);
 	matrix_free(transposed_mat);
 
 	// Backpropogate
 	// output_weights = add(
-	//		 output_weights, 
+	// 		 output_weights, 
 	//     scale(
 	// 			  net->lr, 
-	//			  dot(
+	// 			  dot(
 	// 		 			multiply(
 	// 						output_errors, 
-	//				  	sigmoidPrime(final_outputs)
-	//					), 
-	//					transpose(hidden_outputs)
+	// 				  	sigmoidPrime(final_outputs)
+	// 					), 
+	// 					transpose(hidden_outputs)
 	// 				)
-	//		 )
+	// 		 )
 	// )
 	Matrix* sigmoid_primed_mat = sigmoidPrime(final_outputs);
 	Matrix* multiplied_mat = multiply(output_errors, sigmoid_primed_mat);
@@ -109,6 +116,7 @@ void network_train(NeuralNetwork* net, Matrix* input, Matrix* output) {
 	matrix_free(final_outputs);
 	matrix_free(output_errors);
 	matrix_free(hidden_errors);
+	return loss;
 }
 
 double* network_get_weights(NeuralNetwork* net, int* count_out) {
@@ -162,6 +170,8 @@ void network_set_weights(NeuralNetwork* net, const double* weights, int count) {
 }
 
 void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size, int epochs) {
+	double loss_sum = 0.0;
+    int loss_count = 0;
     for (int epoch = 0; epoch < epochs; epoch++) {
         //double total_loss = 0.0;
         for (int i = 0; i < batch_size; i++) {
@@ -173,11 +183,15 @@ void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size, in
             output->entries[cur_img->label][0] = 1; // Setting the result
 
             // Train on this image
-            network_train(net, img_data, output);
+			double loss = network_train(net, img_data, output); // New version returns loss
+			loss_sum += loss;
+			loss_count++;
 
-            // Calculate loss
-            //double loss = calculate_loss(output, net->output);
-            //total_loss += loss;
+		if (i % 1000 == 0 && loss_count > 0) {
+            printf("Average loss after %d images: %.6f\n", i+1, loss_sum / loss_count);
+            loss_sum = 0;
+            loss_count = 0;
+        }
 
             // Clean up
             matrix_free(output);
@@ -189,34 +203,68 @@ void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size, in
     }
 }
 
-void network_train_batch_imgs_socket(NeuralNetwork* net, Img** imgs, int batch_size, int epochs, bool is_master, const char* ip, int port) {
+void network_train_batch_imgs_socket(
+    NeuralNetwork* net,
+    Img** imgs,
+    int batch_size,
+    int epochs,
+    bool is_master,
+    const char* ip,
+    int port,
+    int local_cpu_count, // <--- THÊM THAM SỐ NÀY
+	Img** test_imgs
+) {
     int weight_count;
     double* weights_buffer = NULL;
-    int start_index, end_index;
+    int start_index = 0, end_index = batch_size;
 
-    // Chia nửa dữ liệu
-    int half = batch_size / 2;
-    if (is_master) {
-        start_index = 0;
-        end_index = half;
-    } else {
-        start_index = half;
-        end_index = batch_size;
-    }
+	double loss_sum = 0.0;
+    int loss_count = 0;
 
     // Thiết lập socket
     int sockfd;
+    int slaver_cpu_count = 0;
+
     if (is_master) {
         sockfd = setup_server(port);
         printf("[Master] Server started. Waiting for connection...\n");
         sockfd = accept_client(sockfd);
         printf("[Master] Connection accepted.\n");
+
+        // Nhận số core từ slaver
+        recv_all(sockfd, &slaver_cpu_count, sizeof(int));
+        printf("[Master] Slaver has %d cores\n", slaver_cpu_count);
+
+        int total_cpu = local_cpu_count + slaver_cpu_count;
+
+        // Phân chia dữ liệu theo tỷ lệ số core
+        int master_imgs = (batch_size * local_cpu_count) / total_cpu;
+        start_index = 0;
+        end_index = master_imgs;
+
     } else {
         sockfd = connect_to_server(ip, port);
         printf("[Slaver] Connected to master.\n");
+
+        // Gửi số core của slaver cho master
+        send_all(sockfd, &local_cpu_count, sizeof(int));
+
+        int master_imgs; // sẽ được tính lại cùng công thức master dùng
+        recv_all(sockfd, &master_imgs, sizeof(int));  // Nhận từ master
+
+        start_index = master_imgs;
+        end_index = batch_size;
     }
 
-    weights_buffer = network_get_weights(net, &weight_count); // dùng để biết weight_count
+    // Master gửi lại cho slaver số ảnh nó xử lý để slaver biết phần còn lại
+    if (is_master) {
+        send_all(sockfd, &end_index, sizeof(int)); // end_index chính là số ảnh master xử lý
+    }
+
+    printf("[%s] Processing images from %d to %d\n", is_master ? "Master" : "Slaver", start_index, end_index);
+	fflush(stdout);
+
+    weights_buffer = network_get_weights(net, &weight_count); // để biết weight_count
 
     for (int epoch = 0; epoch < epochs; epoch++) {
         for (int i = start_index; i < end_index; i++) {
@@ -226,13 +274,28 @@ void network_train_batch_imgs_socket(NeuralNetwork* net, Img** imgs, int batch_s
             Matrix* output = matrix_create(10, 1);
             output->entries[cur_img->label][0] = 1;
 
-            network_train(net, input, output);
+			double loss = network_train(net, input, output); // New version returns loss
+			loss_sum += loss;
+			loss_count++;
+
+			if (i % 100 == 0 && loss_count > 0) {
+				printf("*** Average loss after %d images: %.6f ***\n", i+1, loss_sum / loss_count);
+				fflush(stdout);
+				loss_sum = 0;
+				loss_count = 0;
+			}
+
+			if (i % 100 == 0) {
+				double acc = network_predict_imgs(net, test_imgs, 1000);
+				printf("*** After %d images: %.2f%% accuracy ***\n", i, acc * 100);
+				fflush(stdout);
+			}
 
             matrix_free(input);
             matrix_free(output);
 
             // Mỗi 100 ảnh (batch) thì trao đổi trọng số
-            if ((i - start_index + 1) % 100 == 0 || i == end_index - 1) {
+            if ((((i - start_index + 1) % 1000) == 0) || (i == (end_index - 1))) {
                 if (weights_buffer) free(weights_buffer);
                 weights_buffer = network_get_weights(net, &weight_count);
 
@@ -241,30 +304,101 @@ void network_train_batch_imgs_socket(NeuralNetwork* net, Img** imgs, int batch_s
                     double* slave_weights = (double*)malloc(sizeof(double) * weight_count);
                     recv_all(sockfd, slave_weights, sizeof(double) * weight_count);
                     printf("[Master] Received weights from slaver at img %d\n", i);
+					fflush(stdout);
+					// printf("[Master] Sample received weights from slaver: ");
+					// fflush(stdout);
+					// for (int j = 0; j < 5; j++) {
+					// 	printf("%.5f ", slave_weights[j]);
+					// 	fflush(stdout);
+					// }
+					// printf("\n");
+					// fflush(stdout);
+
+					// printf("[Master] Master weights: ");
+					// fflush(stdout);
+					// for (int j = 0; j < 5; j++) {
+					// 	printf("%.5f ", weights_buffer[j]);
+					// 	fflush(stdout);
+					// }
+					// printf("\n");
+					// fflush(stdout);
+
+					// double diff = 0;
+					// for (int j = 0; j < weight_count; j++) {
+					// 	double d = fabs(slave_weights[j] - weights_buffer[j]);
+					// 	diff += d;
+					// }
+					// printf("[Master] Total weight diff from slaver: %.6f\n", diff);
+					// fflush(stdout);
+
+					// printf("[Master] Average loss after %d images and before update weights: %.6f\n", i+1, loss_sum / loss_count);
+					// fflush(stdout);
+
+					double acc_before = network_predict_imgs(net, test_imgs, 1000);
+					printf("[Master] After %d images: %.2f%% accuracy before update weights\n", i, acc_before * 100);
+					fflush(stdout);
 
                     // Trung bình
                     for (int j = 0; j < weight_count; j++) {
                         weights_buffer[j] = (weights_buffer[j] + slave_weights[j]) / 2.0;
                     }
-
+					// printf("[Master] Averaged weights (sample): ");
+					// fflush(stdout);
+					// for (int j = 0; j < 5; j++) {
+					// 	printf("%.5f ", weights_buffer[j]);
+					// 	fflush(stdout);
+					// }
+					// printf("\n");
+					// fflush(stdout);
                     free(slave_weights);
 
                     // Gửi lại trọng số mới
                     send_all(sockfd, weights_buffer, sizeof(double) * weight_count);
                     printf("[Master] Sent averaged weights to slaver\n");
+					fflush(stdout);
 
-                    // Cập nhật lại trọng số của master
                     network_set_weights(net, weights_buffer, weight_count);
+
+					// printf("[Master] Average loss after %d images and after update weights: %.6f\n", i+1, loss_sum / loss_count);
+					// fflush(stdout);
+
+					double acc_after = network_predict_imgs(net, test_imgs, 1000);
+					printf("[Master] After %d images: %.2f%% accuracy after update weights\n", i, acc_after * 100);
+					fflush(stdout);
                 } else {
+					// printf("[Slaver] Sample weights before sending to master: ");
+					// fflush(stdout);
+					// for (int j = 0; j < 5; j++) {
+					// 	printf("%.5f ", weights_buffer[j]);
+					// 	fflush(stdout);
+					// }
+					// printf("\n");
+					// fflush(stdout);
                     // Gửi trọng số cho master
+					double acc_before = network_predict_imgs(net, test_imgs, 1000);
+					printf("[Slaver] After %d images: %.2f%% accuracy before send weights\n", i, acc_before * 100);
+					fflush(stdout);
+
                     send_all(sockfd, weights_buffer, sizeof(double) * weight_count);
                     printf("[Slaver] Sent weights to master at img %d\n", i);
+					fflush(stdout);
 
                     // Nhận lại trọng số đã trung bình
                     recv_all(sockfd, weights_buffer, sizeof(double) * weight_count);
                     printf("[Slaver] Received updated weights from master\n");
-
+					fflush(stdout);
+					// printf("[Slaver] Received averaged weights from master (sample): ");
+					// fflush(stdout);
+					// for (int j = 0; j < 5; j++) {
+					// 	printf("%.5f ", weights_buffer[j]);
+					// 	fflush(stdout);
+					// }
+					// printf("\n");
                     network_set_weights(net, weights_buffer, weight_count);
+
+					double acc_after = network_predict_imgs(net, test_imgs, 1000);
+					printf("[Slaver] After %d images: %.2f%% accuracy after receive weights\n", i, acc_after * 100);
+					fflush(stdout);
                 }
             }
         }
@@ -276,7 +410,6 @@ void network_train_batch_imgs_socket(NeuralNetwork* net, Img** imgs, int batch_s
     free(weights_buffer);
     socket_close(sockfd);
 }
-
 
 Matrix* network_predict_img(NeuralNetwork* net, Img* img) {
 	Matrix* img_data = matrix_flatten(img->img_data, 0);

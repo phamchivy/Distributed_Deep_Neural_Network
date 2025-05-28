@@ -13,7 +13,7 @@ typedef struct {
 } NeuralNetwork;
 
 NeuralNetwork* network_create(int input, int hidden, int output, double lr);
-void network_train(NeuralNetwork* net, Matrix* input_data, Matrix* output_data);
+double network_train(NeuralNetwork* net, Matrix* input, Matrix* output);
 // Thêm tham số epochs vào khai báo hàm
 void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size, int epochs);
 Matrix* network_predict_img(NeuralNetwork* net, Img* img);
