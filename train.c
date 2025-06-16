@@ -51,7 +51,7 @@ int get_allowed_cpu_count() {
     return count;
 }
 
-void network_train_batch_imgs_socket(
+void network_train_batch_imgs_socket_elastic_averaging(
     NeuralNetwork* net,
     Img** imgs,
     int batch_size,
@@ -91,17 +91,27 @@ int main(int argc, char** argv) {
     Img** test_imgs = csv_to_imgs("./data/mnist_test.csv", 1000);
 
     NeuralNetwork* net = network_create(784, 300, 10, 0.1);
+    
+    // NEW: Configure EASGD parameters
+    double alpha = 0.1;         // Worker elastic coefficient
+    double beta = 0.01;         // Server elastic coefficient
+    network_easgd_init(net, alpha, beta);
+    
+    printf("[%s] EASGD enabled: α=%.3f, β=%.3f\n", role, alpha, beta);
 
     double start = time_in_seconds();
 
     if (strcmp(role, "master") == 0) {
         printf("[MASTER] Starting on port %d\n", port);
-        fflush(stdout);
+        
+        // NEW: Initialize elastic center (only master has this)
+        elastic_center_init(net);
+        
         log_allowed_cpus();
         int cpu_count = get_allowed_cpu_count();
         printf("[%s] Allowed CPU cores: %d\n", role, cpu_count);
-        fflush(stdout);
-        network_train_batch_imgs_socket(net, imgs, number_imgs, 1, true, NULL, port,cpu_count,test_imgs);
+        // MASTER ALSO TRAINS - symmetric approach
+        network_train_batch_imgs_socket_elastic_averaging(net, imgs, number_imgs, 1, true, NULL, port, cpu_count, test_imgs);
     } else if (strcmp(role, "slaver") == 0) {
         if (argc < 4) {
             print_usage(argv[0]);
@@ -112,8 +122,8 @@ int main(int argc, char** argv) {
         int cpu_count = get_allowed_cpu_count();
         printf("[%s] Allowed CPU cores: %d\n", role, cpu_count);
         printf("[SLAVER] Connecting to %s:%d\n", master_ip, port);
-        fflush(stdout);
-        network_train_batch_imgs_socket(net, imgs, number_imgs, 1, false, master_ip, port,cpu_count,test_imgs);
+        // SLAVER TRAINS - symmetric approach
+        network_train_batch_imgs_socket_elastic_averaging(net, imgs, number_imgs, 1, false, master_ip, port, cpu_count, test_imgs);
     } else {
         print_usage(argv[0]);
         return 1;
@@ -124,9 +134,11 @@ int main(int argc, char** argv) {
 
     if (strcmp(role, "master") == 0) {
         network_save(net, "testing_net");
+        // NEW: Cleanup elastic center
+        elastic_center_cleanup();
     }
 
-        // Chi tiết 5 predictions
+    // Rest remains the same...
     for (int i = 0; i < 5; i++) {
         Matrix* pred = network_predict_img(net, test_imgs[i]);
         printf("\nImage %d - True label: %d\n", i, test_imgs[i]->label);
@@ -143,7 +155,6 @@ int main(int argc, char** argv) {
         }
         printf("Predicted: %d (confidence: %.4f)\n", max_idx, max_val);
         printf("Correct: %s\n", (max_idx == test_imgs[i]->label) ? "YES" : "NO");
-
         matrix_free(pred);
     }
 

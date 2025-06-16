@@ -14,22 +14,27 @@
 
 #define MAXCHAR 1000
 
-
-
 // 784, 300, 10
+// UNCHANGED: network_create modification
 NeuralNetwork* network_create(int input, int hidden, int output, double lr) {
-	NeuralNetwork* net = malloc(sizeof(NeuralNetwork));
-	net->input = input;
-	net->hidden = hidden;
-	net->output = output;
-	net->learning_rate = lr;
-	Matrix* hidden_layer = matrix_create(hidden, input);
-	Matrix* output_layer = matrix_create(output, hidden);
-	matrix_randomize(hidden_layer, hidden);
-	matrix_randomize(output_layer, output);
-	net->hidden_weights = hidden_layer;
-	net->output_weights = output_layer;
-	return net;
+    NeuralNetwork* net = malloc(sizeof(NeuralNetwork));
+    net->input = input;
+    net->hidden = hidden;
+    net->output = output;
+    net->learning_rate = lr;
+    
+    // NEW: Initialize EASGD parameters with defaults
+    net->alpha = 0.0;           // Will be set explicitly
+    net->beta = 0.0;            // Will be set explicitly
+    net->easgd_enabled = false; // Disabled by default
+    
+    Matrix* hidden_layer = matrix_create(hidden, input);
+    Matrix* output_layer = matrix_create(output, hidden);
+    matrix_randomize(hidden_layer, hidden);
+    matrix_randomize(output_layer, output);
+    net->hidden_weights = hidden_layer;
+    net->output_weights = output_layer;
+    return net;
 }
 
 double network_train(NeuralNetwork* net, Matrix* input, Matrix* output) {
@@ -210,7 +215,7 @@ double time_in_socket_seconds() {
     return ts.tv_sec + ts.tv_nsec * 1e-9;
 }
 
-void network_train_batch_imgs_socket(
+void network_train_batch_imgs_socket_elastic_averaging(
     NeuralNetwork* net,
     Img** imgs,
     int batch_size,
@@ -301,87 +306,111 @@ void network_train_batch_imgs_socket(
             matrix_free(input);
             matrix_free(output);
 
-            // Mỗi 1000 ảnh thì trao đổi trọng số
-            if ((((i - start_index + 1) % 30000) == 0) || (i == (end_index - 1))) {
+			// Mỗi 1000 ảnh thì trao đổi trọng số
+            if ((((i - start_index + 1) % 1000) == 0) || (i == (end_index - 1))) {
                 if (weights_buffer) free(weights_buffer);
                 weights_buffer = network_get_weights(net, &weight_count);
-				
-				double t_start, t_end;
-				t_start = time_in_socket_seconds();
+                
+                double t_start, t_end;
+                t_start = time_in_socket_seconds();
 
-                if (is_master) {
-                    // Nhận trọng số từ slaver
-					double t_recv_start, t_recv_end;
-					double t_avg_start, t_avg_end;
-					double t_send_start, t_send_end;
-					
+				if (is_master) {
+                    // MASTER: Sequential EASGD updates
+                    double t_recv_start, t_recv_end;
+                    double t_easgd_start, t_easgd_end;
+                    double t_send_start, t_send_end;
+                    
                     double* slave_weights = (double*)malloc(sizeof(double) * weight_count);
-					
-					t_recv_start = time_in_socket_seconds();
+                    
+                    t_recv_start = time_in_socket_seconds();
                     recv_all(sockfd, slave_weights, sizeof(double) * weight_count);
-					t_recv_end = time_in_socket_seconds();
-					
+                    t_recv_end = time_in_socket_seconds();
+                    
                     printf("[Master] Received weights from slaver at img %d\n", i);
-					fflush(stdout);
+                    fflush(stdout);
 
-                    // Trung bình
-					t_avg_start = time_in_socket_seconds();
-                    for (int j = 0; j < weight_count; j++) {
-                        weights_buffer[j] = (weights_buffer[j] + slave_weights[j]) / 2.0;
+                    // SEQUENTIAL ELASTIC AVERAGING - SIMPLIFIED!
+                    t_easgd_start = time_in_socket_seconds();
+                    
+                    if (net->easgd_enabled) {
+                        // Sequential updates:
+                        // w̄ ← w̄ + β(w_master - w̄)
+                        // w̄ ← w̄ + β(w_slaver - w̄)
+                        elastic_center_update_sequential(net, weights_buffer, slave_weights, weight_count);
+                        
+                        // Get updated elastic center
+                        int center_count;
+                        double* center_weights = elastic_center_get_weights(&center_count);
+                        
+                        // Send elastic center to slaver
+                        t_send_start = time_in_socket_seconds();
+                        send_all(sockfd, center_weights, sizeof(double) * center_count);
+                        t_send_end = time_in_socket_seconds();
+                        
+                        printf("[Master] Sent elastic center to slaver\n");
+                        fflush(stdout);
+                        
+                        // Master applies elastic averaging: w_master ← w_master + α(w̄ - w_master)
+                        network_apply_elastic_averaging(net, center_weights, center_count);
+                        
+                        free(center_weights);
+                    } else {
+                        // Fallback to simple averaging
+                        for (int j = 0; j < weight_count; j++) {
+                            weights_buffer[j] = (weights_buffer[j] + slave_weights[j]) / 2.0;
+                        }
+                        t_send_start = time_in_socket_seconds();
+                        send_all(sockfd, weights_buffer, sizeof(double) * weight_count);
+                        t_send_end = time_in_socket_seconds();
+                        network_set_weights(net, weights_buffer, weight_count);
                     }
-					t_avg_end = time_in_socket_seconds();
+                    
+                    t_easgd_end = time_in_socket_seconds();
                     free(slave_weights);
 
-                    // Gửi lại trọng số mới
-					t_send_start = time_in_socket_seconds();
-                    send_all(sockfd, weights_buffer, sizeof(double) * weight_count);
-					t_send_end = time_in_socket_seconds();
-					
-                    printf("[Master] Sent averaged weights to slaver\n");
-					fflush(stdout);
-
-					printf("[Master] recv: %.6f, averaging: %.6f, send: %.6f seconds at img %d\n", 
-						   t_recv_end - t_recv_start, t_avg_end - t_avg_start, t_send_end - t_send_start,i);
-					fflush(stdout);
-
-                    network_set_weights(net, weights_buffer, weight_count);
+                    printf("[Master] recv: %.6f, sequential EASGD: %.6f, send: %.6f seconds at img %d\n", 
+                           t_recv_end - t_recv_start, t_easgd_end - t_easgd_start, 
+                           t_send_end - t_send_start, i);
+                    fflush(stdout);
 
                 } else {
-                    // Gửi trọng số cho master
-					double t_send_start, t_send_end;
-					double t_recv_start, t_recv_end;
-					
-					t_send_start = time_in_socket_seconds();
+                    // SLAVER: KHÔNG THAY ĐỔI - same as before
+                    double t_send_start, t_send_end;
+                    double t_recv_start, t_recv_end;
+                    double t_easgd_start, t_easgd_end;
+                    
+                    t_send_start = time_in_socket_seconds();
                     send_all(sockfd, weights_buffer, sizeof(double) * weight_count);
-					t_send_end = time_in_socket_seconds();
-					
+                    t_send_end = time_in_socket_seconds();
+                    
                     printf("[Slaver] Sent weights to master at img %d\n", i);
-					fflush(stdout);
+                    fflush(stdout);
 
-                    // Nhận lại trọng số đã trung bình
-					t_recv_start = time_in_socket_seconds();
+                    // Receive elastic center từ master
+                    t_recv_start = time_in_socket_seconds();
                     recv_all(sockfd, weights_buffer, sizeof(double) * weight_count);
-					t_recv_end = time_in_socket_seconds();
-					
-                    printf("[Slaver] Received updated weights from master\n");
-					fflush(stdout);
+                    t_recv_end = time_in_socket_seconds();
+                    
+                    printf("[Slaver] Received elastic center from master\n");
+                    fflush(stdout);
+                    
+                    // Apply elastic averaging: w_slaver ← w_slaver + α(w̄ - w_slaver)
+                    t_easgd_start = time_in_socket_seconds();
+                    network_apply_elastic_averaging(net, weights_buffer, weight_count);
+                    t_easgd_end = time_in_socket_seconds();
 
-					printf("[Slaver] send: %.6f, recv: %.6f seconds at img %d\n", 
-						   t_send_end - t_send_start, t_recv_end - t_recv_start,i);
-					fflush(stdout);
-					
-					network_set_weights(net, weights_buffer, weight_count);
+                    printf("[Slaver] send: %.6f, recv: %.6f, EASGD: %.6f seconds at img %d\n", 
+                           t_send_end - t_send_start, t_recv_end - t_recv_start, 
+                           t_easgd_end - t_easgd_start, i);
+                    fflush(stdout);
                 }
 
-				t_end = time_in_socket_seconds();
-				if (is_master) {
-					printf("[Master] total sync took %.6f seconds at img %d\n", t_end - t_start, i);
-				} else {
-					printf("[Slaver] total sync took %.6f seconds at img %d\n", t_end - t_start, i);
-				}
-				fflush(stdout);
+                t_end = time_in_socket_seconds();
+                printf("[%s] total symmetric EASGD sync took %.6f seconds at img %d\n", 
+                       is_master ? "Master" : "Slaver", t_end - t_start, i);
+                fflush(stdout);
             }
-        }
+		}
 
         printf("[%s] Epoch %d/%d done.\n", is_master ? "Master" : "Slaver", epoch + 1, epochs);
         fflush(stdout);
@@ -389,6 +418,200 @@ void network_train_batch_imgs_socket(
 
     free(weights_buffer);
     socket_close(sockfd);
+}
+
+// Keep ALL existing functions unchanged, ADD/MODIFY these:
+
+// NEW: Initialize EASGD parameters
+void network_easgd_init(NeuralNetwork* net, double alpha, double beta) {
+    net->alpha = alpha;
+    net->beta = beta;
+    net->easgd_enabled = true;
+    printf("EASGD initialized: α=%.3f, β=%.3f\n", alpha, beta);
+}
+
+// NEW: Static elastic center (only on master)
+static ElasticCenter elastic_center = {NULL, NULL, false, 0};
+
+// NEW: Initialize elastic center with current network weights
+void elastic_center_init(NeuralNetwork* net) {
+    if (!elastic_center.initialized) {
+        elastic_center.center_hidden_weights = matrix_copy(net->hidden_weights);
+        elastic_center.center_output_weights = matrix_copy(net->output_weights);
+        elastic_center.initialized = true;
+        elastic_center.update_count = 0;
+        printf("[Master] Elastic center initialized\n");
+    }
+}
+
+// NEW: Simple elastic center update với 1 worker - w̄ ← w̄ + β(wᵢ - w̄)
+void elastic_center_update(NeuralNetwork* net, double* worker_weights, int weight_count) {
+    if (!net->easgd_enabled) return;
+    
+    if (!elastic_center.initialized) {
+        elastic_center_init(net);
+        return;
+    }
+    
+    // Convert worker weights array to matrices
+    Matrix* worker_hidden = matrix_create(net->hidden_weights->rows, net->hidden_weights->cols);
+    Matrix* worker_output = matrix_create(net->output_weights->rows, net->output_weights->cols);
+    
+    int idx = 0;
+    // Fill worker hidden weights
+    for (int i = 0; i < worker_hidden->rows; i++) {
+        for (int j = 0; j < worker_hidden->cols; j++) {
+            worker_hidden->entries[i][j] = worker_weights[idx++];
+        }
+    }
+    // Fill worker output weights
+    for (int i = 0; i < worker_output->rows; i++) {
+        for (int j = 0; j < worker_output->cols; j++) {
+            worker_output->entries[i][j] = worker_weights[idx++];
+        }
+    }
+    
+    // Update elastic center: w̄ ← w̄ + β(wᵢ - w̄)
+    
+    // Hidden layer update
+    Matrix* hidden_diff = subtract(worker_hidden, elastic_center.center_hidden_weights);
+    Matrix* hidden_update = scale(net->beta, hidden_diff);
+    Matrix* new_center_hidden = add(elastic_center.center_hidden_weights, hidden_update);
+    
+    matrix_free(elastic_center.center_hidden_weights);
+    elastic_center.center_hidden_weights = new_center_hidden;
+    
+    // Output layer update
+    Matrix* output_diff = subtract(worker_output, elastic_center.center_output_weights);
+    Matrix* output_update = scale(net->beta, output_diff);
+    Matrix* new_center_output = add(elastic_center.center_output_weights, output_update);
+    
+    matrix_free(elastic_center.center_output_weights);
+    elastic_center.center_output_weights = new_center_output;
+    
+    elastic_center.update_count++;
+    
+    // Cleanup
+    matrix_free(worker_hidden);
+    matrix_free(worker_output);
+    matrix_free(hidden_diff);
+    matrix_free(hidden_update);
+    matrix_free(output_diff);
+    matrix_free(output_update);
+}
+
+// NEW: Sequential elastic center update với cả master & slaver
+void elastic_center_update_sequential(NeuralNetwork* net, double* master_weights, double* slaver_weights, int weight_count) {
+    if (!net->easgd_enabled) return;
+    
+    printf("[Master] Updating elastic center sequentially...\n");
+    
+    // Update với master weights: w̄ ← w̄ + β(w_master - w̄)
+    elastic_center_update(net, master_weights, weight_count);
+    printf("[Master] Center updated with master weights\n");
+    
+    // Update với slaver weights: w̄ ← w̄ + β(w_slaver - w̄)  
+    elastic_center_update(net, slaver_weights, weight_count);
+    printf("[Master] Center updated with slaver weights\n");
+    
+    printf("[Master] Sequential elastic center update completed (round %d)\n", 
+           elastic_center.update_count);
+}
+
+// UNCHANGED: elastic_center_get_weights function
+double* elastic_center_get_weights(int* count_out) {
+    if (!elastic_center.initialized) {
+        *count_out = 0;
+        return NULL;
+    }
+    
+    int count = 0;
+    count += elastic_center.center_hidden_weights->rows * elastic_center.center_hidden_weights->cols;
+    count += elastic_center.center_output_weights->rows * elastic_center.center_output_weights->cols;
+    
+    double* center_weights = (double*)malloc(sizeof(double) * count);
+    int idx = 0;
+    
+    // Pack hidden weights
+    for (int i = 0; i < elastic_center.center_hidden_weights->rows; i++) {
+        for (int j = 0; j < elastic_center.center_hidden_weights->cols; j++) {
+            center_weights[idx++] = elastic_center.center_hidden_weights->entries[i][j];
+        }
+    }
+    
+    // Pack output weights
+    for (int i = 0; i < elastic_center.center_output_weights->rows; i++) {
+        for (int j = 0; j < elastic_center.center_output_weights->cols; j++) {
+            center_weights[idx++] = elastic_center.center_output_weights->entries[i][j];
+        }
+    }
+    
+    *count_out = count;
+    return center_weights;
+}
+
+// UNCHANGED: network_apply_elastic_averaging function
+void network_apply_elastic_averaging(NeuralNetwork* net, double* center_weights, int weight_count) {
+    if (!net->easgd_enabled) {
+        network_set_weights(net, center_weights, weight_count);
+        return;
+    }
+    
+    // Convert center weights array to matrices
+    Matrix* center_hidden = matrix_create(net->hidden_weights->rows, net->hidden_weights->cols);
+    Matrix* center_output = matrix_create(net->output_weights->rows, net->output_weights->cols);
+    
+    int idx = 0;
+    // Fill center hidden weights
+    for (int i = 0; i < center_hidden->rows; i++) {
+        for (int j = 0; j < center_hidden->cols; j++) {
+            center_hidden->entries[i][j] = center_weights[idx++];
+        }
+    }
+    // Fill center output weights
+    for (int i = 0; i < center_output->rows; i++) {
+        for (int j = 0; j < center_output->cols; j++) {
+            center_output->entries[i][j] = center_weights[idx++];
+        }
+    }
+    
+    // Apply elastic averaging: wᵢ ← wᵢ + α(w̄ - wᵢ)
+    
+    // Hidden weights update
+    Matrix* hidden_diff = subtract(center_hidden, net->hidden_weights);
+    Matrix* hidden_update = scale(net->alpha, hidden_diff);
+    Matrix* new_hidden = add(net->hidden_weights, hidden_update);
+    
+    matrix_free(net->hidden_weights);
+    net->hidden_weights = new_hidden;
+    
+    // Output weights update
+    Matrix* output_diff = subtract(center_output, net->output_weights);
+    Matrix* output_update = scale(net->alpha, output_diff);
+    Matrix* new_output = add(net->output_weights, output_update);
+    
+    matrix_free(net->output_weights);
+    net->output_weights = new_output;
+    
+    // Cleanup
+    matrix_free(center_hidden);
+    matrix_free(center_output);
+    matrix_free(hidden_diff);
+    matrix_free(hidden_update);
+    matrix_free(output_diff);
+    matrix_free(output_update);
+    
+    printf("[Worker] Applied elastic averaging with α=%.3f\n", net->alpha);
+}
+
+// UNCHANGED: elastic_center_cleanup function
+void elastic_center_cleanup(void) {
+    if (elastic_center.initialized) {
+        matrix_free(elastic_center.center_hidden_weights);
+        matrix_free(elastic_center.center_output_weights);
+        elastic_center.initialized = false;
+        printf("[Master] Elastic center cleaned up\n");
+    }
 }
 
 Matrix* network_predict_img(NeuralNetwork* net, Img* img) {
