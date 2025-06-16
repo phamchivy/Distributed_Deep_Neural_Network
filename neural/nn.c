@@ -25,7 +25,7 @@ NeuralNetwork* network_create(int input, int hidden, int output, double lr) {
 	return net;
 }
 
-void network_train(NeuralNetwork* net, Matrix* input, Matrix* output) {
+double network_train(NeuralNetwork* net, Matrix* input, Matrix* output) {
 	// Feed forward
 	Matrix* hidden_inputs	= dot(net->hidden_weights, input);
 	Matrix* hidden_outputs = apply(sigmoid, hidden_inputs);
@@ -34,6 +34,13 @@ void network_train(NeuralNetwork* net, Matrix* input, Matrix* output) {
 
 	// Find errors
 	Matrix* output_errors = subtract(output, final_outputs);
+	// Tính loss
+	double loss = 0.0;
+	for (int i = 0; i < output->rows; i++) {
+		double diff = output->entries[i][0] - final_outputs->entries[i][0];
+		loss += diff * diff;
+	}
+	loss /= output->rows;
 	Matrix* transposed_mat = transpose(net->output_weights);
 	Matrix* hidden_errors = dot(transposed_mat, output_errors);
 	matrix_free(transposed_mat);
@@ -104,9 +111,42 @@ void network_train(NeuralNetwork* net, Matrix* input, Matrix* output) {
 	matrix_free(final_outputs);
 	matrix_free(output_errors);
 	matrix_free(hidden_errors);
+	return loss;
 }
 
-void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size, int epochs) {
+void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size, Img** test_imgs) {
+    double loss_sum = 0.0;
+    int loss_count = 0;
+
+    for (int i = 0; i < batch_size; i++) {
+        if (i % 100 == 0) printf("Img No. %d\n", i);
+
+        Img* cur_img = imgs[i];
+        Matrix* img_data = matrix_flatten(cur_img->img_data, 0); // Flatten to column vector
+        Matrix* output = matrix_create(10, 1);
+        output->entries[cur_img->label][0] = 1; // One-hot label
+
+        double loss = network_train(net, img_data, output); // New version returns loss
+        loss_sum += loss;
+        loss_count++;
+
+        matrix_free(output);
+        matrix_free(img_data);
+
+        if (i % 1000 == 0 && loss_count > 0) {
+            printf("Average loss after %d images: %.6f\n", i+1, loss_sum / loss_count);
+            loss_sum = 0;
+            loss_count = 0;
+        }
+
+        if (i % 1000 == 0) {
+            double acc = network_predict_imgs(net, test_imgs, 1000);
+            printf("*** After %d images: %.2f%% accuracy ***\n", i, acc * 100);
+        }
+    }
+}
+
+void network_train_batch_imgs_epoch(NeuralNetwork* net, Img** imgs, int batch_size, int epochs) {
     for (int epoch = 0; epoch < epochs; epoch++) {
         //double total_loss = 0.0;
         for (int i = 0; i < batch_size; i++) {
@@ -119,10 +159,6 @@ void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size, in
 
             // Train on this image
             network_train(net, img_data, output);
-
-            // Calculate loss
-            //double loss = calculate_loss(output, net->output);
-            //total_loss += loss;
 
             // Clean up
             matrix_free(output);
@@ -138,7 +174,7 @@ void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size, in
 Matrix* network_predict_img(NeuralNetwork* net, Img* img) {
 	Matrix* img_data = matrix_flatten(img->img_data, 0);
 	Matrix* res = network_predict(net, img_data);
-	matrix_free(img_data);
+	//matrix_free(img_data);
 	return res;
 }
 
@@ -149,7 +185,7 @@ double network_predict_imgs(NeuralNetwork* net, Img** imgs, int n) {
 		if (matrix_argmax(prediction) == imgs[i]->label) {
 			n_correct++;
 		}
-		matrix_free(prediction);
+		//matrix_free(prediction);
 	}
 	return 1.0 * n_correct / n;
 }
@@ -159,12 +195,12 @@ Matrix* network_predict(NeuralNetwork* net, Matrix* input_data) {
 	Matrix* hidden_outputs = apply(sigmoid, hidden_inputs);
 	Matrix* final_inputs = dot(net->output_weights, hidden_outputs);
 	Matrix* final_outputs = apply(sigmoid, final_inputs);
-	Matrix* result = softmax(final_outputs);
+	Matrix* result = final_outputs;
 
 	matrix_free(hidden_inputs);
 	matrix_free(hidden_outputs);
 	matrix_free(final_inputs);
-	matrix_free(final_outputs);
+	//matrix_free(final_outputs);
 
 	return result;
 }

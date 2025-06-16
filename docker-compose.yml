@@ -4,9 +4,20 @@ services:
   slaver:
     build: .
     command: ./train 
+    container_name: mnist-from-scratch-slaver-1
     deploy:
       resources:
         limits:
-          cpus: "2.0"      # Docker Compose v3 yêu cầu phần này khi dùng với swarm mode
-    cpuset: "0-1"          # Chỉ cho phép container dùng CPU core 0 và 1
-
+          cpus: "4.0"      # Docker Compose v3 yêu cầu phần này khi dùng với swarm mode
+    cpuset: "0-3"          # Chỉ cho phép container dùng CPU core 0 và 1
+    volumes:
+      - ./testing_net_single:/app/testing_net 
+  # monitor:
+  #   image: ubuntu:22.04
+  #   container_name: monitor_container
+  #   pid: "container:mnist-from-scratch-slaver-1"
+  #   volumes:
+  #     - ./output:/app/output
+  #   command: bash -c "apt-get update && apt-get install -y sysstat && while true; do pidstat -w -p 1 10 >> /app/output/pidstat_log_2.txt; done"
+  #   depends_on:
+  #     - slaver

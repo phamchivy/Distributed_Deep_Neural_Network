@@ -12,6 +12,5 @@ RUN apt-get update && apt-get install -y \
 WORKDIR /app
 COPY . .
 
-RUN make
+RUN make train
 RUN chmod +x train
-

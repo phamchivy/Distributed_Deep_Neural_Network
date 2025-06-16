@@ -1,0 +1,803 @@
+Untrained network: 10.20%
+Img No. 0
+Average loss after 1 images: 0.294719
+*** After 0 images: 8.70% accuracy ***
+Img No. 100
+Img No. 200
+Img No. 300
+Img No. 400
+Img No. 500
+Img No. 600
+Img No. 700
+Img No. 800
+Img No. 900
+Img No. 1000
+Average loss after 1001 images: 0.037878
+*** After 1000 images: 74.20% accuracy ***
+Img No. 1100
+Img No. 1200
+Img No. 1300
+Img No. 1400
+Img No. 1500
+Img No. 1600
+Img No. 1700
+Img No. 1800
+Img No. 1900
+Img No. 2000
+Average loss after 2001 images: 0.025090
+*** After 2000 images: 83.00% accuracy ***
+Img No. 2100
+Img No. 2200
+Img No. 2300
+Img No. 2400
+Img No. 2500
+Img No. 2600
+Img No. 2700
+Img No. 2800
+Img No. 2900
+Img No. 3000
+Average loss after 3001 images: 0.019145
+*** After 3000 images: 87.10% accuracy ***
+Img No. 3100
+Img No. 3200
+Img No. 3300
+Img No. 3400
+Img No. 3500
+Img No. 3600
+Img No. 3700
+Img No. 3800
+Img No. 3900
+Img No. 4000
+Average loss after 4001 images: 0.017144
+*** After 4000 images: 87.70% accuracy ***
+Img No. 4100
+Img No. 4200
+Img No. 4300
+Img No. 4400
+Img No. 4500
+Img No. 4600
+Img No. 4700
+Img No. 4800
+Img No. 4900
+Img No. 5000
+Average loss after 5001 images: 0.016526
+*** After 5000 images: 88.30% accuracy ***
+Img No. 5100
+Img No. 5200
+Img No. 5300
+Img No. 5400
+Img No. 5500
+Img No. 5600
+Img No. 5700
+Img No. 5800
+Img No. 5900
+Img No. 6000
+Average loss after 6001 images: 0.016412
+*** After 6000 images: 89.20% accuracy ***
+Img No. 6100
+Img No. 6200
+Img No. 6300
+Img No. 6400
+Img No. 6500
+Img No. 6600
+Img No. 6700
+Img No. 6800
+Img No. 6900
+Img No. 7000
+Average loss after 7001 images: 0.013655
+*** After 7000 images: 87.90% accuracy ***
+Img No. 7100
+Img No. 7200
+Img No. 7300
+Img No. 7400
+Img No. 7500
+Img No. 7600
+Img No. 7700
+Img No. 7800
+Img No. 7900
+Img No. 8000
+Average loss after 8001 images: 0.016771
+*** After 8000 images: 89.20% accuracy ***
+Img No. 8100
+Img No. 8200
+Img No. 8300
+Img No. 8400
+Img No. 8500
+Img No. 8600
+Img No. 8700
+Img No. 8800
+Img No. 8900
+Img No. 9000
+Average loss after 9001 images: 0.017948
+*** After 9000 images: 89.60% accuracy ***
+Img No. 9100
+Img No. 9200
+Img No. 9300
+Img No. 9400
+Img No. 9500
+Img No. 9600
+Img No. 9700
+Img No. 9800
+Img No. 9900
+Img No. 10000
+Average loss after 10001 images: 0.013019
+*** After 10000 images: 90.00% accuracy ***
+Img No. 10100
+Img No. 10200
+Img No. 10300
+Img No. 10400
+Img No. 10500
+Img No. 10600
+Img No. 10700
+Img No. 10800
+Img No. 10900
+Img No. 11000
+Average loss after 11001 images: 0.011571
+*** After 11000 images: 90.40% accuracy ***
+Img No. 11100
+Img No. 11200
+Img No. 11300
+Img No. 11400
+Img No. 11500
+Img No. 11600
+Img No. 11700
+Img No. 11800
+Img No. 11900
+Img No. 12000
+Average loss after 12001 images: 0.012981
+*** After 12000 images: 90.00% accuracy ***
+Img No. 12100
+Img No. 12200
+Img No. 12300
+Img No. 12400
+Img No. 12500
+Img No. 12600
+Img No. 12700
+Img No. 12800
+Img No. 12900
+Img No. 13000
+Average loss after 13001 images: 0.015530
+*** After 13000 images: 90.00% accuracy ***
+Img No. 13100
+Img No. 13200
+Img No. 13300
+Img No. 13400
+Img No. 13500
+Img No. 13600
+Img No. 13700
+Img No. 13800
+Img No. 13900
+Img No. 14000
+Average loss after 14001 images: 0.014800
+*** After 14000 images: 89.70% accuracy ***
+Img No. 14100
+Img No. 14200
+Img No. 14300
+Img No. 14400
+Img No. 14500
+Img No. 14600
+Img No. 14700
+Img No. 14800
+Img No. 14900
+Img No. 15000
+Average loss after 15001 images: 0.015429
+*** After 15000 images: 90.80% accuracy ***
+Img No. 15100
+Img No. 15200
+Img No. 15300
+Img No. 15400
+Img No. 15500
+Img No. 15600
+Img No. 15700
+Img No. 15800
+Img No. 15900
+Img No. 16000
+Average loss after 16001 images: 0.013156
+*** After 16000 images: 91.30% accuracy ***
+Img No. 16100
+Img No. 16200
+Img No. 16300
+Img No. 16400
+Img No. 16500
+Img No. 16600
+Img No. 16700
+Img No. 16800
+Img No. 16900
+Img No. 17000
+Average loss after 17001 images: 0.011582
+*** After 17000 images: 92.20% accuracy ***
+Img No. 17100
+Img No. 17200
+Img No. 17300
+Img No. 17400
+Img No. 17500
+Img No. 17600
+Img No. 17700
+Img No. 17800
+Img No. 17900
+Img No. 18000
+Average loss after 18001 images: 0.012806
+*** After 18000 images: 92.10% accuracy ***
+Img No. 18100
+Img No. 18200
+Img No. 18300
+Img No. 18400
+Img No. 18500
+Img No. 18600
+Img No. 18700
+Img No. 18800
+Img No. 18900
+Img No. 19000
+Average loss after 19001 images: 0.008750
+*** After 19000 images: 93.10% accuracy ***
+Img No. 19100
+Img No. 19200
+Img No. 19300
+Img No. 19400
+Img No. 19500
+Img No. 19600
+Img No. 19700
+Img No. 19800
+Img No. 19900
+Img No. 20000
+Average loss after 20001 images: 0.009402
+*** After 20000 images: 92.60% accuracy ***
+Img No. 20100
+Img No. 20200
+Img No. 20300
+Img No. 20400
+Img No. 20500
+Img No. 20600
+Img No. 20700
+Img No. 20800
+Img No. 20900
+Img No. 21000
+Average loss after 21001 images: 0.011238
+*** After 21000 images: 93.30% accuracy ***
+Img No. 21100
+Img No. 21200
+Img No. 21300
+Img No. 21400
+Img No. 21500
+Img No. 21600
+Img No. 21700
+Img No. 21800
+Img No. 21900
+Img No. 22000
+Average loss after 22001 images: 0.008706
+*** After 22000 images: 93.60% accuracy ***
+Img No. 22100
+Img No. 22200
+Img No. 22300
+Img No. 22400
+Img No. 22500
+Img No. 22600
+Img No. 22700
+Img No. 22800
+Img No. 22900
+Img No. 23000
+Average loss after 23001 images: 0.011843
+*** After 23000 images: 93.40% accuracy ***
+Img No. 23100
+Img No. 23200
+Img No. 23300
+Img No. 23400
+Img No. 23500
+Img No. 23600
+Img No. 23700
+Img No. 23800
+Img No. 23900
+Img No. 24000
+Average loss after 24001 images: 0.010959
+*** After 24000 images: 93.90% accuracy ***
+Img No. 24100
+Img No. 24200
+Img No. 24300
+Img No. 24400
+Img No. 24500
+Img No. 24600
+Img No. 24700
+Img No. 24800
+Img No. 24900
+Img No. 25000
+Average loss after 25001 images: 0.010391
+*** After 25000 images: 94.10% accuracy ***
+Img No. 25100
+Img No. 25200
+Img No. 25300
+Img No. 25400
+Img No. 25500
+Img No. 25600
+Img No. 25700
+Img No. 25800
+Img No. 25900
+Img No. 26000
+Average loss after 26001 images: 0.008512
+*** After 26000 images: 93.20% accuracy ***
+Img No. 26100
+Img No. 26200
+Img No. 26300
+Img No. 26400
+Img No. 26500
+Img No. 26600
+Img No. 26700
+Img No. 26800
+Img No. 26900
+Img No. 27000
+Average loss after 27001 images: 0.010616
+*** After 27000 images: 93.90% accuracy ***
+Img No. 27100
+Img No. 27200
+Img No. 27300
+Img No. 27400
+Img No. 27500
+Img No. 27600
+Img No. 27700
+Img No. 27800
+Img No. 27900
+Img No. 28000
+Average loss after 28001 images: 0.009495
+*** After 28000 images: 94.30% accuracy ***
+Img No. 28100
+Img No. 28200
+Img No. 28300
+Img No. 28400
+Img No. 28500
+Img No. 28600
+Img No. 28700
+Img No. 28800
+Img No. 28900
+Img No. 29000
+Average loss after 29001 images: 0.008767
+*** After 29000 images: 93.60% accuracy ***
+Img No. 29100
+Img No. 29200
+Img No. 29300
+Img No. 29400
+Img No. 29500
+Img No. 29600
+Img No. 29700
+Img No. 29800
+Img No. 29900
+Img No. 30000
+Average loss after 30001 images: 0.010707
+*** After 30000 images: 93.80% accuracy ***
+Img No. 30100
+Img No. 30200
+Img No. 30300
+Img No. 30400
+Img No. 30500
+Img No. 30600
+Img No. 30700
+Img No. 30800
+Img No. 30900
+Img No. 31000
+Average loss after 31001 images: 0.009964
+*** After 31000 images: 94.30% accuracy ***
+Img No. 31100
+Img No. 31200
+Img No. 31300
+Img No. 31400
+Img No. 31500
+Img No. 31600
+Img No. 31700
+Img No. 31800
+Img No. 31900
+Img No. 32000
+Average loss after 32001 images: 0.010801
+*** After 32000 images: 94.40% accuracy ***
+Img No. 32100
+Img No. 32200
+Img No. 32300
+Img No. 32400
+Img No. 32500
+Img No. 32600
+Img No. 32700
+Img No. 32800
+Img No. 32900
+Img No. 33000
+Average loss after 33001 images: 0.009996
+*** After 33000 images: 95.20% accuracy ***
+Img No. 33100
+Img No. 33200
+Img No. 33300
+Img No. 33400
+Img No. 33500
+Img No. 33600
+Img No. 33700
+Img No. 33800
+Img No. 33900
+Img No. 34000
+Average loss after 34001 images: 0.006427
+*** After 34000 images: 94.70% accuracy ***
+Img No. 34100
+Img No. 34200
+Img No. 34300
+Img No. 34400
+Img No. 34500
+Img No. 34600
+Img No. 34700
+Img No. 34800
+Img No. 34900
+Img No. 35000
+Average loss after 35001 images: 0.009086
+*** After 35000 images: 93.90% accuracy ***
+Img No. 35100
+Img No. 35200
+Img No. 35300
+Img No. 35400
+Img No. 35500
+Img No. 35600
+Img No. 35700
+Img No. 35800
+Img No. 35900
+Img No. 36000
+Average loss after 36001 images: 0.007640
+*** After 36000 images: 95.00% accuracy ***
+Img No. 36100
+Img No. 36200
+Img No. 36300
+Img No. 36400
+Img No. 36500
+Img No. 36600
+Img No. 36700
+Img No. 36800
+Img No. 36900
+Img No. 37000
+Average loss after 37001 images: 0.007447
+*** After 37000 images: 93.60% accuracy ***
+Img No. 37100
+Img No. 37200
+Img No. 37300
+Img No. 37400
+Img No. 37500
+Img No. 37600
+Img No. 37700
+Img No. 37800
+Img No. 37900
+Img No. 38000
+Average loss after 38001 images: 0.010411
+*** After 38000 images: 95.00% accuracy ***
+Img No. 38100
+Img No. 38200
+Img No. 38300
+Img No. 38400
+Img No. 38500
+Img No. 38600
+Img No. 38700
+Img No. 38800
+Img No. 38900
+Img No. 39000
+Average loss after 39001 images: 0.007163
+*** After 39000 images: 94.80% accuracy ***
+Img No. 39100
+Img No. 39200
+Img No. 39300
+Img No. 39400
+Img No. 39500
+Img No. 39600
+Img No. 39700
+Img No. 39800
+Img No. 39900
+Img No. 40000
+Average loss after 40001 images: 0.008612
+*** After 40000 images: 94.90% accuracy ***
+Img No. 40100
+Img No. 40200
+Img No. 40300
+Img No. 40400
+Img No. 40500
+Img No. 40600
+Img No. 40700
+Img No. 40800
+Img No. 40900
+Img No. 41000
+Average loss after 41001 images: 0.007106
+*** After 41000 images: 94.30% accuracy ***
+Img No. 41100
+Img No. 41200
+Img No. 41300
+Img No. 41400
+Img No. 41500
+Img No. 41600
+Img No. 41700
+Img No. 41800
+Img No. 41900
+Img No. 42000
+Average loss after 42001 images: 0.009455
+*** After 42000 images: 95.10% accuracy ***
+Img No. 42100
+Img No. 42200
+Img No. 42300
+Img No. 42400
+Img No. 42500
+Img No. 42600
+Img No. 42700
+Img No. 42800
+Img No. 42900
+Img No. 43000
+Average loss after 43001 images: 0.009849
+*** After 43000 images: 95.60% accuracy ***
+Img No. 43100
+Img No. 43200
+Img No. 43300
+Img No. 43400
+Img No. 43500
+Img No. 43600
+Img No. 43700
+Img No. 43800
+Img No. 43900
+Img No. 44000
+Average loss after 44001 images: 0.006420
+*** After 44000 images: 94.90% accuracy ***
+Img No. 44100
+Img No. 44200
+Img No. 44300
+Img No. 44400
+Img No. 44500
+Img No. 44600
+Img No. 44700
+Img No. 44800
+Img No. 44900
+Img No. 45000
+Average loss after 45001 images: 0.007156
+*** After 45000 images: 94.40% accuracy ***
+Img No. 45100
+Img No. 45200
+Img No. 45300
+Img No. 45400
+Img No. 45500
+Img No. 45600
+Img No. 45700
+Img No. 45800
+Img No. 45900
+Img No. 46000
+Average loss after 46001 images: 0.009944
+*** After 46000 images: 94.30% accuracy ***
+Img No. 46100
+Img No. 46200
+Img No. 46300
+Img No. 46400
+Img No. 46500
+Img No. 46600
+Img No. 46700
+Img No. 46800
+Img No. 46900
+Img No. 47000
+Average loss after 47001 images: 0.008851
+*** After 47000 images: 94.70% accuracy ***
+Img No. 47100
+Img No. 47200
+Img No. 47300
+Img No. 47400
+Img No. 47500
+Img No. 47600
+Img No. 47700
+Img No. 47800
+Img No. 47900
+Img No. 48000
+Average loss after 48001 images: 0.008580
+*** After 48000 images: 95.20% accuracy ***
+Img No. 48100
+Img No. 48200
+Img No. 48300
+Img No. 48400
+Img No. 48500
+Img No. 48600
+Img No. 48700
+Img No. 48800
+Img No. 48900
+Img No. 49000
+Average loss after 49001 images: 0.007784
+*** After 49000 images: 95.30% accuracy ***
+Img No. 49100
+Img No. 49200
+Img No. 49300
+Img No. 49400
+Img No. 49500
+Img No. 49600
+Img No. 49700
+Img No. 49800
+Img No. 49900
+Img No. 50000
+Average loss after 50001 images: 0.009150
+*** After 50000 images: 95.20% accuracy ***
+Img No. 50100
+Img No. 50200
+Img No. 50300
+Img No. 50400
+Img No. 50500
+Img No. 50600
+Img No. 50700
+Img No. 50800
+Img No. 50900
+Img No. 51000
+Average loss after 51001 images: 0.008206
+*** After 51000 images: 95.50% accuracy ***
+Img No. 51100
+Img No. 51200
+Img No. 51300
+Img No. 51400
+Img No. 51500
+Img No. 51600
+Img No. 51700
+Img No. 51800
+Img No. 51900
+Img No. 52000
+Average loss after 52001 images: 0.006460
+*** After 52000 images: 95.70% accuracy ***
+Img No. 52100
+Img No. 52200
+Img No. 52300
+Img No. 52400
+Img No. 52500
+Img No. 52600
+Img No. 52700
+Img No. 52800
+Img No. 52900
+Img No. 53000
+Average loss after 53001 images: 0.009728
+*** After 53000 images: 95.90% accuracy ***
+Img No. 53100
+Img No. 53200
+Img No. 53300
+Img No. 53400
+Img No. 53500
+Img No. 53600
+Img No. 53700
+Img No. 53800
+Img No. 53900
+Img No. 54000
+Average loss after 54001 images: 0.007046
+*** After 54000 images: 95.20% accuracy ***
+Img No. 54100
+Img No. 54200
+Img No. 54300
+Img No. 54400
+Img No. 54500
+Img No. 54600
+Img No. 54700
+Img No. 54800
+Img No. 54900
+Img No. 55000
+Average loss after 55001 images: 0.006270
+*** After 55000 images: 96.10% accuracy ***
+Img No. 55100
+Img No. 55200
+Img No. 55300
+Img No. 55400
+Img No. 55500
+Img No. 55600
+Img No. 55700
+Img No. 55800
+Img No. 55900
+Img No. 56000
+Average loss after 56001 images: 0.006500
+*** After 56000 images: 95.20% accuracy ***
+Img No. 56100
+Img No. 56200
+Img No. 56300
+Img No. 56400
+Img No. 56500
+Img No. 56600
+Img No. 56700
+Img No. 56800
+Img No. 56900
+Img No. 57000
+Average loss after 57001 images: 0.006163
+*** After 57000 images: 95.80% accuracy ***
+Img No. 57100
+Img No. 57200
+Img No. 57300
+Img No. 57400
+Img No. 57500
+Img No. 57600
+Img No. 57700
+Img No. 57800
+Img No. 57900
+Img No. 58000
+Average loss after 58001 images: 0.005200
+*** After 58000 images: 95.40% accuracy ***
+Img No. 58100
+Img No. 58200
+Img No. 58300
+Img No. 58400
+Img No. 58500
+Img No. 58600
+Img No. 58700
+Img No. 58800
+Img No. 58900
+Img No. 59000
+Average loss after 59001 images: 0.003603
+*** After 59000 images: 95.50% accuracy ***
+Img No. 59100
+Img No. 59200
+Img No. 59300
+Img No. 59400
+Img No. 59500
+Img No. 59600
+Img No. 59700
+Img No. 59800
+Img No. 59900
+Training took 928.00 seconds.
+Successfully saved matrix to hidden
+Successfully saved matrix to output
+Successfully written to 'testing_net'
+
+=== Detailed predictions after training ===
+Final test accuracy: 96.10%
+
+Image 0 - True label: 7
+Raw sigmoid outputs:
+  Class 0: 0.0006
+  Class 1: 0.0000
+  Class 2: 0.0010
+  Class 3: 0.0003
+  Class 4: 0.0000
+  Class 5: 0.0000
+  Class 6: 0.0000
+  Class 7: 0.9992
+  Class 8: 0.0000
+  Class 9: 0.0002
+Predicted: 7 (confidence: 0.9992)
+Correct: YES
+
+Image 1 - True label: 2
+Raw sigmoid outputs:
+  Class 0: 0.0026
+  Class 1: 0.0012
+  Class 2: 0.9087
+  Class 3: 0.0538
+  Class 4: 0.0000
+  Class 5: 0.0012
+  Class 6: 0.0005
+  Class 7: 0.0000
+  Class 8: 0.0001
+  Class 9: 0.0000
+Predicted: 2 (confidence: 0.9087)
+Correct: YES
+
+Image 2 - True label: 1
+Raw sigmoid outputs:
+  Class 0: 0.0000
+  Class 1: 0.9988
+  Class 2: 0.0024
+  Class 3: 0.0024
+  Class 4: 0.0005
+  Class 5: 0.0013
+  Class 6: 0.0003
+  Class 7: 0.0017
+  Class 8: 0.0003
+  Class 9: 0.0002
+Predicted: 1 (confidence: 0.9988)
+Correct: YES
+
+Image 3 - True label: 0
+Raw sigmoid outputs:
+  Class 0: 0.9983
+  Class 1: 0.0000
+  Class 2: 0.0006
+  Class 3: 0.0001
+  Class 4: 0.0000
+  Class 5: 0.0002
+  Class 6: 0.0003
+  Class 7: 0.0009
+  Class 8: 0.0001
+  Class 9: 0.0061
+Predicted: 0 (confidence: 0.9983)
+Correct: YES
+
+Image 4 - True label: 4
+Raw sigmoid outputs:
+  Class 0: 0.0008
+  Class 1: 0.0000
+  Class 2: 0.0019
+  Class 3: 0.0000
+  Class 4: 0.9871
+  Class 5: 0.0001
+  Class 6: 0.0003
+  Class 7: 0.0033
+  Class 8: 0.0001
+  Class 9: 0.0087
+Predicted: 4 (confidence: 0.9871)
+Correct: YES
