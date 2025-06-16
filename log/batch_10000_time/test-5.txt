@@ -1,0 +1,99 @@
+master-1  | [MASTER] Starting on port 12345
+master-1  | Allowed CPU cores: 0 1 2 3 
+master-1  | [master] Allowed CPU cores: 4
+slaver-1  | Allowed CPU cores: 4 5 6 7 
+slaver-1  | [slaver] Allowed CPU cores: 4
+slaver-1  | [SLAVER] Connecting to 172.31.0.2:12345
+slaver-1  | Allowed CPU cores: 4 5 6 7 
+slaver-1  | [slaver] Allowed CPU cores: 4
+slaver-1  | [SLAVER] Connecting to 172.31.0.2:12345
+slaver-1  | [Slaver] Connected to master.
+slaver-1  | [Slaver] Processing images from 30000 to 60000
+slaver-1  | [Slaver] Connected to master.
+slaver-1  | [Slaver] Processing images from 30000 to 60000
+master-1  | [Master] Server started. Waiting for connection...
+master-1  | [Master] Connection accepted.
+master-1  | [Master] Slaver has 4 cores
+master-1  | [Master] Processing images from 0 to 30000
+slaver-1  | *** Average loss after 30001 images: 3.988649 ***
+slaver-1  | *** Average loss after 30001 images: 3.988649 ***
+master-1  | *** Average loss after 1 images: 4.073774 ***
+slaver-1  | *** After 30000 images: 10.70% accuracy ***
+slaver-1  | *** After 30000 images: 10.70% accuracy ***
+master-1  | *** After 0 images: 8.40% accuracy ***
+slaver-1  | *** Average loss after 31001 images: 0.423347 ***
+slaver-1  | *** Average loss after 31001 images: 0.423347 ***
+master-1  | *** Average loss after 1001 images: 0.381490 ***
+slaver-1  | *** After 31000 images: 84.20% accuracy ***
+slaver-1  | *** After 31000 images: 84.20% accuracy ***
+master-1  | *** After 1000 images: 73.50% accuracy ***
+slaver-1  | *** Average loss after 32001 images: 0.291550 ***
+slaver-1  | *** Average loss after 32001 images: 0.291550 ***
+master-1  | *** Average loss after 2001 images: 0.252263 ***
+slaver-1  | *** After 32000 images: 84.60% accuracy ***
+slaver-1  | *** After 32000 images: 84.60% accuracy ***
+master-1  | *** After 2000 images: 82.60% accuracy ***
+slaver-1  | *** Average loss after 33001 images: 0.247661 ***
+slaver-1  | *** Average loss after 33001 images: 0.247661 ***
+master-1  | *** Average loss after 3001 images: 0.193907 ***
+slaver-1  | *** After 33000 images: 87.50% accuracy ***
+slaver-1  | *** After 33000 images: 87.50% accuracy ***
+master-1  | *** After 3000 images: 87.30% accuracy ***
+master-1  | *** Average loss after 4001 images: 0.169490 ***
+slaver-1  | *** Average loss after 34001 images: 0.177459 ***
+slaver-1  | *** Average loss after 34001 images: 0.177459 ***
+slaver-1  | *** After 34000 images: 89.80% accuracy ***
+slaver-1  | *** After 34000 images: 89.80% accuracy ***
+master-1  | *** After 4000 images: 87.60% accuracy ***
+master-1  | *** Average loss after 5001 images: 0.164695 ***
+slaver-1  | *** Average loss after 35001 images: 0.185588 ***
+slaver-1  | *** Average loss after 35001 images: 0.185588 ***
+slaver-1  | *** After 35000 images: 88.00% accuracy ***
+slaver-1  | *** After 35000 images: 88.00% accuracy ***
+master-1  | *** After 5000 images: 88.30% accuracy ***
+master-1  | *** Average loss after 6001 images: 0.164474 ***
+master-1  | *** After 6000 images: 89.10% accuracy ***
+slaver-1  | *** Average loss after 36001 images: 0.161847 ***
+slaver-1  | *** Average loss after 36001 images: 0.161847 ***
+slaver-1  | *** After 36000 images: 87.60% accuracy ***
+slaver-1  | *** After 36000 images: 87.60% accuracy ***
+master-1  | *** Average loss after 7001 images: 0.137159 ***
+master-1  | *** After 7000 images: 88.60% accuracy ***
+slaver-1  | *** Average loss after 37001 images: 0.140859 ***
+slaver-1  | *** Average loss after 37001 images: 0.140859 ***
+slaver-1  | *** After 37000 images: 90.20% accuracy ***
+slaver-1  | *** After 37000 images: 90.20% accuracy ***
+master-1  | *** Average loss after 8001 images: 0.167964 ***
+slaver-1  | *** Average loss after 38001 images: 0.190185 ***
+slaver-1  | *** Average loss after 38001 images: 0.190185 ***
+master-1  | *** After 8000 images: 88.90% accuracy ***
+slaver-1  | *** After 38000 images: 89.10% accuracy ***
+slaver-1  | *** After 38000 images: 89.10% accuracy ***
+master-1  | *** Average loss after 9001 images: 0.179486 ***
+master-1  | *** After 9000 images: 89.90% accuracy ***
+slaver-1  | *** Average loss after 39001 images: 0.145774 ***
+slaver-1  | *** Average loss after 39001 images: 0.145774 ***
+slaver-1  | *** After 39000 images: 88.50% accuracy ***
+slaver-1  | *** After 39000 images: 88.50% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 39999
+slaver-1  | [Slaver] Sent weights to master at img 39999
+master-1  | [Master] Received weights from slaver at img 9999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] Received updated weights from master
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv and send weights took 7.604663 seconds at img 9999
+slaver-1  | [Slaver] send and recv averaged weights took 0.016137 seconds at img 39999
+slaver-1  | [Slaver] send and recv averaged weights took 0.016137 seconds at img 39999
+slaver-1  | *** Average loss after 40001 images: 0.153446 ***
+slaver-1  | *** Average loss after 40001 images: 0.153446 ***
+master-1  | *** Average loss after 10001 images: 0.127293 ***
+master-1  | *** After 10000 images: 74.80% accuracy ***
+slaver-1  | *** After 40000 images: 71.20% accuracy ***
+slaver-1  | *** After 40000 images: 71.20% accuracy ***
+slaver-1  | *** Average loss after 41001 images: 0.185230 ***
+slaver-1  | *** Average loss after 41001 images: 0.185230 ***
+master-1  | *** Average loss after 11001 images: 0.172222 ***
+slaver-1  | *** After 41000 images: 87.70% accuracy ***
+slaver-1  | *** After 41000 images: 87.70% accuracy ***
+[Kslaver-1 exited with code 137
+[Kmaster-1 exited with code 137

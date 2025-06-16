@@ -1,0 +1,262 @@
+master-1  | [MASTER] Starting on port 12345
+master-1  | Allowed CPU cores: 0 
+master-1  | [master] Allowed CPU cores: 1
+slaver-1  | Allowed CPU cores: 1 
+slaver-1  | [slaver] Allowed CPU cores: 1
+slaver-1  | [SLAVER] Connecting to 172.31.0.2:12345
+slaver-1  | [Slaver] Connected to master.
+slaver-1  | [Slaver] Processing images from 30000 to 60000
+master-1  | [Master] Server started. Waiting for connection...
+master-1  | [Master] Connection accepted.
+master-1  | [Master] Slaver has 1 cores
+master-1  | [Master] Processing images from 0 to 30000
+slaver-1  | *** Average loss after 30000 images: 1.759571 ***
+master-1  | *** Average loss after 0 images: 2.408688 ***
+slaver-1  | *** After 30000 images: 10.70% accuracy ***
+master-1  | *** After 0 images: 8.70% accuracy ***
+master-1  | *** Average loss after 1000 images: 0.379665 ***
+slaver-1  | *** Average loss after 31000 images: 0.422506 ***
+master-1  | *** After 1000 images: 73.70% accuracy ***
+slaver-1  | *** After 31000 images: 84.10% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 31999
+master-1  | [Master] Received weights from slaver at img 1999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.208732, averaging: 0.002227, send: 0.002088 seconds at img 1999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000856, recv: 0.006270 seconds at img 31999
+slaver-1  | [Slaver] total sync took 0.009606 seconds at img 31999
+master-1  | [Master] total sync took 0.216320 seconds at img 1999
+master-1  | *** Average loss after 2000 images: 0.252646 ***
+slaver-1  | *** Average loss after 32000 images: 0.288070 ***
+master-1  | *** After 2000 images: 84.80% accuracy ***
+slaver-1  | *** After 32000 images: 87.70% accuracy ***
+master-1  | *** Average loss after 3000 images: 0.188101 ***
+slaver-1  | *** Average loss after 33000 images: 0.239682 ***
+master-1  | *** After 3000 images: 87.80% accuracy ***
+slaver-1  | *** After 33000 images: 88.90% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 33999
+master-1  | [Master] Received weights from slaver at img 3999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000766, recv: 0.005363 seconds at img 33999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.081189, averaging: 0.002603, send: 0.001770 seconds at img 3999
+slaver-1  | [Slaver] total sync took 0.009189 seconds at img 33999
+master-1  | [Master] total sync took 0.088478 seconds at img 3999
+slaver-1  | *** Average loss after 34000 images: 0.177472 ***
+master-1  | *** Average loss after 4000 images: 0.173417 ***
+master-1  | *** After 4000 images: 88.60% accuracy ***
+slaver-1  | *** After 34000 images: 89.80% accuracy ***
+slaver-1  | *** Average loss after 35000 images: 0.179917 ***
+master-1  | *** Average loss after 5000 images: 0.162128 ***
+slaver-1  | *** After 35000 images: 87.80% accuracy ***
+master-1  | *** After 5000 images: 88.70% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 35999
+master-1  | [Master] Received weights from slaver at img 5999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001607, recv: 0.005386 seconds at img 35999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.062219, averaging: 0.002437, send: 0.001481 seconds at img 5999
+slaver-1  | [Slaver] total sync took 0.010283 seconds at img 35999
+master-1  | [Master] total sync took 0.078409 seconds at img 5999
+slaver-1  | *** Average loss after 36000 images: 0.164657 ***
+master-1  | *** Average loss after 6000 images: 0.163816 ***
+slaver-1  | *** After 36000 images: 89.30% accuracy ***
+master-1  | *** After 6000 images: 89.60% accuracy ***
+master-1  | *** Average loss after 7000 images: 0.134507 ***
+slaver-1  | *** Average loss after 37000 images: 0.140623 ***
+master-1  | *** After 7000 images: 89.30% accuracy ***
+slaver-1  | *** After 37000 images: 89.80% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 37999
+master-1  | [Master] Received weights from slaver at img 7999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000996, recv: 0.004662 seconds at img 37999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.076614, averaging: 0.001671, send: 0.001426 seconds at img 7999
+slaver-1  | [Slaver] total sync took 0.008173 seconds at img 37999
+master-1  | [Master] total sync took 0.082146 seconds at img 7999
+master-1  | *** Average loss after 8000 images: 0.162539 ***
+slaver-1  | *** Average loss after 38000 images: 0.185756 ***
+master-1  | *** After 8000 images: 89.80% accuracy ***
+slaver-1  | *** After 38000 images: 89.10% accuracy ***
+master-1  | *** Average loss after 9000 images: 0.171791 ***
+slaver-1  | *** Average loss after 39000 images: 0.140936 ***
+master-1  | *** After 9000 images: 90.50% accuracy ***
+slaver-1  | *** After 39000 images: 88.10% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 39999
+master-1  | [Master] Received weights from slaver at img 9999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.057663, averaging: 0.002607, send: 0.001172 seconds at img 9999
+master-1  | [Master] total sync took 0.064533 seconds at img 9999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000705, recv: 0.005792 seconds at img 39999
+slaver-1  | [Slaver] total sync took 0.008579 seconds at img 39999
+slaver-1  | *** Average loss after 40000 images: 0.153382 ***
+master-1  | *** Average loss after 10000 images: 0.126275 ***
+slaver-1  | *** After 40000 images: 90.50% accuracy ***
+master-1  | *** After 10000 images: 90.50% accuracy ***
+master-1  | *** Average loss after 11000 images: 0.112276 ***
+slaver-1  | *** Average loss after 41000 images: 0.119637 ***
+master-1  | *** After 11000 images: 90.80% accuracy ***
+slaver-1  | *** After 41000 images: 90.00% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 41999
+master-1  | [Master] Received weights from slaver at img 11999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.012353, averaging: 0.002177, send: 0.000732 seconds at img 11999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000728, recv: 0.005797 seconds at img 41999
+master-1  | [Master] total sync took 0.018241 seconds at img 11999
+slaver-1  | [Slaver] total sync took 0.009296 seconds at img 41999
+slaver-1  | *** Average loss after 42000 images: 0.148710 ***
+master-1  | *** Average loss after 12000 images: 0.128728 ***
+slaver-1  | *** After 42000 images: 90.90% accuracy ***
+master-1  | *** After 12000 images: 90.90% accuracy ***
+slaver-1  | *** Average loss after 43000 images: 0.151186 ***
+master-1  | *** Average loss after 13000 images: 0.142678 ***
+master-1  | *** After 13000 images: 90.60% accuracy ***
+slaver-1  | *** After 43000 images: 91.00% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 43999
+master-1  | [Master] Received weights from slaver at img 13999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.020573, averaging: 0.002287, send: 0.001372 seconds at img 13999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000754, recv: 0.004738 seconds at img 43999
+slaver-1  | [Slaver] total sync took 0.008526 seconds at img 43999
+master-1  | [Master] total sync took 0.027352 seconds at img 13999
+master-1  | *** Average loss after 14000 images: 0.142638 ***
+slaver-1  | *** Average loss after 44000 images: 0.110605 ***
+master-1  | *** After 14000 images: 91.70% accuracy ***
+slaver-1  | *** After 44000 images: 91.70% accuracy ***
+master-1  | *** Average loss after 15000 images: 0.152087 ***
+slaver-1  | *** Average loss after 45000 images: 0.120113 ***
+master-1  | *** After 15000 images: 91.10% accuracy ***
+slaver-1  | *** After 45000 images: 91.30% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 45999
+master-1  | [Master] Received weights from slaver at img 15999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001152, averaging: 0.003945, send: 0.001606 seconds at img 15999
+master-1  | [Master] total sync took 0.014837 seconds at img 15999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000622, recv: 0.062705 seconds at img 45999
+slaver-1  | [Slaver] total sync took 0.067931 seconds at img 45999
+master-1  | *** Average loss after 16000 images: 0.127916 ***
+slaver-1  | *** Average loss after 46000 images: 0.145205 ***
+slaver-1  | *** After 46000 images: 92.40% accuracy ***
+master-1  | *** After 16000 images: 92.30% accuracy ***
+master-1  | *** Average loss after 17000 images: 0.114083 ***
+slaver-1  | *** Average loss after 47000 images: 0.125075 ***
+master-1  | *** After 17000 images: 92.40% accuracy ***
+slaver-1  | *** After 47000 images: 92.40% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 47999
+master-1  | [Master] Received weights from slaver at img 17999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.268763, averaging: 0.001936, send: 0.001579 seconds at img 17999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000779, recv: 0.004428 seconds at img 47999
+master-1  | [Master] total sync took 0.274879 seconds at img 17999
+slaver-1  | [Slaver] total sync took 0.008452 seconds at img 47999
+slaver-1  | *** Average loss after 48000 images: 0.124021 ***
+master-1  | *** Average loss after 18000 images: 0.124265 ***
+slaver-1  | *** After 48000 images: 93.30% accuracy ***
+master-1  | *** After 18000 images: 93.40% accuracy ***
+slaver-1  | *** Average loss after 49000 images: 0.102632 ***
+master-1  | *** Average loss after 19000 images: 0.083738 ***
+slaver-1  | *** After 49000 images: 92.00% accuracy ***
+master-1  | *** After 19000 images: 93.30% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 49999
+master-1  | [Master] Received weights from slaver at img 19999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001237, averaging: 0.005897, send: 0.001722 seconds at img 19999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001011, recv: 0.016938 seconds at img 49999
+slaver-1  | [Slaver] total sync took 0.023927 seconds at img 49999
+master-1  | [Master] total sync took 0.013143 seconds at img 19999
+slaver-1  | *** Average loss after 50000 images: 0.125020 ***
+master-1  | *** Average loss after 20000 images: 0.093484 ***
+master-1  | *** After 20000 images: 93.30% accuracy ***
+slaver-1  | *** After 50000 images: 93.30% accuracy ***
+master-1  | *** Average loss after 21000 images: 0.111060 ***
+slaver-1  | *** Average loss after 51000 images: 0.112476 ***
+master-1  | *** After 21000 images: 93.20% accuracy ***
+slaver-1  | *** After 51000 images: 93.40% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 51999
+master-1  | [Master] Received weights from slaver at img 21999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.059714, averaging: 0.003041, send: 0.001598 seconds at img 21999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000831, recv: 0.008053 seconds at img 51999
+master-1  | [Master] total sync took 0.075507 seconds at img 21999
+slaver-1  | [Slaver] total sync took 0.015822 seconds at img 51999
+slaver-1  | *** Average loss after 52000 images: 0.083985 ***
+master-1  | *** Average loss after 22000 images: 0.086243 ***
+slaver-1  | *** After 52000 images: 94.00% accuracy ***
+master-1  | *** After 22000 images: 94.00% accuracy ***
+master-1  | *** Average loss after 23000 images: 0.110633 ***
+slaver-1  | *** Average loss after 53000 images: 0.136510 ***
+master-1  | *** After 23000 images: 93.40% accuracy ***
+slaver-1  | *** After 53000 images: 93.50% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 53999
+master-1  | [Master] Received weights from slaver at img 23999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.258470, averaging: 0.002311, send: 0.000808 seconds at img 23999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000839, recv: 0.005963 seconds at img 53999
+master-1  | [Master] total sync took 0.265116 seconds at img 23999
+slaver-1  | [Slaver] total sync took 0.011079 seconds at img 53999
+master-1  | *** Average loss after 24000 images: 0.104037 ***
+slaver-1  | *** Average loss after 54000 images: 0.103122 ***
+slaver-1  | *** After 54000 images: 94.80% accuracy ***
+master-1  | *** After 24000 images: 94.80% accuracy ***
+master-1  | *** Average loss after 25000 images: 0.098382 ***
+slaver-1  | *** Average loss after 55000 images: 0.091721 ***
+master-1  | *** After 25000 images: 94.20% accuracy ***
+slaver-1  | *** After 55000 images: 93.20% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 55999
+master-1  | [Master] Received weights from slaver at img 25999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001252, recv: 0.007054 seconds at img 55999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.061681, averaging: 0.002545, send: 0.001855 seconds at img 25999
+slaver-1  | [Slaver] total sync took 0.016035 seconds at img 55999
+master-1  | [Master] total sync took 0.069969 seconds at img 25999
+master-1  | *** Average loss after 26000 images: 0.082817 ***
+slaver-1  | *** Average loss after 56000 images: 0.078311 ***
+master-1  | *** After 26000 images: 94.40% accuracy ***
+slaver-1  | *** After 56000 images: 94.40% accuracy ***
+master-1  | *** Average loss after 27000 images: 0.099462 ***
+slaver-1  | *** Average loss after 57000 images: 0.076210 ***
+master-1  | *** After 27000 images: 93.90% accuracy ***
+slaver-1  | *** After 57000 images: 93.30% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 57999
+master-1  | [Master] Received weights from slaver at img 27999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000654, recv: 0.005728 seconds at img 57999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.311242, averaging: 0.002634, send: 0.001868 seconds at img 27999
+slaver-1  | [Slaver] total sync took 0.008390 seconds at img 57999
+master-1  | [Master] total sync took 0.318722 seconds at img 27999
+slaver-1  | *** Average loss after 58000 images: 0.071354 ***
+master-1  | *** Average loss after 28000 images: 0.090102 ***
+slaver-1  | *** After 58000 images: 94.00% accuracy ***
+master-1  | *** After 28000 images: 94.00% accuracy ***
+slaver-1  | *** Average loss after 59000 images: 0.043577 ***
+master-1  | *** Average loss after 29000 images: 0.080336 ***
+slaver-1  | *** After 59000 images: 94.30% accuracy ***
+master-1  | *** After 29000 images: 93.90% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 59999
+master-1  | [Master] Received weights from slaver at img 29999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000399, averaging: 0.001588, send: 0.000879 seconds at img 29999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000834, recv: 0.236136 seconds at img 59999
+master-1  | [Master] total sync took 0.004985 seconds at img 29999
+master-1  | [Master] Epoch 1/1 done.
+slaver-1  | [Slaver] total sync took 0.239894 seconds at img 59999
+slaver-1  | [Slaver] Epoch 1/1 done.
+slaver-1  | [slaver] Training took 440.14 seconds.
+slaver-1  | Successfully saved matrix to hidden
+slaver-1  | Successfully saved matrix to output
+slaver-1  | Successfully written to 'testing_net'
+master-1  | [master] Training took 440.52 seconds.
+master-1  | Successfully saved matrix to hidden
+master-1  | Successfully saved matrix to output
+master-1  | Successfully written to 'testing_net'

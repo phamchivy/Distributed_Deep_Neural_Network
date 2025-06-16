@@ -122,9 +122,30 @@ int main(int argc, char** argv) {
     double end = time_in_seconds();
     printf("[%s] Training took %.2f seconds.\n", role, end - start);
 
-    //if (strcmp(role, "master") == 0) {
+    if (strcmp(role, "master") == 0) {
         network_save(net, "testing_net");
-    //}
+    }
+
+        // Chi tiết 5 predictions
+    for (int i = 0; i < 5; i++) {
+        Matrix* pred = network_predict_img(net, test_imgs[i]);
+        printf("\nImage %d - True label: %d\n", i, test_imgs[i]->label);
+        printf("Raw sigmoid outputs:\n");
+        double max_val = 0;
+        int max_idx = 0;
+        for (int j = 0; j < 10; j++) {
+            double val = pred->entries[j][0];
+            printf("  Class %d: %.4f\n", j, val);
+            if (val > max_val) {
+                max_val = val;
+                max_idx = j;
+            }
+        }
+        printf("Predicted: %d (confidence: %.4f)\n", max_idx, max_val);
+        printf("Correct: %s\n", (max_idx == test_imgs[i]->label) ? "YES" : "NO");
+
+        matrix_free(pred);
+    }
 
     imgs_free(imgs, number_imgs);
     imgs_free(test_imgs, 1000);

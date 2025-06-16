@@ -6,8 +6,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "4.0"
-    cpuset: "0-3"
+          cpus: "1.0"
+    cpuset: "0"
     volumes:
       - ./testing_net_master:/app/testing_net  # <-- Mount vào đây
     networks:
@@ -20,8 +20,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "4.0"
-    cpuset: "4-7"
+          cpus: "1.0"
+    cpuset: "1"
     depends_on:
       - master
     networks:

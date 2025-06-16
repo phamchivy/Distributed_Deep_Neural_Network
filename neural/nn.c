@@ -7,6 +7,7 @@
 #include <stdbool.h>
 #include <math.h>
 //#include <mpi.h> 
+#include <time.h> 
 #include "../matrix/ops.h"
 #include "../neural/activations.h"
 #include "../socket/socket_utils.h"
@@ -203,6 +204,12 @@ void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size, in
     }
 }
 
+double time_in_socket_seconds() {
+    struct timespec ts;
+    clock_gettime(CLOCK_MONOTONIC, &ts);
+    return ts.tv_sec + ts.tv_nsec * 1e-9;
+}
+
 void network_train_batch_imgs_socket(
     NeuralNetwork* net,
     Img** imgs,
@@ -278,14 +285,14 @@ void network_train_batch_imgs_socket(
 			loss_sum += loss;
 			loss_count++;
 
-			if (i % 100 == 0 && loss_count > 0) {
-				printf("*** Average loss after %d images: %.6f ***\n", i+1, loss_sum / loss_count);
+			if (i % 1000 == 0 && loss_count > 0) {
+				printf("*** Average loss after %d images: %.6f ***\n", i, loss_sum / loss_count);
 				fflush(stdout);
 				loss_sum = 0;
 				loss_count = 0;
 			}
 
-			if (i % 100 == 0) {
+			if (i % 1000 == 0) {
 				double acc = network_predict_imgs(net, test_imgs, 1000);
 				printf("*** After %d images: %.2f%% accuracy ***\n", i, acc * 100);
 				fflush(stdout);
@@ -294,112 +301,85 @@ void network_train_batch_imgs_socket(
             matrix_free(input);
             matrix_free(output);
 
-            // Mỗi 100 ảnh (batch) thì trao đổi trọng số
-            if ((((i - start_index + 1) % 1000) == 0) || (i == (end_index - 1))) {
+            // Mỗi 1000 ảnh thì trao đổi trọng số
+            if ((((i - start_index + 1) % 30000) == 0) || (i == (end_index - 1))) {
                 if (weights_buffer) free(weights_buffer);
                 weights_buffer = network_get_weights(net, &weight_count);
+				
+				double t_start, t_end;
+				t_start = time_in_socket_seconds();
 
                 if (is_master) {
                     // Nhận trọng số từ slaver
+					double t_recv_start, t_recv_end;
+					double t_avg_start, t_avg_end;
+					double t_send_start, t_send_end;
+					
                     double* slave_weights = (double*)malloc(sizeof(double) * weight_count);
+					
+					t_recv_start = time_in_socket_seconds();
                     recv_all(sockfd, slave_weights, sizeof(double) * weight_count);
+					t_recv_end = time_in_socket_seconds();
+					
                     printf("[Master] Received weights from slaver at img %d\n", i);
-					fflush(stdout);
-					// printf("[Master] Sample received weights from slaver: ");
-					// fflush(stdout);
-					// for (int j = 0; j < 5; j++) {
-					// 	printf("%.5f ", slave_weights[j]);
-					// 	fflush(stdout);
-					// }
-					// printf("\n");
-					// fflush(stdout);
-
-					// printf("[Master] Master weights: ");
-					// fflush(stdout);
-					// for (int j = 0; j < 5; j++) {
-					// 	printf("%.5f ", weights_buffer[j]);
-					// 	fflush(stdout);
-					// }
-					// printf("\n");
-					// fflush(stdout);
-
-					// double diff = 0;
-					// for (int j = 0; j < weight_count; j++) {
-					// 	double d = fabs(slave_weights[j] - weights_buffer[j]);
-					// 	diff += d;
-					// }
-					// printf("[Master] Total weight diff from slaver: %.6f\n", diff);
-					// fflush(stdout);
-
-					// printf("[Master] Average loss after %d images and before update weights: %.6f\n", i+1, loss_sum / loss_count);
-					// fflush(stdout);
-
-					double acc_before = network_predict_imgs(net, test_imgs, 1000);
-					printf("[Master] After %d images: %.2f%% accuracy before update weights\n", i, acc_before * 100);
 					fflush(stdout);
 
                     // Trung bình
+					t_avg_start = time_in_socket_seconds();
                     for (int j = 0; j < weight_count; j++) {
                         weights_buffer[j] = (weights_buffer[j] + slave_weights[j]) / 2.0;
                     }
-					// printf("[Master] Averaged weights (sample): ");
-					// fflush(stdout);
-					// for (int j = 0; j < 5; j++) {
-					// 	printf("%.5f ", weights_buffer[j]);
-					// 	fflush(stdout);
-					// }
-					// printf("\n");
-					// fflush(stdout);
+					t_avg_end = time_in_socket_seconds();
                     free(slave_weights);
 
                     // Gửi lại trọng số mới
+					t_send_start = time_in_socket_seconds();
                     send_all(sockfd, weights_buffer, sizeof(double) * weight_count);
+					t_send_end = time_in_socket_seconds();
+					
                     printf("[Master] Sent averaged weights to slaver\n");
+					fflush(stdout);
+
+					printf("[Master] recv: %.6f, averaging: %.6f, send: %.6f seconds at img %d\n", 
+						   t_recv_end - t_recv_start, t_avg_end - t_avg_start, t_send_end - t_send_start,i);
 					fflush(stdout);
 
                     network_set_weights(net, weights_buffer, weight_count);
 
-					// printf("[Master] Average loss after %d images and after update weights: %.6f\n", i+1, loss_sum / loss_count);
-					// fflush(stdout);
-
-					double acc_after = network_predict_imgs(net, test_imgs, 1000);
-					printf("[Master] After %d images: %.2f%% accuracy after update weights\n", i, acc_after * 100);
-					fflush(stdout);
                 } else {
-					// printf("[Slaver] Sample weights before sending to master: ");
-					// fflush(stdout);
-					// for (int j = 0; j < 5; j++) {
-					// 	printf("%.5f ", weights_buffer[j]);
-					// 	fflush(stdout);
-					// }
-					// printf("\n");
-					// fflush(stdout);
                     // Gửi trọng số cho master
-					double acc_before = network_predict_imgs(net, test_imgs, 1000);
-					printf("[Slaver] After %d images: %.2f%% accuracy before send weights\n", i, acc_before * 100);
-					fflush(stdout);
-
+					double t_send_start, t_send_end;
+					double t_recv_start, t_recv_end;
+					
+					t_send_start = time_in_socket_seconds();
                     send_all(sockfd, weights_buffer, sizeof(double) * weight_count);
+					t_send_end = time_in_socket_seconds();
+					
                     printf("[Slaver] Sent weights to master at img %d\n", i);
 					fflush(stdout);
 
                     // Nhận lại trọng số đã trung bình
+					t_recv_start = time_in_socket_seconds();
                     recv_all(sockfd, weights_buffer, sizeof(double) * weight_count);
+					t_recv_end = time_in_socket_seconds();
+					
                     printf("[Slaver] Received updated weights from master\n");
 					fflush(stdout);
-					// printf("[Slaver] Received averaged weights from master (sample): ");
-					// fflush(stdout);
-					// for (int j = 0; j < 5; j++) {
-					// 	printf("%.5f ", weights_buffer[j]);
-					// 	fflush(stdout);
-					// }
-					// printf("\n");
-                    network_set_weights(net, weights_buffer, weight_count);
 
-					double acc_after = network_predict_imgs(net, test_imgs, 1000);
-					printf("[Slaver] After %d images: %.2f%% accuracy after receive weights\n", i, acc_after * 100);
+					printf("[Slaver] send: %.6f, recv: %.6f seconds at img %d\n", 
+						   t_send_end - t_send_start, t_recv_end - t_recv_start,i);
 					fflush(stdout);
+					
+					network_set_weights(net, weights_buffer, weight_count);
                 }
+
+				t_end = time_in_socket_seconds();
+				if (is_master) {
+					printf("[Master] total sync took %.6f seconds at img %d\n", t_end - t_start, i);
+				} else {
+					printf("[Slaver] total sync took %.6f seconds at img %d\n", t_end - t_start, i);
+				}
+				fflush(stdout);
             }
         }
 

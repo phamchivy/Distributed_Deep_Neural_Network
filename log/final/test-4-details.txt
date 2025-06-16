@@ -1,0 +1,2544 @@
+master-1  | [MASTER] Starting on port 12345
+master-1  | Allowed CPU cores: 0 1 2 3 
+master-1  | [master] Allowed CPU cores: 4
+slaver-1  | Allowed CPU cores: 4 5 6 7 
+slaver-1  | [slaver] Allowed CPU cores: 4
+slaver-1  | [SLAVER] Connecting to 172.31.0.2:12345
+slaver-1  | [Slaver] Connected to master.
+slaver-1  | [Slaver] Processing images from 30000 to 60000
+master-1  | [Master] Server started. Waiting for connection...
+master-1  | [Master] Connection accepted.
+master-1  | [Master] Slaver has 4 cores
+master-1  | [Master] Processing images from 0 to 30000
+slaver-1  | *** Average loss after 30000 images: 4.549911 ***
+master-1  | *** Average loss after 0 images: 5.634412 ***
+master-1  | *** After 0 images: 12.00% accuracy ***
+slaver-1  | *** After 30000 images: 10.70% accuracy ***
+master-1  | [Master] Received weights from slaver at img 99
+slaver-1  | [Slaver] Sent weights to master at img 30099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.025793, averaging: 0.003294, send: 0.002325 seconds at img 99
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.003100, recv: 0.005645 seconds at img 30099
+master-1  | [Master] total sync took 0.033932 seconds at img 99
+slaver-1  | [Slaver] total sync took 0.011013 seconds at img 30099
+slaver-1  | [Slaver] Sent weights to master at img 30199
+master-1  | [Master] Received weights from slaver at img 199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001446, averaging: 0.001851, send: 0.001117 seconds at img 199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.004858, recv: 0.003453 seconds at img 30199
+slaver-1  | [Slaver] total sync took 0.011026 seconds at img 30199
+master-1  | [Master] total sync took 0.006929 seconds at img 199
+slaver-1  | [Slaver] Sent weights to master at img 30299
+master-1  | [Master] Received weights from slaver at img 299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.180610, averaging: 0.002205, send: 0.001170 seconds at img 299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001612, recv: 0.003825 seconds at img 30299
+master-1  | [Master] total sync took 0.186848 seconds at img 299
+slaver-1  | [Slaver] total sync took 0.007731 seconds at img 30299
+slaver-1  | [Slaver] Sent weights to master at img 30399
+master-1  | [Master] Received weights from slaver at img 399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001929, recv: 0.004673 seconds at img 30399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.132904, averaging: 0.001840, send: 0.001054 seconds at img 399
+master-1  | [Master] total sync took 0.137869 seconds at img 399
+slaver-1  | [Slaver] total sync took 0.009784 seconds at img 30399
+slaver-1  | [Slaver] Sent weights to master at img 30499
+master-1  | [Master] Received weights from slaver at img 499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001694, averaging: 0.001852, send: 0.001168 seconds at img 499
+slaver-1  | [Slaver] Received updated weights from master
+master-1  | [Master] total sync took 0.006976 seconds at img 499
+slaver-1  | [Slaver] send: 0.001215, recv: 0.002958 seconds at img 30499
+slaver-1  | [Slaver] total sync took 0.009686 seconds at img 30499
+slaver-1  | [Slaver] Sent weights to master at img 30599
+master-1  | [Master] Received weights from slaver at img 599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.023984, recv: 0.003577 seconds at img 30599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001419, averaging: 0.002015, send: 0.001131 seconds at img 599
+slaver-1  | [Slaver] total sync took 0.030618 seconds at img 30599
+master-1  | [Master] total sync took 0.007248 seconds at img 599
+slaver-1  | [Slaver] Sent weights to master at img 30699
+master-1  | [Master] Received weights from slaver at img 699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001236, recv: 0.003848 seconds at img 30699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.110875, averaging: 0.002273, send: 0.001036 seconds at img 699
+slaver-1  | [Slaver] total sync took 0.007362 seconds at img 30699
+master-1  | [Master] total sync took 0.116559 seconds at img 699
+slaver-1  | [Slaver] Sent weights to master at img 30799
+master-1  | [Master] Received weights from slaver at img 799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.020761, recv: 0.002261 seconds at img 30799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001171, averaging: 0.001867, send: 0.000927 seconds at img 799
+master-1  | [Master] total sync took 0.006939 seconds at img 799
+slaver-1  | [Slaver] total sync took 0.026516 seconds at img 30799
+slaver-1  | [Slaver] Sent weights to master at img 30899
+master-1  | [Master] Received weights from slaver at img 899
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001050, recv: 0.003745 seconds at img 30899
+master-1  | [Master] recv: 0.010367, averaging: 0.002029, send: 0.001028 seconds at img 899
+slaver-1  | [Slaver] total sync took 0.007986 seconds at img 30899
+master-1  | [Master] total sync took 0.016251 seconds at img 899
+slaver-1  | [Slaver] Sent weights to master at img 30999
+master-1  | [Master] Received weights from slaver at img 999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.002063, recv: 0.003345 seconds at img 30999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001109, averaging: 0.001580, send: 0.001514 seconds at img 999
+master-1  | [Master] total sync took 0.007925 seconds at img 999
+slaver-1  | [Slaver] total sync took 0.010526 seconds at img 30999
+slaver-1  | *** Average loss after 31000 images: 0.417994 ***
+master-1  | *** Average loss after 1000 images: 0.385210 ***
+master-1  | *** After 1000 images: 81.70% accuracy ***
+slaver-1  | *** After 31000 images: 78.40% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 31099
+master-1  | [Master] Received weights from slaver at img 1099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001449, recv: 0.004031 seconds at img 31099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.335028, averaging: 0.001923, send: 0.001570 seconds at img 1099
+master-1  | [Master] total sync took 0.340567 seconds at img 1099
+slaver-1  | [Slaver] total sync took 0.007789 seconds at img 31099
+slaver-1  | [Slaver] Sent weights to master at img 31199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001675, recv: 0.003520 seconds at img 31199
+slaver-1  | [Slaver] total sync took 0.007216 seconds at img 31199
+master-1  | [Master] Received weights from slaver at img 1199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.309446, averaging: 0.001826, send: 0.001069 seconds at img 1199
+master-1  | [Master] total sync took 0.315479 seconds at img 1199
+slaver-1  | [Slaver] Sent weights to master at img 31299
+master-1  | [Master] Received weights from slaver at img 1299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001291, recv: 0.008458 seconds at img 31299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.022334, averaging: 0.003298, send: 0.001089 seconds at img 1299
+master-1  | [Master] total sync took 0.030629 seconds at img 1299
+slaver-1  | [Slaver] total sync took 0.013534 seconds at img 31299
+master-1  | [Master] Received weights from slaver at img 1399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.146619, averaging: 0.001907, send: 0.001137 seconds at img 1399
+master-1  | [Master] total sync took 0.151863 seconds at img 1399
+slaver-1  | [Slaver] Sent weights to master at img 31399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.003095, recv: 0.003244 seconds at img 31399
+slaver-1  | [Slaver] total sync took 0.008742 seconds at img 31399
+slaver-1  | [Slaver] Sent weights to master at img 31499
+master-1  | [Master] Received weights from slaver at img 1499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000511, averaging: 0.001619, send: 0.001009 seconds at img 1499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.100537, recv: 0.485392 seconds at img 31499
+master-1  | [Master] total sync took 0.005296 seconds at img 1499
+slaver-1  | [Slaver] total sync took 0.588891 seconds at img 31499
+master-1  | [Master] Received weights from slaver at img 1599
+slaver-1  | [Slaver] Sent weights to master at img 31599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001602, averaging: 0.002020, send: 0.001227 seconds at img 1599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.062409, recv: 0.003393 seconds at img 31599
+slaver-1  | [Slaver] total sync took 0.068728 seconds at img 31599
+master-1  | [Master] total sync took 0.007529 seconds at img 1599
+master-1  | [Master] Received weights from slaver at img 1699
+slaver-1  | [Slaver] Sent weights to master at img 31699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001069, recv: 0.003969 seconds at img 31699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.077104, averaging: 0.002207, send: 0.001319 seconds at img 1699
+master-1  | [Master] total sync took 0.083296 seconds at img 1699
+slaver-1  | [Slaver] total sync took 0.007131 seconds at img 31699
+slaver-1  | [Slaver] Sent weights to master at img 31799
+master-1  | [Master] Received weights from slaver at img 1799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.072320, recv: 0.005678 seconds at img 31799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.003503, averaging: 0.001618, send: 0.001000 seconds at img 1799
+master-1  | [Master] total sync took 0.008328 seconds at img 1799
+slaver-1  | [Slaver] total sync took 0.084292 seconds at img 31799
+slaver-1  | [Slaver] Sent weights to master at img 31899
+master-1  | [Master] Received weights from slaver at img 1899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.037653, averaging: 0.003501, send: 0.000941 seconds at img 1899
+master-1  | [Master] total sync took 0.045202 seconds at img 1899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001117, recv: 0.007710 seconds at img 31899
+slaver-1  | [Slaver] total sync took 0.011677 seconds at img 31899
+slaver-1  | [Slaver] Sent weights to master at img 31999
+master-1  | [Master] Received weights from slaver at img 1999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.021993, averaging: 0.002846, send: 0.000932 seconds at img 1999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001343, recv: 0.003849 seconds at img 31999
+master-1  | [Master] total sync took 0.029245 seconds at img 1999
+slaver-1  | [Slaver] total sync took 0.009432 seconds at img 31999
+slaver-1  | *** Average loss after 32000 images: 0.281535 ***
+master-1  | *** Average loss after 2000 images: 0.246067 ***
+slaver-1  | *** After 32000 images: 87.20% accuracy ***
+master-1  | *** After 2000 images: 83.80% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 32099
+master-1  | [Master] Received weights from slaver at img 2099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.165495, averaging: 0.002693, send: 0.001178 seconds at img 2099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.002854, recv: 0.005522 seconds at img 32099
+master-1  | [Master] total sync took 0.172496 seconds at img 2099
+slaver-1  | [Slaver] total sync took 0.011220 seconds at img 32099
+slaver-1  | [Slaver] Sent weights to master at img 32199
+master-1  | [Master] Received weights from slaver at img 2199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000936, averaging: 0.001737, send: 0.001149 seconds at img 2199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.041447, recv: 0.082687 seconds at img 32199
+master-1  | [Master] total sync took 0.006030 seconds at img 2199
+slaver-1  | [Slaver] total sync took 0.126984 seconds at img 32199
+slaver-1  | [Slaver] Sent weights to master at img 32299
+master-1  | [Master] Received weights from slaver at img 2299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.009896, recv: 0.004106 seconds at img 32299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001577, averaging: 0.002171, send: 0.001084 seconds at img 2299
+master-1  | [Master] total sync took 0.008464 seconds at img 2299
+slaver-1  | [Slaver] total sync took 0.018998 seconds at img 32299
+slaver-1  | [Slaver] Sent weights to master at img 32399
+master-1  | [Master] Received weights from slaver at img 2399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.045245, averaging: 0.002437, send: 0.001365 seconds at img 2399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001173, recv: 0.004545 seconds at img 32399
+master-1  | [Master] total sync took 0.051899 seconds at img 2399
+slaver-1  | [Slaver] total sync took 0.008818 seconds at img 32399
+slaver-1  | [Slaver] Sent weights to master at img 32499
+master-1  | [Master] Received weights from slaver at img 2499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001341, averaging: 0.003584, send: 0.002224 seconds at img 2499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.021034, recv: 0.007187 seconds at img 32499
+master-1  | [Master] total sync took 0.015035 seconds at img 2499
+slaver-1  | [Slaver] total sync took 0.031029 seconds at img 32499
+slaver-1  | [Slaver] Sent weights to master at img 32599
+master-1  | [Master] Received weights from slaver at img 2599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001680, averaging: 0.002911, send: 0.001236 seconds at img 2599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.030183, recv: 0.005654 seconds at img 32599
+master-1  | [Master] total sync took 0.009435 seconds at img 2599
+slaver-1  | [Slaver] total sync took 0.042595 seconds at img 32599
+slaver-1  | [Slaver] Sent weights to master at img 32699
+master-1  | [Master] Received weights from slaver at img 2699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001017, averaging: 0.001868, send: 0.001097 seconds at img 2699
+master-1  | [Master] total sync took 0.008698 seconds at img 2699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.060027, recv: 0.003611 seconds at img 32699
+slaver-1  | [Slaver] total sync took 0.066197 seconds at img 32699
+slaver-1  | [Slaver] Sent weights to master at img 32799
+master-1  | [Master] Received weights from slaver at img 2799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.126127, averaging: 0.002318, send: 0.001527 seconds at img 2799
+master-1  | [Master] total sync took 0.132731 seconds at img 2799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001321, recv: 0.004772 seconds at img 32799
+slaver-1  | [Slaver] total sync took 0.008910 seconds at img 32799
+slaver-1  | [Slaver] Sent weights to master at img 32899
+master-1  | [Master] Received weights from slaver at img 2899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000514, averaging: 0.002037, send: 0.001232 seconds at img 2899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.044167, recv: 0.276083 seconds at img 32899
+master-1  | [Master] total sync took 0.006455 seconds at img 2899
+slaver-1  | [Slaver] total sync took 0.323568 seconds at img 32899
+slaver-1  | [Slaver] Sent weights to master at img 32999
+master-1  | [Master] Received weights from slaver at img 2999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.012489, averaging: 0.002512, send: 0.001390 seconds at img 2999
+master-1  | [Master] total sync took 0.019466 seconds at img 2999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001646, recv: 0.004342 seconds at img 32999
+slaver-1  | [Slaver] total sync took 0.008919 seconds at img 32999
+slaver-1  | *** Average loss after 33000 images: 0.237725 ***
+master-1  | *** Average loss after 3000 images: 0.185704 ***
+master-1  | *** After 3000 images: 89.50% accuracy ***
+slaver-1  | *** After 33000 images: 89.10% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 33099
+master-1  | [Master] Received weights from slaver at img 3099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.323741, averaging: 0.003063, send: 0.000862 seconds at img 3099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001185, recv: 0.005418 seconds at img 33099
+master-1  | [Master] total sync took 0.330145 seconds at img 3099
+slaver-1  | [Slaver] total sync took 0.009966 seconds at img 33099
+slaver-1  | [Slaver] Sent weights to master at img 33199
+master-1  | [Master] Received weights from slaver at img 3199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.052784, averaging: 0.002556, send: 0.001427 seconds at img 3199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001186, recv: 0.004733 seconds at img 33199
+slaver-1  | [Slaver] total sync took 0.008493 seconds at img 33199
+master-1  | [Master] total sync took 0.060287 seconds at img 3199
+master-1  | [Master] Received weights from slaver at img 3299
+slaver-1  | [Slaver] Sent weights to master at img 33299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001138, recv: 0.005459 seconds at img 33299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.024217, averaging: 0.002748, send: 0.001789 seconds at img 3299
+slaver-1  | [Slaver] total sync took 0.009717 seconds at img 33299
+master-1  | [Master] total sync took 0.032560 seconds at img 3299
+slaver-1  | [Slaver] Sent weights to master at img 33399
+master-1  | [Master] Received weights from slaver at img 3399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.016418, averaging: 0.002631, send: 0.001139 seconds at img 3399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001554, recv: 0.005689 seconds at img 33399
+master-1  | [Master] total sync took 0.023695 seconds at img 3399
+slaver-1  | [Slaver] total sync took 0.009827 seconds at img 33399
+slaver-1  | [Slaver] Sent weights to master at img 33499
+master-1  | [Master] Received weights from slaver at img 3499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.030104, recv: 0.006392 seconds at img 33499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.002902, averaging: 0.002475, send: 0.002329 seconds at img 3499
+slaver-1  | [Slaver] total sync took 0.040655 seconds at img 33499
+master-1  | [Master] total sync took 0.012060 seconds at img 3499
+slaver-1  | [Slaver] Sent weights to master at img 33599
+master-1  | [Master] Received weights from slaver at img 3599
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001150, recv: 0.003247 seconds at img 33599
+master-1  | [Master] recv: 0.006612, averaging: 0.001991, send: 0.001039 seconds at img 3599
+slaver-1  | [Slaver] total sync took 0.007919 seconds at img 33599
+master-1  | [Master] total sync took 0.013693 seconds at img 3599
+master-1  | [Master] Received weights from slaver at img 3699
+slaver-1  | [Slaver] Sent weights to master at img 33699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.034273, averaging: 0.002447, send: 0.001467 seconds at img 3699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001210, recv: 0.004568 seconds at img 33699
+master-1  | [Master] total sync took 0.041229 seconds at img 3699
+slaver-1  | [Slaver] total sync took 0.009895 seconds at img 33699
+slaver-1  | [Slaver] Sent weights to master at img 33799
+master-1  | [Master] Received weights from slaver at img 3799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.018033, recv: 0.004757 seconds at img 33799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001169, averaging: 0.002925, send: 0.001029 seconds at img 3799
+slaver-1  | [Slaver] total sync took 0.026419 seconds at img 33799
+master-1  | [Master] total sync took 0.013258 seconds at img 3799
+slaver-1  | [Slaver] Sent weights to master at img 33899
+master-1  | [Master] Received weights from slaver at img 3899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.017106, recv: 0.004549 seconds at img 33899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001435, averaging: 0.002252, send: 0.001212 seconds at img 3899
+slaver-1  | [Slaver] total sync took 0.024511 seconds at img 33899
+master-1  | [Master] total sync took 0.009058 seconds at img 3899
+slaver-1  | [Slaver] Sent weights to master at img 33999
+master-1  | [Master] Received weights from slaver at img 3999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.035462, recv: 0.003726 seconds at img 33999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001149, averaging: 0.002041, send: 0.001259 seconds at img 3999
+master-1  | [Master] total sync took 0.007174 seconds at img 3999
+slaver-1  | [Slaver] total sync took 0.041623 seconds at img 33999
+master-1  | *** Average loss after 4000 images: 0.165005 ***
+slaver-1  | *** Average loss after 34000 images: 0.170846 ***
+master-1  | *** After 4000 images: 89.10% accuracy ***
+slaver-1  | *** After 34000 images: 89.60% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 34099
+master-1  | [Master] Received weights from slaver at img 4099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001825, recv: 0.005017 seconds at img 34099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.077631, averaging: 0.002310, send: 0.001248 seconds at img 4099
+slaver-1  | [Slaver] total sync took 0.009912 seconds at img 34099
+master-1  | [Master] total sync took 0.084447 seconds at img 4099
+slaver-1  | [Slaver] Sent weights to master at img 34199
+master-1  | [Master] Received weights from slaver at img 4199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.091859, recv: 0.042327 seconds at img 34199
+slaver-1  | [Slaver] total sync took 0.136579 seconds at img 34199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001878, averaging: 0.002214, send: 0.001150 seconds at img 4199
+master-1  | [Master] total sync took 0.008167 seconds at img 4199
+slaver-1  | [Slaver] Sent weights to master at img 34299
+master-1  | [Master] Received weights from slaver at img 4299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.176025, averaging: 0.002807, send: 0.001685 seconds at img 4299
+master-1  | [Master] total sync took 0.184819 seconds at img 4299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000894, recv: 0.006102 seconds at img 34299
+slaver-1  | [Slaver] total sync took 0.009855 seconds at img 34299
+slaver-1  | [Slaver] Sent weights to master at img 34399
+master-1  | [Master] Received weights from slaver at img 4399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.180499, recv: 0.066065 seconds at img 34399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000929, averaging: 0.002005, send: 0.001110 seconds at img 4399
+master-1  | [Master] total sync took 0.006653 seconds at img 4399
+slaver-1  | [Slaver] total sync took 0.249080 seconds at img 34399
+slaver-1  | [Slaver] Sent weights to master at img 34499
+master-1  | [Master] Received weights from slaver at img 4499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.061167, averaging: 0.002513, send: 0.001255 seconds at img 4499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001514, recv: 0.004220 seconds at img 34499
+slaver-1  | [Slaver] total sync took 0.009641 seconds at img 34499
+master-1  | [Master] total sync took 0.068223 seconds at img 4499
+slaver-1  | [Slaver] Sent weights to master at img 34599
+master-1  | [Master] Received weights from slaver at img 4599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001607, averaging: 0.002642, send: 0.001730 seconds at img 4599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.047310, recv: 0.005160 seconds at img 34599
+slaver-1  | [Slaver] total sync took 0.055743 seconds at img 34599
+master-1  | [Master] total sync took 0.009163 seconds at img 4599
+master-1  | [Master] Received weights from slaver at img 4699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.117748, averaging: 0.001975, send: 0.001218 seconds at img 4699
+master-1  | [Master] total sync took 0.123668 seconds at img 4699
+slaver-1  | [Slaver] Sent weights to master at img 34699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000753, recv: 0.004311 seconds at img 34699
+slaver-1  | [Slaver] total sync took 0.007814 seconds at img 34699
+slaver-1  | [Slaver] Sent weights to master at img 34799
+master-1  | [Master] Received weights from slaver at img 4799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001111, averaging: 0.002148, send: 0.001112 seconds at img 4799
+master-1  | [Master] total sync took 0.007314 seconds at img 4799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000612, recv: 0.005673 seconds at img 34799
+slaver-1  | [Slaver] total sync took 0.009066 seconds at img 34799
+master-1  | [Master] Received weights from slaver at img 4899
+slaver-1  | [Slaver] Sent weights to master at img 34899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.069272, averaging: 0.002787, send: 0.004289 seconds at img 4899
+master-1  | [Master] total sync took 0.079883 seconds at img 4899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000773, recv: 0.013110 seconds at img 34899
+slaver-1  | [Slaver] total sync took 0.016958 seconds at img 34899
+slaver-1  | [Slaver] Sent weights to master at img 34999
+master-1  | [Master] Received weights from slaver at img 4999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.024296, averaging: 0.002627, send: 0.001325 seconds at img 4999
+master-1  | [Master] total sync took 0.031767 seconds at img 4999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000760, recv: 0.009851 seconds at img 34999
+slaver-1  | [Slaver] total sync took 0.016531 seconds at img 34999
+slaver-1  | *** Average loss after 35000 images: 0.181412 ***
+master-1  | *** Average loss after 5000 images: 0.161291 ***
+master-1  | *** After 5000 images: 88.70% accuracy ***
+slaver-1  | *** After 35000 images: 88.70% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 35099
+master-1  | [Master] Received weights from slaver at img 5099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.090217, averaging: 0.002459, send: 0.002202 seconds at img 5099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000902, recv: 0.005831 seconds at img 35099
+slaver-1  | [Slaver] total sync took 0.012313 seconds at img 35099
+master-1  | [Master] total sync took 0.101007 seconds at img 5099
+slaver-1  | [Slaver] Sent weights to master at img 35199
+master-1  | [Master] Received weights from slaver at img 5199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000931, recv: 0.004835 seconds at img 35199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.066488, averaging: 0.002288, send: 0.001559 seconds at img 5199
+master-1  | [Master] total sync took 0.073332 seconds at img 5199
+slaver-1  | [Slaver] total sync took 0.009549 seconds at img 35199
+slaver-1  | [Slaver] Sent weights to master at img 35299
+master-1  | [Master] Received weights from slaver at img 5299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000707, recv: 0.005517 seconds at img 35299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.122861, averaging: 0.002463, send: 0.001774 seconds at img 5299
+slaver-1  | [Slaver] total sync took 0.008558 seconds at img 35299
+master-1  | [Master] total sync took 0.130259 seconds at img 5299
+slaver-1  | [Slaver] Sent weights to master at img 35399
+master-1  | [Master] Received weights from slaver at img 5399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000703, recv: 0.005254 seconds at img 35399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.238042, averaging: 0.002085, send: 0.001766 seconds at img 5399
+master-1  | [Master] total sync took 0.244896 seconds at img 5399
+slaver-1  | [Slaver] total sync took 0.008344 seconds at img 35399
+slaver-1  | [Slaver] Sent weights to master at img 35499
+master-1  | [Master] Received weights from slaver at img 5499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.123640, averaging: 0.001921, send: 0.000982 seconds at img 5499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000874, recv: 0.005190 seconds at img 35499
+slaver-1  | [Slaver] total sync took 0.008977 seconds at img 35499
+master-1  | [Master] total sync took 0.129285 seconds at img 5499
+slaver-1  | [Slaver] Sent weights to master at img 35599
+master-1  | [Master] Received weights from slaver at img 5599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.374197, averaging: 0.003135, send: 0.002413 seconds at img 5599
+master-1  | [Master] total sync took 0.383599 seconds at img 5599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000787, recv: 0.011530 seconds at img 35599
+slaver-1  | [Slaver] total sync took 0.015173 seconds at img 35599
+slaver-1  | [Slaver] Sent weights to master at img 35699
+master-1  | [Master] Received weights from slaver at img 5699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.020070, averaging: 0.002467, send: 0.001589 seconds at img 5699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000703, recv: 0.007239 seconds at img 35699
+slaver-1  | [Slaver] total sync took 0.010950 seconds at img 35699
+master-1  | [Master] total sync took 0.027049 seconds at img 5699
+slaver-1  | [Slaver] Sent weights to master at img 35799
+master-1  | [Master] Received weights from slaver at img 5799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000897, recv: 0.006888 seconds at img 35799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.408365, averaging: 0.002650, send: 0.001210 seconds at img 5799
+master-1  | [Master] total sync took 0.415602 seconds at img 5799
+slaver-1  | [Slaver] total sync took 0.013454 seconds at img 35799
+slaver-1  | [Slaver] Sent weights to master at img 35899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000905, recv: 0.004686 seconds at img 35899
+master-1  | [Master] Received weights from slaver at img 5899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.617391, averaging: 0.002080, send: 0.001392 seconds at img 5899
+master-1  | [Master] total sync took 0.626908 seconds at img 5899
+slaver-1  | [Slaver] total sync took 0.009375 seconds at img 35899
+slaver-1  | [Slaver] Sent weights to master at img 35999
+master-1  | [Master] Received weights from slaver at img 5999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000734, recv: 0.006511 seconds at img 35999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.103895, averaging: 0.002245, send: 0.001346 seconds at img 5999
+master-1  | [Master] total sync took 0.110256 seconds at img 5999
+slaver-1  | [Slaver] total sync took 0.011855 seconds at img 35999
+master-1  | *** Average loss after 6000 images: 0.160014 ***
+slaver-1  | *** Average loss after 36000 images: 0.160687 ***
+master-1  | *** After 6000 images: 89.40% accuracy ***
+slaver-1  | *** After 36000 images: 88.80% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 36099
+master-1  | [Master] Received weights from slaver at img 6099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.656388, averaging: 0.002266, send: 0.001398 seconds at img 6099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001138, recv: 0.008322 seconds at img 36099
+slaver-1  | [Slaver] total sync took 0.012804 seconds at img 36099
+master-1  | [Master] total sync took 0.663022 seconds at img 6099
+slaver-1  | [Slaver] Sent weights to master at img 36199
+master-1  | [Master] Received weights from slaver at img 6199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.050309, averaging: 0.002211, send: 0.001219 seconds at img 6199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000836, recv: 0.004756 seconds at img 36199
+master-1  | [Master] total sync took 0.056649 seconds at img 6199
+slaver-1  | [Slaver] total sync took 0.009184 seconds at img 36199
+slaver-1  | [Slaver] Sent weights to master at img 36299
+master-1  | [Master] Received weights from slaver at img 6299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001164, averaging: 0.002505, send: 0.001176 seconds at img 6299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000564, recv: 0.030282 seconds at img 36299
+master-1  | [Master] total sync took 0.008650 seconds at img 6299
+slaver-1  | [Slaver] total sync took 0.036607 seconds at img 36299
+slaver-1  | [Slaver] Sent weights to master at img 36399
+master-1  | [Master] Received weights from slaver at img 6399
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000877, recv: 0.004864 seconds at img 36399
+master-1  | [Master] recv: 0.001820, averaging: 0.002269, send: 0.001293 seconds at img 6399
+master-1  | [Master] total sync took 0.011222 seconds at img 6399
+slaver-1  | [Slaver] total sync took 0.012581 seconds at img 36399
+slaver-1  | [Slaver] Sent weights to master at img 36499
+master-1  | [Master] Received weights from slaver at img 6499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000786, recv: 0.004980 seconds at img 36499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.153598, averaging: 0.002271, send: 0.000994 seconds at img 6499
+master-1  | [Master] total sync took 0.160110 seconds at img 6499
+slaver-1  | [Slaver] total sync took 0.009146 seconds at img 36499
+master-1  | [Master] Received weights from slaver at img 6599
+slaver-1  | [Slaver] Sent weights to master at img 36599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.041667, averaging: 0.002999, send: 0.001553 seconds at img 6599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001030, recv: 0.006304 seconds at img 36599
+slaver-1  | [Slaver] total sync took 0.011961 seconds at img 36599
+master-1  | [Master] total sync took 0.049926 seconds at img 6599
+slaver-1  | [Slaver] Sent weights to master at img 36699
+master-1  | [Master] Received weights from slaver at img 6699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001277, averaging: 0.002214, send: 0.001731 seconds at img 6699
+master-1  | [Master] total sync took 0.008360 seconds at img 6699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000555, recv: 0.031264 seconds at img 36699
+slaver-1  | [Slaver] total sync took 0.035246 seconds at img 36699
+slaver-1  | [Slaver] Sent weights to master at img 36799
+master-1  | [Master] Received weights from slaver at img 6799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.182981, averaging: 0.002420, send: 0.000959 seconds at img 6799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000593, recv: 0.006306 seconds at img 36799
+master-1  | [Master] total sync took 0.190984 seconds at img 6799
+slaver-1  | [Slaver] total sync took 0.015953 seconds at img 36799
+slaver-1  | [Slaver] Sent weights to master at img 36899
+master-1  | [Master] Received weights from slaver at img 6899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000614, averaging: 0.002236, send: 0.001395 seconds at img 6899
+master-1  | [Master] total sync took 0.007147 seconds at img 6899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000550, recv: 0.218883 seconds at img 36899
+slaver-1  | [Slaver] total sync took 0.222803 seconds at img 36899
+slaver-1  | [Slaver] Sent weights to master at img 36999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001464, recv: 0.004391 seconds at img 36999
+slaver-1  | [Slaver] total sync took 0.008509 seconds at img 36999
+master-1  | [Master] Received weights from slaver at img 6999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.201319, averaging: 0.002247, send: 0.001263 seconds at img 6999
+master-1  | [Master] total sync took 0.207562 seconds at img 6999
+slaver-1  | *** Average loss after 37000 images: 0.141725 ***
+master-1  | *** Average loss after 7000 images: 0.135927 ***
+master-1  | *** After 7000 images: 90.70% accuracy ***
+slaver-1  | *** After 37000 images: 91.00% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 37099
+master-1  | [Master] Received weights from slaver at img 7099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000819, recv: 0.004501 seconds at img 37099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.551647, averaging: 0.002228, send: 0.001203 seconds at img 7099
+master-1  | [Master] total sync took 0.558032 seconds at img 7099
+slaver-1  | [Slaver] total sync took 0.008216 seconds at img 37099
+slaver-1  | [Slaver] Sent weights to master at img 37199
+master-1  | [Master] Received weights from slaver at img 7199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000978, averaging: 0.002522, send: 0.002359 seconds at img 7199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000560, recv: 0.069281 seconds at img 37199
+master-1  | [Master] total sync took 0.008893 seconds at img 7199
+slaver-1  | [Slaver] total sync took 0.073930 seconds at img 37199
+slaver-1  | [Slaver] Sent weights to master at img 37299
+master-1  | [Master] Received weights from slaver at img 7299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.179191, averaging: 0.002491, send: 0.001279 seconds at img 7299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000922, recv: 0.005109 seconds at img 37299
+slaver-1  | [Slaver] total sync took 0.008854 seconds at img 37299
+master-1  | [Master] total sync took 0.186897 seconds at img 7299
+slaver-1  | [Slaver] Sent weights to master at img 37399
+master-1  | [Master] Received weights from slaver at img 7399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.201434, averaging: 0.002374, send: 0.001235 seconds at img 7399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000821, recv: 0.004986 seconds at img 37399
+master-1  | [Master] total sync took 0.208464 seconds at img 7399
+slaver-1  | [Slaver] total sync took 0.009357 seconds at img 37399
+slaver-1  | [Slaver] Sent weights to master at img 37499
+master-1  | [Master] Received weights from slaver at img 7499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.156156, averaging: 0.002493, send: 0.001106 seconds at img 7499
+master-1  | [Master] total sync took 0.163866 seconds at img 7499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001885, recv: 0.005352 seconds at img 37499
+slaver-1  | [Slaver] total sync took 0.012989 seconds at img 37499
+slaver-1  | [Slaver] Sent weights to master at img 37599
+master-1  | [Master] Received weights from slaver at img 7599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000866, recv: 0.012278 seconds at img 37599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.041405, averaging: 0.004031, send: 0.003289 seconds at img 7599
+master-1  | [Master] total sync took 0.052719 seconds at img 7599
+slaver-1  | [Slaver] total sync took 0.016554 seconds at img 37599
+slaver-1  | [Slaver] Sent weights to master at img 37699
+master-1  | [Master] Received weights from slaver at img 7699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001650, recv: 0.004922 seconds at img 37699
+slaver-1  | [Slaver] total sync took 0.009407 seconds at img 37699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.431080, averaging: 0.002112, send: 0.001314 seconds at img 7699
+master-1  | [Master] total sync took 0.437394 seconds at img 7699
+slaver-1  | [Slaver] Sent weights to master at img 37799
+master-1  | [Master] Received weights from slaver at img 7799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.410224, averaging: 0.002224, send: 0.001959 seconds at img 7799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001290, recv: 0.006014 seconds at img 37799
+slaver-1  | [Slaver] total sync took 0.009970 seconds at img 37799
+master-1  | [Master] total sync took 0.418013 seconds at img 7799
+slaver-1  | [Slaver] Sent weights to master at img 37899
+master-1  | [Master] Received weights from slaver at img 7899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.654413, averaging: 0.002646, send: 0.001268 seconds at img 7899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000730, recv: 0.005724 seconds at img 37899
+slaver-1  | [Slaver] total sync took 0.009651 seconds at img 37899
+master-1  | [Master] total sync took 0.662829 seconds at img 7899
+slaver-1  | [Slaver] Sent weights to master at img 37999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000590, recv: 0.159329 seconds at img 37999
+slaver-1  | [Slaver] total sync took 0.162609 seconds at img 37999
+master-1  | [Master] Received weights from slaver at img 7999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000678, averaging: 0.001903, send: 0.001007 seconds at img 7999
+master-1  | [Master] total sync took 0.006090 seconds at img 7999
+master-1  | *** Average loss after 8000 images: 0.155591 ***
+slaver-1  | *** Average loss after 38000 images: 0.183675 ***
+master-1  | *** After 8000 images: 89.50% accuracy ***
+slaver-1  | *** After 38000 images: 89.10% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 38099
+master-1  | [Master] Received weights from slaver at img 8099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.745854, averaging: 0.002610, send: 0.001384 seconds at img 8099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.004408, recv: 0.008610 seconds at img 38099
+master-1  | [Master] total sync took 0.752882 seconds at img 8099
+slaver-1  | [Slaver] total sync took 0.016275 seconds at img 38099
+slaver-1  | [Slaver] Sent weights to master at img 38199
+master-1  | [Master] Received weights from slaver at img 8199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000872, recv: 0.009068 seconds at img 38199
+slaver-1  | [Slaver] total sync took 0.013817 seconds at img 38199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.228229, averaging: 0.003470, send: 0.001687 seconds at img 8199
+master-1  | [Master] total sync took 0.238721 seconds at img 8199
+master-1  | [Master] Received weights from slaver at img 8299
+slaver-1  | [Slaver] Sent weights to master at img 38299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.274048, averaging: 0.002640, send: 0.000960 seconds at img 8299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001406, recv: 0.005135 seconds at img 38299
+slaver-1  | [Slaver] total sync took 0.009035 seconds at img 38299
+master-1  | [Master] total sync took 0.280331 seconds at img 8299
+slaver-1  | [Slaver] Sent weights to master at img 38399
+master-1  | [Master] Received weights from slaver at img 8399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.251974, averaging: 0.002208, send: 0.001399 seconds at img 8399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000832, recv: 0.006973 seconds at img 38399
+slaver-1  | [Slaver] total sync took 0.010515 seconds at img 38399
+master-1  | [Master] total sync took 0.259269 seconds at img 8399
+slaver-1  | [Slaver] Sent weights to master at img 38499
+master-1  | [Master] Received weights from slaver at img 8499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000902, averaging: 0.002150, send: 0.001054 seconds at img 8499
+master-1  | [Master] total sync took 0.006792 seconds at img 8499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001559, recv: 0.053756 seconds at img 38499
+slaver-1  | [Slaver] total sync took 0.060744 seconds at img 38499
+slaver-1  | [Slaver] Sent weights to master at img 38599
+master-1  | [Master] Received weights from slaver at img 8599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.043541, averaging: 0.002795, send: 0.001627 seconds at img 8599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000988, recv: 0.005348 seconds at img 38599
+slaver-1  | [Slaver] total sync took 0.009885 seconds at img 38599
+master-1  | [Master] total sync took 0.051622 seconds at img 8599
+slaver-1  | [Slaver] Sent weights to master at img 38699
+master-1  | [Master] Received weights from slaver at img 8699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001052, averaging: 0.003215, send: 0.001009 seconds at img 8699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000669, recv: 0.017680 seconds at img 38699
+slaver-1  | [Slaver] total sync took 0.024000 seconds at img 38699
+master-1  | [Master] total sync took 0.011520 seconds at img 8699
+slaver-1  | [Slaver] Sent weights to master at img 38799
+master-1  | [Master] Received weights from slaver at img 8799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000556, recv: 0.053520 seconds at img 38799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000768, averaging: 0.002058, send: 0.001131 seconds at img 8799
+slaver-1  | [Slaver] total sync took 0.058562 seconds at img 38799
+master-1  | [Master] total sync took 0.006711 seconds at img 8799
+slaver-1  | [Slaver] Sent weights to master at img 38899
+master-1  | [Master] Received weights from slaver at img 8899
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000834, recv: 0.014016 seconds at img 38899
+master-1  | [Master] recv: 0.001229, averaging: 0.002658, send: 0.001757 seconds at img 8899
+master-1  | [Master] total sync took 0.011565 seconds at img 8899
+slaver-1  | [Slaver] total sync took 0.020874 seconds at img 38899
+slaver-1  | [Slaver] Sent weights to master at img 38999
+master-1  | [Master] Received weights from slaver at img 8999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001213, averaging: 0.002700, send: 0.001101 seconds at img 8999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000727, recv: 0.018458 seconds at img 38999
+slaver-1  | [Slaver] total sync took 0.023171 seconds at img 38999
+master-1  | [Master] total sync took 0.012868 seconds at img 8999
+master-1  | *** Average loss after 9000 images: 0.166796 ***
+slaver-1  | *** Average loss after 39000 images: 0.136946 ***
+master-1  | *** After 9000 images: 91.20% accuracy ***
+slaver-1  | *** After 39000 images: 90.50% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 39099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000633, recv: 0.006763 seconds at img 39099
+slaver-1  | [Slaver] total sync took 0.012570 seconds at img 39099
+master-1  | [Master] Received weights from slaver at img 9099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.168652, averaging: 0.002302, send: 0.001388 seconds at img 9099
+master-1  | [Master] total sync took 0.175366 seconds at img 9099
+slaver-1  | [Slaver] Sent weights to master at img 39199
+master-1  | [Master] Received weights from slaver at img 9199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001190, averaging: 0.002189, send: 0.001250 seconds at img 9199
+master-1  | [Master] total sync took 0.007504 seconds at img 9199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000574, recv: 0.018593 seconds at img 39199
+slaver-1  | [Slaver] total sync took 0.023646 seconds at img 39199
+slaver-1  | [Slaver] Sent weights to master at img 39299
+master-1  | [Master] Received weights from slaver at img 9299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.280060, averaging: 0.002190, send: 0.000564 seconds at img 9299
+master-1  | [Master] total sync took 0.285747 seconds at img 9299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000713, recv: 0.008573 seconds at img 39299
+slaver-1  | [Slaver] total sync took 0.013658 seconds at img 39299
+slaver-1  | [Slaver] Sent weights to master at img 39399
+master-1  | [Master] Received weights from slaver at img 9399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.091762, averaging: 0.002387, send: 0.001122 seconds at img 9399
+master-1  | [Master] total sync took 0.097935 seconds at img 9399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000800, recv: 0.013387 seconds at img 39399
+slaver-1  | [Slaver] total sync took 0.017702 seconds at img 39399
+slaver-1  | [Slaver] Sent weights to master at img 39499
+master-1  | [Master] Received weights from slaver at img 9499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000895, recv: 0.107029 seconds at img 39499
+slaver-1  | [Slaver] total sync took 0.110766 seconds at img 39499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000583, averaging: 0.002339, send: 0.001520 seconds at img 9499
+master-1  | [Master] total sync took 0.007673 seconds at img 9499
+slaver-1  | [Slaver] Sent weights to master at img 39599
+master-1  | [Master] Received weights from slaver at img 9599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.520378, averaging: 0.002395, send: 0.001354 seconds at img 9599
+master-1  | [Master] total sync took 0.527316 seconds at img 9599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000978, recv: 0.007552 seconds at img 39599
+slaver-1  | [Slaver] total sync took 0.011585 seconds at img 39599
+slaver-1  | [Slaver] Sent weights to master at img 39699
+master-1  | [Master] Received weights from slaver at img 9699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001044, recv: 0.004337 seconds at img 39699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.133893, averaging: 0.002362, send: 0.001350 seconds at img 9699
+master-1  | [Master] total sync took 0.140813 seconds at img 9699
+slaver-1  | [Slaver] total sync took 0.008355 seconds at img 39699
+slaver-1  | [Slaver] Sent weights to master at img 39799
+master-1  | [Master] Received weights from slaver at img 9799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001114, recv: 0.005194 seconds at img 39799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.014090, averaging: 0.002250, send: 0.001597 seconds at img 9799
+master-1  | [Master] total sync took 0.021335 seconds at img 9799
+slaver-1  | [Slaver] total sync took 0.014836 seconds at img 39799
+slaver-1  | [Slaver] Sent weights to master at img 39899
+master-1  | [Master] Received weights from slaver at img 9899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001027, averaging: 0.002504, send: 0.001197 seconds at img 9899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000706, recv: 0.031558 seconds at img 39899
+master-1  | [Master] total sync took 0.008404 seconds at img 9899
+slaver-1  | [Slaver] total sync took 0.040943 seconds at img 39899
+master-1  | [Master] Received weights from slaver at img 9999
+slaver-1  | [Slaver] Sent weights to master at img 39999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.019178, averaging: 0.002495, send: 0.001074 seconds at img 9999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001442, recv: 0.007199 seconds at img 39999
+master-1  | [Master] total sync took 0.027779 seconds at img 9999
+slaver-1  | [Slaver] total sync took 0.014360 seconds at img 39999
+slaver-1  | *** Average loss after 40000 images: 0.149110 ***
+master-1  | *** Average loss after 10000 images: 0.119061 ***
+slaver-1  | *** After 40000 images: 91.00% accuracy ***
+master-1  | *** After 10000 images: 91.00% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 40099
+master-1  | [Master] Received weights from slaver at img 10099
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000596, recv: 0.031431 seconds at img 40099
+master-1  | [Master] recv: 0.001217, averaging: 0.002175, send: 0.001249 seconds at img 10099
+master-1  | [Master] total sync took 0.008222 seconds at img 10099
+slaver-1  | [Slaver] total sync took 0.036331 seconds at img 40099
+slaver-1  | [Slaver] Sent weights to master at img 40199
+master-1  | [Master] Received weights from slaver at img 10199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000827, recv: 0.004678 seconds at img 40199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.116059, averaging: 0.002511, send: 0.000842 seconds at img 10199
+slaver-1  | [Slaver] total sync took 0.008868 seconds at img 40199
+master-1  | [Master] total sync took 0.122938 seconds at img 10199
+slaver-1  | [Slaver] Sent weights to master at img 40299
+master-1  | [Master] Received weights from slaver at img 10299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001037, recv: 0.003826 seconds at img 40299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.119131, averaging: 0.001985, send: 0.000994 seconds at img 10299
+master-1  | [Master] total sync took 0.124633 seconds at img 10299
+slaver-1  | [Slaver] total sync took 0.007810 seconds at img 40299
+slaver-1  | [Slaver] Sent weights to master at img 40399
+master-1  | [Master] Received weights from slaver at img 10399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001000, averaging: 0.002497, send: 0.001168 seconds at img 10399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000611, recv: 0.031799 seconds at img 40399
+master-1  | [Master] total sync took 0.008383 seconds at img 10399
+slaver-1  | [Slaver] total sync took 0.040122 seconds at img 40399
+slaver-1  | [Slaver] Sent weights to master at img 40499
+master-1  | [Master] Received weights from slaver at img 10499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000857, recv: 0.043568 seconds at img 40499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001373, averaging: 0.002820, send: 0.001511 seconds at img 10499
+master-1  | [Master] total sync took 0.008473 seconds at img 10499
+slaver-1  | [Slaver] total sync took 0.049489 seconds at img 40499
+slaver-1  | [Slaver] Sent weights to master at img 40599
+master-1  | [Master] Received weights from slaver at img 10599
+slaver-1  | [Slaver] Received updated weights from master
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.046664, averaging: 0.002255, send: 0.002055 seconds at img 10599
+slaver-1  | [Slaver] send: 0.001188, recv: 0.007586 seconds at img 40599
+master-1  | [Master] total sync took 0.055055 seconds at img 10599
+slaver-1  | [Slaver] total sync took 0.015650 seconds at img 40599
+slaver-1  | [Slaver] Sent weights to master at img 40699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000836, recv: 0.008549 seconds at img 40699
+slaver-1  | [Slaver] total sync took 0.013609 seconds at img 40699
+master-1  | [Master] Received weights from slaver at img 10699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.317074, averaging: 0.003371, send: 0.002948 seconds at img 10699
+master-1  | [Master] total sync took 0.328076 seconds at img 10699
+slaver-1  | [Slaver] Sent weights to master at img 40799
+master-1  | [Master] Received weights from slaver at img 10799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000763, recv: 0.005790 seconds at img 40799
+slaver-1  | [Slaver] total sync took 0.009980 seconds at img 40799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.493843, averaging: 0.002726, send: 0.001735 seconds at img 10799
+master-1  | [Master] total sync took 0.501891 seconds at img 10799
+slaver-1  | [Slaver] Sent weights to master at img 40899
+master-1  | [Master] Received weights from slaver at img 10899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000555, recv: 0.006225 seconds at img 40899
+slaver-1  | [Slaver] total sync took 0.009758 seconds at img 40899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.486821, averaging: 0.002293, send: 0.001359 seconds at img 10899
+master-1  | [Master] total sync took 0.493885 seconds at img 10899
+slaver-1  | [Slaver] Sent weights to master at img 40999
+master-1  | [Master] Received weights from slaver at img 10999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.507328, averaging: 0.002746, send: 0.001375 seconds at img 10999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000933, recv: 0.008891 seconds at img 40999
+master-1  | [Master] total sync took 0.515874 seconds at img 10999
+slaver-1  | [Slaver] total sync took 0.013979 seconds at img 40999
+slaver-1  | *** Average loss after 41000 images: 0.116674 ***
+master-1  | *** Average loss after 11000 images: 0.109319 ***
+slaver-1  | *** After 41000 images: 91.20% accuracy ***
+master-1  | *** After 11000 images: 91.10% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 41099
+master-1  | [Master] Received weights from slaver at img 11099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000948, averaging: 0.005298, send: 0.004270 seconds at img 11099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000838, recv: 0.290385 seconds at img 41099
+slaver-1  | [Slaver] total sync took 0.294582 seconds at img 41099
+master-1  | [Master] total sync took 0.015702 seconds at img 11099
+slaver-1  | [Slaver] Sent weights to master at img 41199
+master-1  | [Master] Received weights from slaver at img 11199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.171261, averaging: 0.001898, send: 0.001040 seconds at img 11199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001031, recv: 0.005606 seconds at img 41199
+master-1  | [Master] total sync took 0.177203 seconds at img 11199
+slaver-1  | [Slaver] total sync took 0.009397 seconds at img 41199
+slaver-1  | [Slaver] Sent weights to master at img 41299
+master-1  | [Master] Received weights from slaver at img 11299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001407, averaging: 0.002714, send: 0.001823 seconds at img 11299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000670, recv: 0.099786 seconds at img 41299
+slaver-1  | [Slaver] total sync took 0.104629 seconds at img 41299
+master-1  | [Master] total sync took 0.015743 seconds at img 11299
+master-1  | [Master] Received weights from slaver at img 11399
+slaver-1  | [Slaver] Sent weights to master at img 41399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.379398, averaging: 0.003164, send: 0.001431 seconds at img 11399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001842, recv: 0.005219 seconds at img 41399
+slaver-1  | [Slaver] total sync took 0.011283 seconds at img 41399
+master-1  | [Master] total sync took 0.387500 seconds at img 11399
+slaver-1  | [Slaver] Sent weights to master at img 41499
+master-1  | [Master] Received weights from slaver at img 11499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000949, recv: 0.006396 seconds at img 41499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.335420, averaging: 0.002927, send: 0.001857 seconds at img 11499
+master-1  | [Master] total sync took 0.344399 seconds at img 11499
+slaver-1  | [Slaver] total sync took 0.013203 seconds at img 41499
+slaver-1  | [Slaver] Sent weights to master at img 41599
+master-1  | [Master] Received weights from slaver at img 11599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.428024, averaging: 0.007766, send: 0.001355 seconds at img 11599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001493, recv: 0.016357 seconds at img 41599
+slaver-1  | [Slaver] total sync took 0.023393 seconds at img 41599
+master-1  | [Master] total sync took 0.462329 seconds at img 11599
+slaver-1  | [Slaver] Sent weights to master at img 41699
+master-1  | [Master] Received weights from slaver at img 11699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000882, recv: 0.004302 seconds at img 41699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.014008, averaging: 0.002155, send: 0.001082 seconds at img 11699
+master-1  | [Master] total sync took 0.020139 seconds at img 11699
+slaver-1  | [Slaver] total sync took 0.012523 seconds at img 41699
+slaver-1  | [Slaver] Sent weights to master at img 41799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001115, recv: 0.006376 seconds at img 41799
+master-1  | [Master] Received weights from slaver at img 11799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.214826, averaging: 0.002606, send: 0.001745 seconds at img 11799
+master-1  | [Master] total sync took 0.222670 seconds at img 11799
+slaver-1  | [Slaver] total sync took 0.010428 seconds at img 41799
+slaver-1  | [Slaver] Sent weights to master at img 41899
+master-1  | [Master] Received weights from slaver at img 11899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.177605, averaging: 0.002690, send: 0.001707 seconds at img 11899
+master-1  | [Master] total sync took 0.184682 seconds at img 11899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000812, recv: 0.005577 seconds at img 41899
+slaver-1  | [Slaver] total sync took 0.009842 seconds at img 41899
+slaver-1  | [Slaver] Sent weights to master at img 41999
+master-1  | [Master] Received weights from slaver at img 11999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000492, averaging: 0.002146, send: 0.001179 seconds at img 11999
+master-1  | [Master] total sync took 0.006445 seconds at img 11999
+master-1  | *** Average loss after 12000 images: 0.126794 ***
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000582, recv: 0.197390 seconds at img 41999
+slaver-1  | [Slaver] total sync took 0.201356 seconds at img 41999
+slaver-1  | *** Average loss after 42000 images: 0.146290 ***
+master-1  | *** After 12000 images: 90.10% accuracy ***
+slaver-1  | *** After 42000 images: 90.10% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 42099
+master-1  | [Master] Received weights from slaver at img 12099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.847507, averaging: 0.002359, send: 0.001300 seconds at img 12099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001523, recv: 0.004121 seconds at img 42099
+master-1  | [Master] total sync took 0.854247 seconds at img 12099
+slaver-1  | [Slaver] total sync took 0.010689 seconds at img 42099
+slaver-1  | [Slaver] Sent weights to master at img 42199
+master-1  | [Master] Received weights from slaver at img 12199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001352, averaging: 0.003123, send: 0.001181 seconds at img 12199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000618, recv: 0.020813 seconds at img 42199
+slaver-1  | [Slaver] total sync took 0.026125 seconds at img 42199
+master-1  | [Master] total sync took 0.014020 seconds at img 12199
+slaver-1  | [Slaver] Sent weights to master at img 42299
+master-1  | [Master] Received weights from slaver at img 12299
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000518, recv: 0.053593 seconds at img 42299
+master-1  | [Master] recv: 0.000764, averaging: 0.002782, send: 0.001456 seconds at img 12299
+slaver-1  | [Slaver] total sync took 0.058347 seconds at img 42299
+master-1  | [Master] total sync took 0.008814 seconds at img 12299
+slaver-1  | [Slaver] Sent weights to master at img 42399
+master-1  | [Master] Received weights from slaver at img 12399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000971, recv: 0.005710 seconds at img 42399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.087226, averaging: 0.002824, send: 0.001458 seconds at img 12399
+master-1  | [Master] total sync took 0.095265 seconds at img 12399
+slaver-1  | [Slaver] total sync took 0.009324 seconds at img 42399
+slaver-1  | [Slaver] Sent weights to master at img 42499
+master-1  | [Master] Received weights from slaver at img 12499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000620, recv: 0.048445 seconds at img 42499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001129, averaging: 0.002455, send: 0.001249 seconds at img 12499
+slaver-1  | [Slaver] total sync took 0.052738 seconds at img 42499
+master-1  | [Master] total sync took 0.007842 seconds at img 12499
+slaver-1  | [Slaver] Sent weights to master at img 42599
+master-1  | [Master] Received weights from slaver at img 12599
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+master-1  | [Master] recv: 0.022725, averaging: 0.002848, send: 0.001276 seconds at img 12599
+slaver-1  | [Slaver] send: 0.000712, recv: 0.006879 seconds at img 42599
+master-1  | [Master] total sync took 0.034773 seconds at img 12599
+slaver-1  | [Slaver] total sync took 0.014396 seconds at img 42599
+slaver-1  | [Slaver] Sent weights to master at img 42699
+master-1  | [Master] Received weights from slaver at img 12699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.206003, averaging: 0.002685, send: 0.001325 seconds at img 12699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000780, recv: 0.005196 seconds at img 42699
+master-1  | [Master] total sync took 0.213692 seconds at img 12699
+slaver-1  | [Slaver] total sync took 0.009230 seconds at img 42699
+slaver-1  | [Slaver] Sent weights to master at img 42799
+master-1  | [Master] Received weights from slaver at img 12799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.025739, averaging: 0.003743, send: 0.001202 seconds at img 12799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000908, recv: 0.006422 seconds at img 42799
+slaver-1  | [Slaver] total sync took 0.010345 seconds at img 42799
+master-1  | [Master] total sync took 0.042845 seconds at img 12799
+slaver-1  | [Slaver] Sent weights to master at img 42899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000915, recv: 0.006373 seconds at img 42899
+slaver-1  | [Slaver] total sync took 0.010346 seconds at img 42899
+master-1  | [Master] Received weights from slaver at img 12899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.094005, averaging: 0.003057, send: 0.001829 seconds at img 12899
+master-1  | [Master] total sync took 0.102411 seconds at img 12899
+slaver-1  | [Slaver] Sent weights to master at img 42999
+master-1  | [Master] Received weights from slaver at img 12999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000550, averaging: 0.002559, send: 0.001354 seconds at img 12999
+master-1  | [Master] total sync took 0.014044 seconds at img 12999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000627, recv: 0.207456 seconds at img 42999
+slaver-1  | [Slaver] total sync took 0.211200 seconds at img 42999
+slaver-1  | *** Average loss after 43000 images: 0.150225 ***
+master-1  | *** Average loss after 13000 images: 0.142542 ***
+master-1  | *** After 13000 images: 92.30% accuracy ***
+slaver-1  | *** After 43000 images: 92.00% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 43099
+master-1  | [Master] Received weights from slaver at img 13099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.030184, averaging: 0.002542, send: 0.001893 seconds at img 13099
+master-1  | [Master] total sync took 0.038503 seconds at img 13099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.002887, recv: 0.004629 seconds at img 43099
+slaver-1  | [Slaver] total sync took 0.010897 seconds at img 43099
+slaver-1  | [Slaver] Sent weights to master at img 43199
+master-1  | [Master] Received weights from slaver at img 13199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.119470, averaging: 0.002883, send: 0.001560 seconds at img 13199
+master-1  | [Master] total sync took 0.127999 seconds at img 13199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000847, recv: 0.005672 seconds at img 43199
+slaver-1  | [Slaver] total sync took 0.010169 seconds at img 43199
+slaver-1  | [Slaver] Sent weights to master at img 43299
+master-1  | [Master] Received weights from slaver at img 13299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.002791, averaging: 0.002287, send: 0.001694 seconds at img 13299
+master-1  | [Master] total sync took 0.010111 seconds at img 13299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000889, recv: 0.158756 seconds at img 43299
+slaver-1  | [Slaver] total sync took 0.163677 seconds at img 43299
+slaver-1  | [Slaver] Sent weights to master at img 43399
+master-1  | [Master] Received weights from slaver at img 13399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.212192, averaging: 0.001924, send: 0.001150 seconds at img 13399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001315, recv: 0.005645 seconds at img 43399
+master-1  | [Master] total sync took 0.217867 seconds at img 13399
+slaver-1  | [Slaver] total sync took 0.010592 seconds at img 43399
+slaver-1  | [Slaver] Sent weights to master at img 43499
+master-1  | [Master] Received weights from slaver at img 13499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000890, recv: 0.006166 seconds at img 43499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.180519, averaging: 0.002725, send: 0.001876 seconds at img 13499
+master-1  | [Master] total sync took 0.188715 seconds at img 13499
+slaver-1  | [Slaver] total sync took 0.011920 seconds at img 43499
+slaver-1  | [Slaver] Sent weights to master at img 43599
+master-1  | [Master] Received weights from slaver at img 13599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000870, recv: 0.006694 seconds at img 43599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.363159, averaging: 0.003560, send: 0.001387 seconds at img 13599
+master-1  | [Master] total sync took 0.371101 seconds at img 13599
+slaver-1  | [Slaver] total sync took 0.011268 seconds at img 43599
+slaver-1  | [Slaver] Sent weights to master at img 43699
+master-1  | [Master] Received weights from slaver at img 13699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.202434, averaging: 0.002238, send: 0.001337 seconds at img 13699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000800, recv: 0.005475 seconds at img 43699
+master-1  | [Master] total sync took 0.209213 seconds at img 13699
+slaver-1  | [Slaver] total sync took 0.010425 seconds at img 43699
+slaver-1  | [Slaver] Sent weights to master at img 43799
+master-1  | [Master] Received weights from slaver at img 13799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000535, recv: 0.055007 seconds at img 43799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000965, averaging: 0.003215, send: 0.001885 seconds at img 13799
+master-1  | [Master] total sync took 0.010666 seconds at img 13799
+slaver-1  | [Slaver] total sync took 0.059887 seconds at img 43799
+slaver-1  | [Slaver] Sent weights to master at img 43899
+master-1  | [Master] Received weights from slaver at img 13899
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000976, recv: 0.003756 seconds at img 43899
+master-1  | [Master] recv: 0.002479, averaging: 0.002326, send: 0.001249 seconds at img 13899
+master-1  | [Master] total sync took 0.010299 seconds at img 13899
+slaver-1  | [Slaver] total sync took 0.013941 seconds at img 43899
+slaver-1  | [Slaver] Sent weights to master at img 43999
+master-1  | [Master] Received weights from slaver at img 13999
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000804, recv: 0.019621 seconds at img 43999
+master-1  | [Master] recv: 0.001087, averaging: 0.003012, send: 0.001465 seconds at img 13999
+slaver-1  | [Slaver] total sync took 0.029107 seconds at img 43999
+master-1  | [Master] total sync took 0.015120 seconds at img 13999
+slaver-1  | *** Average loss after 44000 images: 0.107512 ***
+master-1  | *** Average loss after 14000 images: 0.137598 ***
+slaver-1  | *** After 44000 images: 92.20% accuracy ***
+master-1  | *** After 14000 images: 92.20% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 44099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000679, recv: 0.163520 seconds at img 44099
+master-1  | [Master] Received weights from slaver at img 14099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.004726, averaging: 0.002430, send: 0.002247 seconds at img 14099
+master-1  | [Master] total sync took 0.012343 seconds at img 14099
+slaver-1  | [Slaver] total sync took 0.167637 seconds at img 44099
+slaver-1  | [Slaver] Sent weights to master at img 44199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000954, recv: 0.005832 seconds at img 44199
+slaver-1  | [Slaver] total sync took 0.010076 seconds at img 44199
+master-1  | [Master] Received weights from slaver at img 14199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.340943, averaging: 0.002418, send: 0.001748 seconds at img 14199
+master-1  | [Master] total sync took 0.348195 seconds at img 14199
+slaver-1  | [Slaver] Sent weights to master at img 44299
+master-1  | [Master] Received weights from slaver at img 14299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000830, recv: 0.448536 seconds at img 44299
+slaver-1  | [Slaver] total sync took 0.452677 seconds at img 44299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000565, averaging: 0.002118, send: 0.001463 seconds at img 14299
+master-1  | [Master] total sync took 0.009087 seconds at img 14299
+slaver-1  | [Slaver] Sent weights to master at img 44399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001179, recv: 0.004951 seconds at img 44399
+slaver-1  | [Slaver] total sync took 0.009956 seconds at img 44399
+master-1  | [Master] Received weights from slaver at img 14399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.151040, averaging: 0.002214, send: 0.001556 seconds at img 14399
+master-1  | [Master] total sync took 0.157948 seconds at img 14399
+slaver-1  | [Slaver] Sent weights to master at img 44499
+master-1  | [Master] Received weights from slaver at img 14499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000733, recv: 0.006897 seconds at img 44499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.118796, averaging: 0.002282, send: 0.001472 seconds at img 14499
+slaver-1  | [Slaver] total sync took 0.011010 seconds at img 44499
+master-1  | [Master] total sync took 0.127306 seconds at img 14499
+slaver-1  | [Slaver] Sent weights to master at img 44599
+master-1  | [Master] Received weights from slaver at img 14599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.029180, averaging: 0.002583, send: 0.001747 seconds at img 14599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000999, recv: 0.005158 seconds at img 44599
+slaver-1  | [Slaver] total sync took 0.009887 seconds at img 44599
+master-1  | [Master] total sync took 0.036919 seconds at img 14599
+slaver-1  | [Slaver] Sent weights to master at img 44699
+master-1  | [Master] Received weights from slaver at img 14699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000763, recv: 0.036812 seconds at img 44699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001219, averaging: 0.002885, send: 0.001357 seconds at img 14699
+slaver-1  | [Slaver] total sync took 0.041246 seconds at img 44699
+master-1  | [Master] total sync took 0.009572 seconds at img 14699
+slaver-1  | [Slaver] Sent weights to master at img 44799
+master-1  | [Master] Received weights from slaver at img 14799
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000627, recv: 0.019785 seconds at img 44799
+master-1  | [Master] recv: 0.001377, averaging: 0.002917, send: 0.001676 seconds at img 14799
+slaver-1  | [Slaver] total sync took 0.025512 seconds at img 44799
+master-1  | [Master] total sync took 0.018670 seconds at img 14799
+slaver-1  | [Slaver] Sent weights to master at img 44899
+master-1  | [Master] Received weights from slaver at img 14899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000818, recv: 0.005765 seconds at img 44899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.027831, averaging: 0.002977, send: 0.001197 seconds at img 14899
+master-1  | [Master] total sync took 0.035873 seconds at img 14899
+slaver-1  | [Slaver] total sync took 0.012912 seconds at img 44899
+slaver-1  | [Slaver] Sent weights to master at img 44999
+master-1  | [Master] Received weights from slaver at img 14999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000592, recv: 0.035766 seconds at img 44999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001122, averaging: 0.002203, send: 0.001274 seconds at img 14999
+slaver-1  | [Slaver] total sync took 0.040066 seconds at img 44999
+master-1  | [Master] total sync took 0.008026 seconds at img 14999
+slaver-1  | *** Average loss after 45000 images: 0.118678 ***
+master-1  | *** Average loss after 15000 images: 0.150889 ***
+slaver-1  | *** After 45000 images: 92.00% accuracy ***
+master-1  | *** After 15000 images: 92.00% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 45099
+master-1  | [Master] Received weights from slaver at img 15099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001429, averaging: 0.002378, send: 0.001111 seconds at img 15099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000590, recv: 0.038217 seconds at img 45099
+slaver-1  | [Slaver] total sync took 0.043680 seconds at img 45099
+master-1  | [Master] total sync took 0.009382 seconds at img 15099
+slaver-1  | [Slaver] Sent weights to master at img 45199
+master-1  | [Master] Received weights from slaver at img 15199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001126, averaging: 0.002167, send: 0.001193 seconds at img 15199
+master-1  | [Master] total sync took 0.008033 seconds at img 15199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000580, recv: 0.036027 seconds at img 45199
+slaver-1  | [Slaver] total sync took 0.042230 seconds at img 45199
+slaver-1  | [Slaver] Sent weights to master at img 45299
+master-1  | [Master] Received weights from slaver at img 15299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.009120, averaging: 0.002250, send: 0.001080 seconds at img 15299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000910, recv: 0.003945 seconds at img 45299
+master-1  | [Master] total sync took 0.017194 seconds at img 15299
+slaver-1  | [Slaver] total sync took 0.012668 seconds at img 45299
+slaver-1  | [Slaver] Sent weights to master at img 45399
+master-1  | [Master] Received weights from slaver at img 15399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000958, recv: 0.004688 seconds at img 45399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.056277, averaging: 0.002708, send: 0.001259 seconds at img 15399
+master-1  | [Master] total sync took 0.063411 seconds at img 15399
+slaver-1  | [Slaver] total sync took 0.009309 seconds at img 45399
+slaver-1  | [Slaver] Sent weights to master at img 45499
+master-1  | [Master] Received weights from slaver at img 15499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000622, recv: 0.030176 seconds at img 45499
+slaver-1  | [Slaver] total sync took 0.033758 seconds at img 45499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001279, averaging: 0.002251, send: 0.000840 seconds at img 15499
+master-1  | [Master] total sync took 0.007290 seconds at img 15499
+slaver-1  | [Slaver] Sent weights to master at img 45599
+master-1  | [Master] Received weights from slaver at img 15599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.002571, averaging: 0.002351, send: 0.001222 seconds at img 15599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000586, recv: 0.116651 seconds at img 45599
+master-1  | [Master] total sync took 0.009442 seconds at img 15599
+slaver-1  | [Slaver] total sync took 0.119868 seconds at img 45599
+slaver-1  | [Slaver] Sent weights to master at img 45699
+master-1  | [Master] Received weights from slaver at img 15699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001141, averaging: 0.001990, send: 0.001976 seconds at img 15699
+master-1  | [Master] total sync took 0.007687 seconds at img 15699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000629, recv: 0.178460 seconds at img 45699
+slaver-1  | [Slaver] total sync took 0.182327 seconds at img 45699
+slaver-1  | [Slaver] Sent weights to master at img 45799
+master-1  | [Master] Received weights from slaver at img 15799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.189410, averaging: 0.002515, send: 0.001362 seconds at img 15799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000742, recv: 0.009794 seconds at img 45799
+master-1  | [Master] total sync took 0.198481 seconds at img 15799
+slaver-1  | [Slaver] total sync took 0.013273 seconds at img 45799
+slaver-1  | [Slaver] Sent weights to master at img 45899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.005212, recv: 0.004686 seconds at img 45899
+master-1  | [Master] Received weights from slaver at img 15899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.261482, averaging: 0.002536, send: 0.001578 seconds at img 15899
+master-1  | [Master] total sync took 0.269668 seconds at img 15899
+slaver-1  | [Slaver] total sync took 0.015963 seconds at img 45899
+slaver-1  | [Slaver] Sent weights to master at img 45999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000527, recv: 0.123858 seconds at img 45999
+master-1  | [Master] Received weights from slaver at img 15999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000809, averaging: 0.002143, send: 0.001170 seconds at img 15999
+master-1  | [Master] total sync took 0.006873 seconds at img 15999
+master-1  | *** Average loss after 16000 images: 0.123636 ***
+slaver-1  | [Slaver] total sync took 0.127562 seconds at img 45999
+slaver-1  | *** Average loss after 46000 images: 0.134572 ***
+master-1  | *** After 16000 images: 92.70% accuracy ***
+slaver-1  | *** After 46000 images: 92.50% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 46099
+master-1  | [Master] Received weights from slaver at img 16099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000621, recv: 0.006306 seconds at img 46099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.005313, averaging: 0.002732, send: 0.001723 seconds at img 16099
+master-1  | [Master] total sync took 0.012780 seconds at img 16099
+slaver-1  | [Slaver] total sync took 0.014267 seconds at img 46099
+slaver-1  | [Slaver] Sent weights to master at img 46199
+master-1  | [Master] Received weights from slaver at img 16199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000978, recv: 0.003938 seconds at img 46199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.006170, averaging: 0.002378, send: 0.001050 seconds at img 16199
+master-1  | [Master] total sync took 0.013089 seconds at img 16199
+slaver-1  | [Slaver] total sync took 0.012786 seconds at img 46199
+slaver-1  | [Slaver] Sent weights to master at img 46299
+master-1  | [Master] Received weights from slaver at img 16299
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000627, recv: 0.025137 seconds at img 46299
+master-1  | [Master] recv: 0.001182, averaging: 0.002455, send: 0.001123 seconds at img 16299
+slaver-1  | [Slaver] total sync took 0.032752 seconds at img 46299
+master-1  | [Master] total sync took 0.012154 seconds at img 16299
+slaver-1  | [Slaver] Sent weights to master at img 46399
+master-1  | [Master] Received weights from slaver at img 16399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001135, averaging: 0.002265, send: 0.001298 seconds at img 16399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000728, recv: 0.046491 seconds at img 46399
+master-1  | [Master] total sync took 0.007914 seconds at img 16399
+slaver-1  | [Slaver] total sync took 0.053052 seconds at img 46399
+slaver-1  | [Slaver] Sent weights to master at img 46499
+master-1  | [Master] Received weights from slaver at img 16499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001122, averaging: 0.002223, send: 0.001178 seconds at img 16499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000562, recv: 0.049445 seconds at img 46499
+master-1  | [Master] total sync took 0.007717 seconds at img 16499
+slaver-1  | [Slaver] total sync took 0.054492 seconds at img 46499
+slaver-1  | [Slaver] Sent weights to master at img 46599
+master-1  | [Master] Received weights from slaver at img 16599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000928, recv: 0.003465 seconds at img 46599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.043531, averaging: 0.002115, send: 0.000984 seconds at img 16599
+master-1  | [Master] total sync took 0.049589 seconds at img 16599
+slaver-1  | [Slaver] total sync took 0.012480 seconds at img 46599
+slaver-1  | [Slaver] Sent weights to master at img 46699
+master-1  | [Master] Received weights from slaver at img 16699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000894, recv: 0.004093 seconds at img 46699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.003422, averaging: 0.002559, send: 0.001247 seconds at img 16699
+master-1  | [Master] total sync took 0.011462 seconds at img 16699
+slaver-1  | [Slaver] total sync took 0.013835 seconds at img 46699
+slaver-1  | [Slaver] Sent weights to master at img 46799
+master-1  | [Master] Received weights from slaver at img 16799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000649, recv: 0.043019 seconds at img 46799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001231, averaging: 0.002158, send: 0.001284 seconds at img 16799
+slaver-1  | [Slaver] total sync took 0.048009 seconds at img 46799
+master-1  | [Master] total sync took 0.008079 seconds at img 16799
+slaver-1  | [Slaver] Sent weights to master at img 46899
+master-1  | [Master] Received weights from slaver at img 16899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000866, recv: 0.004727 seconds at img 46899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.002298, averaging: 0.002233, send: 0.001179 seconds at img 16899
+master-1  | [Master] total sync took 0.009434 seconds at img 16899
+slaver-1  | [Slaver] total sync took 0.014639 seconds at img 46899
+master-1  | [Master] Received weights from slaver at img 16999
+slaver-1  | [Slaver] Sent weights to master at img 46999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.270214, averaging: 0.002293, send: 0.002105 seconds at img 16999
+master-1  | [Master] total sync took 0.278573 seconds at img 16999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000809, recv: 0.010455 seconds at img 46999
+slaver-1  | [Slaver] total sync took 0.014909 seconds at img 46999
+master-1  | *** Average loss after 17000 images: 0.113509 ***
+slaver-1  | *** Average loss after 47000 images: 0.121561 ***
+slaver-1  | *** After 47000 images: 92.40% accuracy ***
+master-1  | *** After 17000 images: 92.40% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 47099
+master-1  | [Master] Received weights from slaver at img 17099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000557, recv: 0.208072 seconds at img 47099
+slaver-1  | [Slaver] total sync took 0.211660 seconds at img 47099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000774, averaging: 0.002092, send: 0.001056 seconds at img 17099
+master-1  | [Master] total sync took 0.006740 seconds at img 17099
+slaver-1  | [Slaver] Sent weights to master at img 47199
+master-1  | [Master] Received weights from slaver at img 17199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.056953, averaging: 0.002420, send: 0.001215 seconds at img 17199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000884, recv: 0.004804 seconds at img 47199
+master-1  | [Master] total sync took 0.063495 seconds at img 17199
+slaver-1  | [Slaver] total sync took 0.008886 seconds at img 47199
+slaver-1  | [Slaver] Sent weights to master at img 47299
+master-1  | [Master] Received weights from slaver at img 17299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000490, averaging: 0.002009, send: 0.001448 seconds at img 17299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000714, recv: 0.708903 seconds at img 47299
+master-1  | [Master] total sync took 0.007284 seconds at img 17299
+slaver-1  | [Slaver] total sync took 0.713011 seconds at img 47299
+master-1  | [Master] Received weights from slaver at img 17399
+slaver-1  | [Slaver] Sent weights to master at img 47399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.194804, averaging: 0.002387, send: 0.001322 seconds at img 17399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001476, recv: 0.006505 seconds at img 47399
+master-1  | [Master] total sync took 0.201694 seconds at img 17399
+slaver-1  | [Slaver] total sync took 0.010760 seconds at img 47399
+slaver-1  | [Slaver] Sent weights to master at img 47499
+master-1  | [Master] Received weights from slaver at img 17499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000887, recv: 0.006232 seconds at img 47499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.085638, averaging: 0.003394, send: 0.001690 seconds at img 17499
+master-1  | [Master] total sync took 0.094083 seconds at img 17499
+slaver-1  | [Slaver] total sync took 0.011181 seconds at img 47499
+slaver-1  | [Slaver] Sent weights to master at img 47599
+master-1  | [Master] Received weights from slaver at img 17599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000660, recv: 0.044198 seconds at img 47599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001201, averaging: 0.002310, send: 0.001218 seconds at img 17599
+slaver-1  | [Slaver] total sync took 0.049858 seconds at img 47599
+master-1  | [Master] total sync took 0.007658 seconds at img 17599
+slaver-1  | [Slaver] Sent weights to master at img 47699
+master-1  | [Master] Received weights from slaver at img 17699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001149, averaging: 0.002398, send: 0.001523 seconds at img 17699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000534, recv: 0.019550 seconds at img 47699
+slaver-1  | [Slaver] total sync took 0.026775 seconds at img 47699
+master-1  | [Master] total sync took 0.008297 seconds at img 17699
+slaver-1  | [Slaver] Sent weights to master at img 47799
+master-1  | [Master] Received weights from slaver at img 17799
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000961, recv: 0.005190 seconds at img 47799
+master-1  | [Master] recv: 0.003041, averaging: 0.002505, send: 0.001191 seconds at img 17799
+master-1  | [Master] total sync took 0.011775 seconds at img 17799
+slaver-1  | [Slaver] total sync took 0.012570 seconds at img 47799
+slaver-1  | [Slaver] Sent weights to master at img 47899
+master-1  | [Master] Received weights from slaver at img 17899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001022, averaging: 0.002580, send: 0.001256 seconds at img 17899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000573, recv: 0.041041 seconds at img 47899
+master-1  | [Master] total sync took 0.007743 seconds at img 17899
+slaver-1  | [Slaver] total sync took 0.044838 seconds at img 47899
+slaver-1  | [Slaver] Sent weights to master at img 47999
+master-1  | [Master] Received weights from slaver at img 17999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.030567, averaging: 0.002189, send: 0.001091 seconds at img 17999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000869, recv: 0.005797 seconds at img 47999
+slaver-1  | [Slaver] total sync took 0.009835 seconds at img 47999
+master-1  | [Master] total sync took 0.037278 seconds at img 17999
+master-1  | *** Average loss after 18000 images: 0.122603 ***
+slaver-1  | *** Average loss after 48000 images: 0.117698 ***
+slaver-1  | *** After 48000 images: 93.30% accuracy ***
+master-1  | *** After 18000 images: 92.60% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 48099
+master-1  | [Master] Received weights from slaver at img 18099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000693, recv: 0.132443 seconds at img 48099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001143, averaging: 0.002541, send: 0.001353 seconds at img 18099
+slaver-1  | [Slaver] total sync took 0.138198 seconds at img 48099
+master-1  | [Master] total sync took 0.008408 seconds at img 18099
+slaver-1  | [Slaver] Sent weights to master at img 48199
+master-1  | [Master] Received weights from slaver at img 18199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.034203, averaging: 0.002297, send: 0.001196 seconds at img 18199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000926, recv: 0.004590 seconds at img 48199
+master-1  | [Master] total sync took 0.040648 seconds at img 18199
+slaver-1  | [Slaver] total sync took 0.012222 seconds at img 48199
+slaver-1  | [Slaver] Sent weights to master at img 48299
+master-1  | [Master] Received weights from slaver at img 18299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000906, recv: 0.004547 seconds at img 48299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.015576, averaging: 0.002203, send: 0.001281 seconds at img 18299
+master-1  | [Master] total sync took 0.022442 seconds at img 18299
+slaver-1  | [Slaver] total sync took 0.015762 seconds at img 48299
+slaver-1  | [Slaver] Sent weights to master at img 48399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000753, recv: 0.004233 seconds at img 48399
+slaver-1  | [Slaver] total sync took 0.007815 seconds at img 48399
+master-1  | [Master] Received weights from slaver at img 18399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.110455, averaging: 0.002031, send: 0.001258 seconds at img 18399
+master-1  | [Master] total sync took 0.116612 seconds at img 18399
+slaver-1  | [Slaver] Sent weights to master at img 48499
+master-1  | [Master] Received weights from slaver at img 18499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001169, averaging: 0.002866, send: 0.001219 seconds at img 18499
+master-1  | [Master] total sync took 0.008157 seconds at img 18499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000618, recv: 0.100333 seconds at img 48499
+slaver-1  | [Slaver] total sync took 0.104486 seconds at img 48499
+slaver-1  | [Slaver] Sent weights to master at img 48599
+master-1  | [Master] Received weights from slaver at img 18599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001404, averaging: 0.002434, send: 0.001545 seconds at img 18599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000745, recv: 0.019119 seconds at img 48599
+slaver-1  | [Slaver] total sync took 0.023490 seconds at img 48599
+master-1  | [Master] total sync took 0.008664 seconds at img 18599
+slaver-1  | [Slaver] Sent weights to master at img 48699
+master-1  | [Master] Received weights from slaver at img 18699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000905, recv: 0.005717 seconds at img 48699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.079562, averaging: 0.002522, send: 0.001434 seconds at img 18699
+master-1  | [Master] total sync took 0.086873 seconds at img 18699
+slaver-1  | [Slaver] total sync took 0.011391 seconds at img 48699
+slaver-1  | [Slaver] Sent weights to master at img 48799
+master-1  | [Master] Received weights from slaver at img 18799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001889, averaging: 0.002182, send: 0.001241 seconds at img 18799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000589, recv: 0.173844 seconds at img 48799
+slaver-1  | [Slaver] total sync took 0.178906 seconds at img 48799
+master-1  | [Master] total sync took 0.008169 seconds at img 18799
+slaver-1  | [Slaver] Sent weights to master at img 48899
+master-1  | [Master] Received weights from slaver at img 18899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001000, recv: 0.007151 seconds at img 48899
+slaver-1  | [Slaver] total sync took 0.011574 seconds at img 48899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.786970, averaging: 0.002874, send: 0.003279 seconds at img 18899
+master-1  | [Master] total sync took 0.797458 seconds at img 18899
+slaver-1  | [Slaver] Sent weights to master at img 48999
+master-1  | [Master] Received weights from slaver at img 18999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.002089, averaging: 0.003060, send: 0.001287 seconds at img 18999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000567, recv: 0.070909 seconds at img 48999
+slaver-1  | [Slaver] total sync took 0.074977 seconds at img 48999
+master-1  | [Master] total sync took 0.010493 seconds at img 18999
+master-1  | *** Average loss after 19000 images: 0.080495 ***
+slaver-1  | *** Average loss after 49000 images: 0.098423 ***
+master-1  | *** After 19000 images: 93.60% accuracy ***
+slaver-1  | *** After 49000 images: 93.40% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 49099
+master-1  | [Master] Received weights from slaver at img 19099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000929, recv: 0.007201 seconds at img 49099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.022230, averaging: 0.002774, send: 0.002146 seconds at img 19099
+master-1  | [Master] total sync took 0.031024 seconds at img 19099
+slaver-1  | [Slaver] total sync took 0.014902 seconds at img 49099
+slaver-1  | [Slaver] Sent weights to master at img 49199
+master-1  | [Master] Received weights from slaver at img 19199
+slaver-1  | [Slaver] Received updated weights from master
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] send: 0.000674, recv: 0.036314 seconds at img 49199
+master-1  | [Master] recv: 0.002893, averaging: 0.002437, send: 0.001343 seconds at img 19199
+master-1  | [Master] total sync took 0.011100 seconds at img 19199
+slaver-1  | [Slaver] total sync took 0.044170 seconds at img 49199
+slaver-1  | [Slaver] Sent weights to master at img 49299
+master-1  | [Master] Received weights from slaver at img 19299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.030090, averaging: 0.002664, send: 0.000854 seconds at img 19299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000850, recv: 0.004965 seconds at img 49299
+master-1  | [Master] total sync took 0.036994 seconds at img 19299
+slaver-1  | [Slaver] total sync took 0.013078 seconds at img 49299
+slaver-1  | [Slaver] Sent weights to master at img 49399
+master-1  | [Master] Received weights from slaver at img 19399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000634, recv: 0.064845 seconds at img 49399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000888, averaging: 0.002324, send: 0.001161 seconds at img 19399
+master-1  | [Master] total sync took 0.007513 seconds at img 19399
+slaver-1  | [Slaver] total sync took 0.068930 seconds at img 49399
+slaver-1  | [Slaver] Sent weights to master at img 49499
+master-1  | [Master] Received weights from slaver at img 19499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000886, recv: 0.004162 seconds at img 49499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.050192, averaging: 0.002270, send: 0.001156 seconds at img 19499
+master-1  | [Master] total sync took 0.056685 seconds at img 19499
+slaver-1  | [Slaver] total sync took 0.009932 seconds at img 49499
+slaver-1  | [Slaver] Sent weights to master at img 49599
+master-1  | [Master] Received weights from slaver at img 19599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000615, recv: 0.087720 seconds at img 49599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000979, averaging: 0.003113, send: 0.001070 seconds at img 19599
+master-1  | [Master] total sync took 0.008655 seconds at img 19599
+slaver-1  | [Slaver] total sync took 0.091417 seconds at img 49599
+slaver-1  | [Slaver] Sent weights to master at img 49699
+master-1  | [Master] Received weights from slaver at img 19699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000743, recv: 0.005420 seconds at img 49699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.015572, averaging: 0.002192, send: 0.001370 seconds at img 19699
+master-1  | [Master] total sync took 0.022023 seconds at img 19699
+slaver-1  | [Slaver] total sync took 0.013162 seconds at img 49699
+slaver-1  | [Slaver] Sent weights to master at img 49799
+master-1  | [Master] Received weights from slaver at img 19799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000482, recv: 0.042354 seconds at img 49799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.002499, averaging: 0.002790, send: 0.001061 seconds at img 19799
+master-1  | [Master] total sync took 0.009909 seconds at img 19799
+slaver-1  | [Slaver] total sync took 0.049667 seconds at img 49799
+slaver-1  | [Slaver] Sent weights to master at img 49899
+master-1  | [Master] Received weights from slaver at img 19899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.060155, averaging: 0.002510, send: 0.001538 seconds at img 19899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001025, recv: 0.007417 seconds at img 49899
+master-1  | [Master] total sync took 0.069607 seconds at img 19899
+slaver-1  | [Slaver] total sync took 0.012158 seconds at img 49899
+slaver-1  | [Slaver] Sent weights to master at img 49999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000754, recv: 0.005025 seconds at img 49999
+master-1  | [Master] Received weights from slaver at img 19999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.133503, averaging: 0.002177, send: 0.001161 seconds at img 19999
+master-1  | [Master] total sync took 0.139803 seconds at img 19999
+slaver-1  | [Slaver] total sync took 0.013520 seconds at img 49999
+slaver-1  | *** Average loss after 50000 images: 0.123143 ***
+master-1  | *** Average loss after 20000 images: 0.087986 ***
+master-1  | *** After 20000 images: 93.00% accuracy ***
+slaver-1  | *** After 50000 images: 93.00% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 50099
+master-1  | [Master] Received weights from slaver at img 20099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.420625, averaging: 0.002165, send: 0.001501 seconds at img 20099
+master-1  | [Master] total sync took 0.427455 seconds at img 20099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000710, recv: 0.006252 seconds at img 50099
+slaver-1  | [Slaver] total sync took 0.009566 seconds at img 50099
+slaver-1  | [Slaver] Sent weights to master at img 50199
+master-1  | [Master] Received weights from slaver at img 20199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.061899, averaging: 0.002815, send: 0.001084 seconds at img 20199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000679, recv: 0.005763 seconds at img 50199
+master-1  | [Master] total sync took 0.068692 seconds at img 20199
+slaver-1  | [Slaver] total sync took 0.013476 seconds at img 50199
+slaver-1  | [Slaver] Sent weights to master at img 50299
+master-1  | [Master] Received weights from slaver at img 20299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.239981, averaging: 0.004783, send: 0.003214 seconds at img 20299
+master-1  | [Master] total sync took 0.260117 seconds at img 20299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000618, recv: 0.018452 seconds at img 50299
+slaver-1  | [Slaver] total sync took 0.022616 seconds at img 50299
+slaver-1  | [Slaver] Sent weights to master at img 50399
+master-1  | [Master] Received weights from slaver at img 20399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.139456, averaging: 0.002179, send: 0.001587 seconds at img 20399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000892, recv: 0.006651 seconds at img 50399
+slaver-1  | [Slaver] total sync took 0.010867 seconds at img 50399
+master-1  | [Master] total sync took 0.146129 seconds at img 20399
+slaver-1  | [Slaver] Sent weights to master at img 50499
+master-1  | [Master] Received weights from slaver at img 20499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000593, recv: 0.041998 seconds at img 50499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001117, averaging: 0.002205, send: 0.001256 seconds at img 20499
+slaver-1  | [Slaver] total sync took 0.046796 seconds at img 50499
+master-1  | [Master] total sync took 0.007832 seconds at img 20499
+slaver-1  | [Slaver] Sent weights to master at img 50599
+master-1  | [Master] Received weights from slaver at img 20599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000600, recv: 0.025459 seconds at img 50599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001190, averaging: 0.002970, send: 0.001157 seconds at img 20599
+master-1  | [Master] total sync took 0.009117 seconds at img 20599
+slaver-1  | [Slaver] total sync took 0.030809 seconds at img 50599
+slaver-1  | [Slaver] Sent weights to master at img 50699
+master-1  | [Master] Received weights from slaver at img 20699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.012623, averaging: 0.002314, send: 0.000953 seconds at img 20699
+master-1  | [Master] total sync took 0.019153 seconds at img 20699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001428, recv: 0.010200 seconds at img 50699
+slaver-1  | [Slaver] total sync took 0.015203 seconds at img 50699
+slaver-1  | [Slaver] Sent weights to master at img 50799
+master-1  | [Master] Received weights from slaver at img 20799
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000820, recv: 0.008389 seconds at img 50799
+master-1  | [Master] recv: 0.025362, averaging: 0.003983, send: 0.002141 seconds at img 20799
+slaver-1  | [Slaver] total sync took 0.013368 seconds at img 50799
+master-1  | [Master] total sync took 0.037960 seconds at img 20799
+slaver-1  | [Slaver] Sent weights to master at img 50899
+master-1  | [Master] Received weights from slaver at img 20899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000876, recv: 0.004443 seconds at img 50899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.050630, averaging: 0.002169, send: 0.001308 seconds at img 20899
+master-1  | [Master] total sync took 0.057070 seconds at img 20899
+slaver-1  | [Slaver] total sync took 0.009758 seconds at img 50899
+slaver-1  | [Slaver] Sent weights to master at img 50999
+master-1  | [Master] Received weights from slaver at img 20999
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000568, recv: 0.012687 seconds at img 50999
+master-1  | [Master] recv: 0.001195, averaging: 0.002349, send: 0.001341 seconds at img 20999
+slaver-1  | [Slaver] total sync took 0.017897 seconds at img 50999
+master-1  | [Master] total sync took 0.013515 seconds at img 20999
+slaver-1  | *** Average loss after 51000 images: 0.112432 ***
+master-1  | *** Average loss after 21000 images: 0.109368 ***
+slaver-1  | *** After 51000 images: 94.20% accuracy ***
+master-1  | *** After 21000 images: 94.10% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 51099
+master-1  | [Master] Received weights from slaver at img 21099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.277596, averaging: 0.002166, send: 0.001491 seconds at img 21099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000751, recv: 0.004864 seconds at img 51099
+slaver-1  | [Slaver] total sync took 0.008348 seconds at img 51099
+master-1  | [Master] total sync took 0.283949 seconds at img 21099
+slaver-1  | [Slaver] Sent weights to master at img 51199
+master-1  | [Master] Received weights from slaver at img 21199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000614, recv: 0.097061 seconds at img 51199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000752, averaging: 0.001904, send: 0.001073 seconds at img 21199
+master-1  | [Master] total sync took 0.006515 seconds at img 21199
+slaver-1  | [Slaver] total sync took 0.102205 seconds at img 51199
+slaver-1  | [Slaver] Sent weights to master at img 51299
+master-1  | [Master] Received weights from slaver at img 21299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.141775, averaging: 0.002330, send: 0.001171 seconds at img 21299
+master-1  | [Master] total sync took 0.148472 seconds at img 21299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000687, recv: 0.008984 seconds at img 51299
+slaver-1  | [Slaver] total sync took 0.012633 seconds at img 51299
+slaver-1  | [Slaver] Sent weights to master at img 51399
+master-1  | [Master] Received weights from slaver at img 21399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000590, averaging: 0.002341, send: 0.001337 seconds at img 21399
+master-1  | [Master] total sync took 0.007163 seconds at img 21399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000567, recv: 0.219727 seconds at img 51399
+slaver-1  | [Slaver] total sync took 0.224493 seconds at img 51399
+slaver-1  | [Slaver] Sent weights to master at img 51499
+master-1  | [Master] Received weights from slaver at img 21499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.003294, averaging: 0.002532, send: 0.002952 seconds at img 21499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.011103, recv: 0.063087 seconds at img 51499
+master-1  | [Master] total sync took 0.011958 seconds at img 21499
+slaver-1  | [Slaver] total sync took 0.077285 seconds at img 51499
+slaver-1  | [Slaver] Sent weights to master at img 51599
+master-1  | [Master] Received weights from slaver at img 21599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000520, recv: 0.101645 seconds at img 51599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000889, averaging: 0.002657, send: 0.001281 seconds at img 21599
+master-1  | [Master] total sync took 0.007917 seconds at img 21599
+slaver-1  | [Slaver] total sync took 0.105074 seconds at img 51599
+slaver-1  | [Slaver] Sent weights to master at img 51699
+master-1  | [Master] Received weights from slaver at img 21699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.017355, averaging: 0.002608, send: 0.001288 seconds at img 21699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000754, recv: 0.005999 seconds at img 51699
+master-1  | [Master] total sync took 0.024233 seconds at img 21699
+slaver-1  | [Slaver] total sync took 0.011759 seconds at img 51699
+slaver-1  | [Slaver] Sent weights to master at img 51799
+master-1  | [Master] Received weights from slaver at img 21799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.478797, averaging: 0.002948, send: 0.001180 seconds at img 21799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000924, recv: 0.010224 seconds at img 51799
+master-1  | [Master] total sync took 0.486121 seconds at img 21799
+slaver-1  | [Slaver] total sync took 0.014065 seconds at img 51799
+slaver-1  | [Slaver] Sent weights to master at img 51899
+master-1  | [Master] Received weights from slaver at img 21899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000635, averaging: 0.002138, send: 0.001314 seconds at img 21899
+master-1  | [Master] total sync took 0.006934 seconds at img 21899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000600, recv: 0.100352 seconds at img 51899
+slaver-1  | [Slaver] total sync took 0.103910 seconds at img 51899
+slaver-1  | [Slaver] Sent weights to master at img 51999
+master-1  | [Master] Received weights from slaver at img 21999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000868, recv: 0.006471 seconds at img 51999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.019226, averaging: 0.002744, send: 0.001989 seconds at img 21999
+master-1  | [Master] total sync took 0.027827 seconds at img 21999
+slaver-1  | [Slaver] total sync took 0.013814 seconds at img 51999
+master-1  | *** Average loss after 22000 images: 0.082709 ***
+slaver-1  | *** Average loss after 52000 images: 0.086450 ***
+slaver-1  | *** After 52000 images: 94.20% accuracy ***
+master-1  | *** After 22000 images: 94.20% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 52099
+master-1  | [Master] Received weights from slaver at img 22099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.002983, averaging: 0.002228, send: 0.001226 seconds at img 22099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000596, recv: 0.050149 seconds at img 52099
+slaver-1  | [Slaver] total sync took 0.054692 seconds at img 52099
+master-1  | [Master] total sync took 0.012201 seconds at img 22099
+slaver-1  | [Slaver] Sent weights to master at img 52199
+master-1  | [Master] Received weights from slaver at img 22199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.036108, averaging: 0.002564, send: 0.001008 seconds at img 22199
+master-1  | [Master] total sync took 0.042944 seconds at img 22199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000904, recv: 0.007459 seconds at img 52199
+slaver-1  | [Slaver] total sync took 0.015081 seconds at img 52199
+slaver-1  | [Slaver] Sent weights to master at img 52299
+master-1  | [Master] Received weights from slaver at img 22299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000937, averaging: 0.004558, send: 0.001377 seconds at img 22299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000611, recv: 0.074890 seconds at img 52299
+master-1  | [Master] total sync took 0.010303 seconds at img 22299
+slaver-1  | [Slaver] total sync took 0.087186 seconds at img 52299
+slaver-1  | [Slaver] Sent weights to master at img 52399
+master-1  | [Master] Received weights from slaver at img 22399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000505, recv: 0.048790 seconds at img 52399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001778, averaging: 0.002461, send: 0.001469 seconds at img 22399
+master-1  | [Master] total sync took 0.009168 seconds at img 22399
+slaver-1  | [Slaver] total sync took 0.054275 seconds at img 52399
+slaver-1  | [Slaver] Sent weights to master at img 52499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000873, recv: 0.003805 seconds at img 52499
+master-1  | [Master] Received weights from slaver at img 22499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.032414, averaging: 0.002098, send: 0.001199 seconds at img 22499
+master-1  | [Master] total sync took 0.038634 seconds at img 22499
+slaver-1  | [Slaver] total sync took 0.009220 seconds at img 52499
+slaver-1  | [Slaver] Sent weights to master at img 52599
+master-1  | [Master] Received weights from slaver at img 22599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000706, recv: 0.078865 seconds at img 52599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000818, averaging: 0.003047, send: 0.001524 seconds at img 22599
+master-1  | [Master] total sync took 0.008952 seconds at img 22599
+slaver-1  | [Slaver] total sync took 0.083749 seconds at img 52599
+slaver-1  | [Slaver] Sent weights to master at img 52699
+master-1  | [Master] Received weights from slaver at img 22699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000555, recv: 0.074208 seconds at img 52699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001344, averaging: 0.002549, send: 0.001263 seconds at img 22699
+master-1  | [Master] total sync took 0.008830 seconds at img 22699
+slaver-1  | [Slaver] total sync took 0.079570 seconds at img 52699
+slaver-1  | [Slaver] Sent weights to master at img 52799
+master-1  | [Master] Received weights from slaver at img 22799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000956, averaging: 0.002273, send: 0.001318 seconds at img 22799
+master-1  | [Master] total sync took 0.007455 seconds at img 22799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000575, recv: 0.147189 seconds at img 52799
+slaver-1  | [Slaver] total sync took 0.150868 seconds at img 52799
+slaver-1  | [Slaver] Sent weights to master at img 52899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000459, recv: 0.008489 seconds at img 52899
+master-1  | [Master] Received weights from slaver at img 22899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.083309, averaging: 0.002229, send: 0.001219 seconds at img 22899
+slaver-1  | [Slaver] total sync took 0.011917 seconds at img 52899
+master-1  | [Master] total sync took 0.092329 seconds at img 22899
+slaver-1  | [Slaver] Sent weights to master at img 52999
+master-1  | [Master] Received weights from slaver at img 22999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000913, recv: 0.004676 seconds at img 52999
+slaver-1  | [Slaver] total sync took 0.008395 seconds at img 52999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.128036, averaging: 0.002221, send: 0.001217 seconds at img 22999
+master-1  | [Master] total sync took 0.134622 seconds at img 22999
+slaver-1  | *** Average loss after 53000 images: 0.134673 ***
+master-1  | *** Average loss after 23000 images: 0.104971 ***
+slaver-1  | *** After 53000 images: 94.10% accuracy ***
+master-1  | *** After 23000 images: 94.20% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 53099
+master-1  | [Master] Received weights from slaver at img 23099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000706, averaging: 0.002265, send: 0.001286 seconds at img 23099
+master-1  | [Master] total sync took 0.007413 seconds at img 23099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000530, recv: 0.140739 seconds at img 53099
+slaver-1  | [Slaver] total sync took 0.143984 seconds at img 53099
+master-1  | [Master] Received weights from slaver at img 23199
+slaver-1  | [Slaver] Sent weights to master at img 53199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.305089, averaging: 0.001894, send: 0.001230 seconds at img 23199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001262, recv: 0.003343 seconds at img 53199
+slaver-1  | [Slaver] total sync took 0.007261 seconds at img 53199
+master-1  | [Master] total sync took 0.310845 seconds at img 23199
+slaver-1  | [Slaver] Sent weights to master at img 53299
+master-1  | [Master] Received weights from slaver at img 23299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001221, averaging: 0.002471, send: 0.001157 seconds at img 23299
+master-1  | [Master] total sync took 0.008809 seconds at img 23299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000560, recv: 0.052358 seconds at img 53299
+slaver-1  | [Slaver] total sync took 0.056433 seconds at img 53299
+slaver-1  | [Slaver] Sent weights to master at img 53399
+master-1  | [Master] Received weights from slaver at img 23399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000949, averaging: 0.002437, send: 0.001287 seconds at img 23399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000587, recv: 0.021351 seconds at img 53399
+master-1  | [Master] total sync took 0.008618 seconds at img 23399
+slaver-1  | [Slaver] total sync took 0.028320 seconds at img 53399
+slaver-1  | [Slaver] Sent weights to master at img 53499
+master-1  | [Master] Received weights from slaver at img 23499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.040063, averaging: 0.002422, send: 0.001129 seconds at img 23499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000857, recv: 0.004477 seconds at img 53499
+master-1  | [Master] total sync took 0.047157 seconds at img 23499
+slaver-1  | [Slaver] total sync took 0.010664 seconds at img 53499
+slaver-1  | [Slaver] Sent weights to master at img 53599
+master-1  | [Master] Received weights from slaver at img 23599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000563, recv: 0.011178 seconds at img 53599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001017, averaging: 0.004292, send: 0.001223 seconds at img 23599
+slaver-1  | [Slaver] total sync took 0.016562 seconds at img 53599
+master-1  | [Master] total sync took 0.011259 seconds at img 23599
+slaver-1  | [Slaver] Sent weights to master at img 53699
+master-1  | [Master] Received weights from slaver at img 23699
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000690, recv: 0.029716 seconds at img 53699
+master-1  | [Master] recv: 0.001204, averaging: 0.002254, send: 0.001158 seconds at img 23699
+slaver-1  | [Slaver] total sync took 0.034660 seconds at img 53699
+master-1  | [Master] total sync took 0.008478 seconds at img 23699
+slaver-1  | [Slaver] Sent weights to master at img 53799
+master-1  | [Master] Received weights from slaver at img 23799
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000579, recv: 0.019401 seconds at img 53799
+master-1  | [Master] recv: 0.001182, averaging: 0.002389, send: 0.001211 seconds at img 23799
+master-1  | [Master] total sync took 0.009654 seconds at img 23799
+slaver-1  | [Slaver] total sync took 0.023836 seconds at img 53799
+slaver-1  | [Slaver] Sent weights to master at img 53899
+master-1  | [Master] Received weights from slaver at img 23899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000597, recv: 0.024909 seconds at img 53899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001084, averaging: 0.002476, send: 0.001165 seconds at img 23899
+master-1  | [Master] total sync took 0.008226 seconds at img 23899
+slaver-1  | [Slaver] total sync took 0.029855 seconds at img 53899
+slaver-1  | [Slaver] Sent weights to master at img 53999
+master-1  | [Master] Received weights from slaver at img 23999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001180, averaging: 0.002096, send: 0.001145 seconds at img 23999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000670, recv: 0.045502 seconds at img 53999
+master-1  | [Master] total sync took 0.007459 seconds at img 23999
+slaver-1  | [Slaver] total sync took 0.050056 seconds at img 53999
+master-1  | *** Average loss after 24000 images: 0.099367 ***
+slaver-1  | *** Average loss after 54000 images: 0.096372 ***
+master-1  | *** After 24000 images: 94.40% accuracy ***
+slaver-1  | *** After 54000 images: 94.40% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 54099
+master-1  | [Master] Received weights from slaver at img 24099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000570, recv: 0.016633 seconds at img 54099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001381, averaging: 0.003694, send: 0.001389 seconds at img 24099
+slaver-1  | [Slaver] total sync took 0.021782 seconds at img 54099
+master-1  | [Master] total sync took 0.012018 seconds at img 24099
+master-1  | [Master] Received weights from slaver at img 24199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.025007, averaging: 0.002168, send: 0.001138 seconds at img 24199
+slaver-1  | [Slaver] Sent weights to master at img 54199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000824, recv: 0.004292 seconds at img 54199
+master-1  | [Master] total sync took 0.031548 seconds at img 24199
+slaver-1  | [Slaver] total sync took 0.012057 seconds at img 54199
+slaver-1  | [Slaver] Sent weights to master at img 54299
+master-1  | [Master] Received weights from slaver at img 24299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000713, averaging: 0.002462, send: 0.001040 seconds at img 24299
+master-1  | [Master] total sync took 0.007276 seconds at img 24299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000514, recv: 0.104232 seconds at img 54299
+slaver-1  | [Slaver] total sync took 0.108676 seconds at img 54299
+slaver-1  | [Slaver] Sent weights to master at img 54399
+master-1  | [Master] Received weights from slaver at img 24399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.047091, averaging: 0.002613, send: 0.001611 seconds at img 24399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001262, recv: 0.008222 seconds at img 54399
+slaver-1  | [Slaver] total sync took 0.014114 seconds at img 54399
+master-1  | [Master] total sync took 0.059588 seconds at img 24399
+slaver-1  | [Slaver] Sent weights to master at img 54499
+master-1  | [Master] Received weights from slaver at img 24499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.287009, averaging: 0.003256, send: 0.001209 seconds at img 24499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000822, recv: 0.008580 seconds at img 54499
+master-1  | [Master] total sync took 0.297166 seconds at img 24499
+slaver-1  | [Slaver] total sync took 0.019659 seconds at img 54499
+slaver-1  | [Slaver] Sent weights to master at img 54599
+master-1  | [Master] Received weights from slaver at img 24599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001354, recv: 0.008828 seconds at img 54599
+slaver-1  | [Slaver] total sync took 0.017203 seconds at img 54599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.727343, averaging: 0.003642, send: 0.002584 seconds at img 24599
+master-1  | [Master] total sync took 0.745020 seconds at img 24599
+slaver-1  | [Slaver] Sent weights to master at img 54699
+slaver-1  | [Slaver] Received updated weights from master
+master-1  | [Master] Received weights from slaver at img 24699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.077349, averaging: 0.003579, send: 0.001175 seconds at img 24699
+master-1  | [Master] total sync took 0.087887 seconds at img 24699
+slaver-1  | [Slaver] send: 0.000963, recv: 0.008686 seconds at img 54699
+slaver-1  | [Slaver] total sync took 0.026443 seconds at img 54699
+slaver-1  | [Slaver] Sent weights to master at img 54799
+master-1  | [Master] Received weights from slaver at img 24799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001160, averaging: 0.004366, send: 0.001600 seconds at img 24799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000732, recv: 0.017021 seconds at img 54799
+slaver-1  | [Slaver] total sync took 0.022402 seconds at img 54799
+master-1  | [Master] total sync took 0.014755 seconds at img 24799
+slaver-1  | [Slaver] Sent weights to master at img 54899
+master-1  | [Master] Received weights from slaver at img 24899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000907, averaging: 0.002556, send: 0.001122 seconds at img 24899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000573, recv: 0.074645 seconds at img 54899
+master-1  | [Master] total sync took 0.007900 seconds at img 24899
+slaver-1  | [Slaver] total sync took 0.079729 seconds at img 54899
+slaver-1  | [Slaver] Sent weights to master at img 54999
+master-1  | [Master] Received weights from slaver at img 24999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000439, averaging: 0.001993, send: 0.000916 seconds at img 24999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000573, recv: 0.241401 seconds at img 54999
+master-1  | [Master] total sync took 0.005626 seconds at img 24999
+slaver-1  | [Slaver] total sync took 0.246913 seconds at img 54999
+master-1  | *** Average loss after 25000 images: 0.096221 ***
+slaver-1  | *** Average loss after 55000 images: 0.090530 ***
+slaver-1  | *** After 55000 images: 94.20% accuracy ***
+master-1  | *** After 25000 images: 94.00% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 55099
+master-1  | [Master] Received weights from slaver at img 25099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000764, averaging: 0.001962, send: 0.000972 seconds at img 25099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001226, recv: 0.142082 seconds at img 55099
+master-1  | [Master] total sync took 0.006368 seconds at img 25099
+slaver-1  | [Slaver] total sync took 0.148707 seconds at img 55099
+slaver-1  | [Slaver] Sent weights to master at img 55199
+master-1  | [Master] Received weights from slaver at img 25199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.002061, recv: 0.004383 seconds at img 55199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.051430, averaging: 0.002770, send: 0.001510 seconds at img 25199
+master-1  | [Master] total sync took 0.059580 seconds at img 25199
+slaver-1  | [Slaver] total sync took 0.010200 seconds at img 55199
+master-1  | [Master] Received weights from slaver at img 25299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.071019, averaging: 0.002679, send: 0.001222 seconds at img 25299
+slaver-1  | [Slaver] Sent weights to master at img 55299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000905, recv: 0.005902 seconds at img 55299
+master-1  | [Master] total sync took 0.077749 seconds at img 25299
+slaver-1  | [Slaver] total sync took 0.009661 seconds at img 55299
+slaver-1  | [Slaver] Sent weights to master at img 55399
+master-1  | [Master] Received weights from slaver at img 25399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000848, recv: 0.007341 seconds at img 55399
+slaver-1  | [Slaver] total sync took 0.011740 seconds at img 55399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.037396, averaging: 0.002907, send: 0.001212 seconds at img 25399
+master-1  | [Master] total sync took 0.046412 seconds at img 25399
+slaver-1  | [Slaver] Sent weights to master at img 55499
+master-1  | [Master] Received weights from slaver at img 25499
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000759, recv: 0.198106 seconds at img 55499
+slaver-1  | [Slaver] total sync took 0.202018 seconds at img 55499
+master-1  | [Master] recv: 0.000492, averaging: 0.002263, send: 0.001057 seconds at img 25499
+master-1  | [Master] total sync took 0.007187 seconds at img 25499
+slaver-1  | [Slaver] Sent weights to master at img 55599
+master-1  | [Master] Received weights from slaver at img 25599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001086, recv: 0.005272 seconds at img 55599
+slaver-1  | [Slaver] total sync took 0.009375 seconds at img 55599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.011689, averaging: 0.002113, send: 0.001275 seconds at img 25599
+master-1  | [Master] total sync took 0.017845 seconds at img 25599
+slaver-1  | [Slaver] Sent weights to master at img 55699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000631, recv: 0.281409 seconds at img 55699
+slaver-1  | [Slaver] total sync took 0.285082 seconds at img 55699
+master-1  | [Master] Received weights from slaver at img 25699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000713, averaging: 0.002127, send: 0.001298 seconds at img 25699
+master-1  | [Master] total sync took 0.006787 seconds at img 25699
+slaver-1  | [Slaver] Sent weights to master at img 55799
+master-1  | [Master] Received weights from slaver at img 25799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.354878, averaging: 0.001877, send: 0.000892 seconds at img 25799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001297, recv: 0.003659 seconds at img 55799
+master-1  | [Master] total sync took 0.360105 seconds at img 25799
+slaver-1  | [Slaver] total sync took 0.007622 seconds at img 55799
+slaver-1  | [Slaver] Sent weights to master at img 55899
+master-1  | [Master] Received weights from slaver at img 25899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000594, recv: 0.039123 seconds at img 55899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000996, averaging: 0.002541, send: 0.002615 seconds at img 25899
+master-1  | [Master] total sync took 0.009378 seconds at img 25899
+slaver-1  | [Slaver] total sync took 0.045018 seconds at img 55899
+slaver-1  | [Slaver] Sent weights to master at img 55999
+master-1  | [Master] Received weights from slaver at img 25999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000585, recv: 0.016031 seconds at img 55999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001214, averaging: 0.002442, send: 0.001175 seconds at img 25999
+master-1  | [Master] total sync took 0.008155 seconds at img 25999
+slaver-1  | [Slaver] total sync took 0.020758 seconds at img 55999
+master-1  | *** Average loss after 26000 images: 0.080811 ***
+slaver-1  | *** Average loss after 56000 images: 0.078696 ***
+slaver-1  | *** After 56000 images: 94.40% accuracy ***
+master-1  | *** After 26000 images: 94.30% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 56099
+master-1  | [Master] Received weights from slaver at img 26099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000571, recv: 0.155898 seconds at img 56099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001706, averaging: 0.002024, send: 0.001176 seconds at img 26099
+master-1  | [Master] total sync took 0.007394 seconds at img 26099
+slaver-1  | [Slaver] total sync took 0.160872 seconds at img 56099
+slaver-1  | [Slaver] Sent weights to master at img 56199
+master-1  | [Master] Received weights from slaver at img 26199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.041910, averaging: 0.002244, send: 0.001060 seconds at img 26199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001275, recv: 0.003705 seconds at img 56199
+master-1  | [Master] total sync took 0.048325 seconds at img 26199
+slaver-1  | [Slaver] total sync took 0.008058 seconds at img 56199
+slaver-1  | [Slaver] Sent weights to master at img 56299
+master-1  | [Master] Received weights from slaver at img 26299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000533, recv: 0.093338 seconds at img 56299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000553, averaging: 0.002729, send: 0.001238 seconds at img 26299
+slaver-1  | [Slaver] total sync took 0.097988 seconds at img 56299
+master-1  | [Master] total sync took 0.008089 seconds at img 26299
+slaver-1  | [Slaver] Sent weights to master at img 56399
+master-1  | [Master] Received weights from slaver at img 26399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.008518, averaging: 0.002222, send: 0.001127 seconds at img 26399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001118, recv: 0.002133 seconds at img 56399
+master-1  | [Master] total sync took 0.014766 seconds at img 26399
+slaver-1  | [Slaver] total sync took 0.014111 seconds at img 56399
+slaver-1  | [Slaver] Sent weights to master at img 56499
+master-1  | [Master] Received weights from slaver at img 26499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001218, averaging: 0.002388, send: 0.001505 seconds at img 26499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000643, recv: 0.037265 seconds at img 56499
+master-1  | [Master] total sync took 0.008887 seconds at img 26499
+slaver-1  | [Slaver] total sync took 0.043428 seconds at img 56499
+slaver-1  | [Slaver] Sent weights to master at img 56599
+master-1  | [Master] Received weights from slaver at img 26599
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000781, recv: 0.007592 seconds at img 56599
+master-1  | [Master] recv: 0.002560, averaging: 0.002252, send: 0.001165 seconds at img 26599
+master-1  | [Master] total sync took 0.010329 seconds at img 26599
+slaver-1  | [Slaver] total sync took 0.018427 seconds at img 56599
+slaver-1  | [Slaver] Sent weights to master at img 56699
+master-1  | [Master] Received weights from slaver at img 26699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000537, recv: 0.034246 seconds at img 56699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001561, averaging: 0.002187, send: 0.001267 seconds at img 26699
+master-1  | [Master] total sync took 0.008897 seconds at img 26699
+slaver-1  | [Slaver] total sync took 0.040424 seconds at img 56699
+slaver-1  | [Slaver] Sent weights to master at img 56799
+master-1  | [Master] Received weights from slaver at img 26799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.022655, averaging: 0.002893, send: 0.001262 seconds at img 26799
+master-1  | [Master] total sync took 0.031480 seconds at img 26799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000743, recv: 0.009691 seconds at img 56799
+slaver-1  | [Slaver] total sync took 0.015279 seconds at img 56799
+slaver-1  | [Slaver] Sent weights to master at img 56899
+master-1  | [Master] Received weights from slaver at img 26899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000578, averaging: 0.002430, send: 0.001528 seconds at img 26899
+master-1  | [Master] total sync took 0.007917 seconds at img 26899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000632, recv: 0.291999 seconds at img 56899
+slaver-1  | [Slaver] total sync took 0.295495 seconds at img 56899
+master-1  | [Master] Received weights from slaver at img 26999
+slaver-1  | [Slaver] Sent weights to master at img 56999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.072224, averaging: 0.002100, send: 0.001848 seconds at img 26999
+master-1  | [Master] total sync took 0.080380 seconds at img 26999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001323, recv: 0.006591 seconds at img 56999
+slaver-1  | [Slaver] total sync took 0.011675 seconds at img 56999
+slaver-1  | *** Average loss after 57000 images: 0.076109 ***
+master-1  | *** Average loss after 27000 images: 0.097584 ***
+slaver-1  | *** After 57000 images: 94.60% accuracy ***
+master-1  | *** After 27000 images: 94.60% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 57099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000674, recv: 0.259124 seconds at img 57099
+master-1  | [Master] Received weights from slaver at img 27099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000625, averaging: 0.002338, send: 0.001320 seconds at img 27099
+master-1  | [Master] total sync took 0.007538 seconds at img 27099
+slaver-1  | [Slaver] total sync took 0.268011 seconds at img 57099
+slaver-1  | [Slaver] Sent weights to master at img 57199
+master-1  | [Master] Received weights from slaver at img 27199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.193615, averaging: 0.003142, send: 0.001737 seconds at img 27199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.002301, recv: 0.006877 seconds at img 57199
+master-1  | [Master] total sync took 0.201686 seconds at img 27199
+slaver-1  | [Slaver] total sync took 0.011846 seconds at img 57199
+slaver-1  | [Slaver] Sent weights to master at img 57299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000599, recv: 0.228497 seconds at img 57299
+master-1  | [Master] Received weights from slaver at img 27299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000467, averaging: 0.002202, send: 0.001229 seconds at img 27299
+master-1  | [Master] total sync took 0.006823 seconds at img 27299
+slaver-1  | [Slaver] total sync took 0.232852 seconds at img 57299
+slaver-1  | [Slaver] Sent weights to master at img 57399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001382, recv: 0.008251 seconds at img 57399
+master-1  | [Master] Received weights from slaver at img 27399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.089307, averaging: 0.005592, send: 0.001725 seconds at img 27399
+master-1  | [Master] total sync took 0.099996 seconds at img 27399
+slaver-1  | [Slaver] total sync took 0.015327 seconds at img 57399
+slaver-1  | [Slaver] Sent weights to master at img 57499
+master-1  | [Master] Received weights from slaver at img 27499
+slaver-1  | [Slaver] Received updated weights from master
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.006165, averaging: 0.002219, send: 0.001782 seconds at img 27499
+slaver-1  | [Slaver] send: 0.000852, recv: 0.004223 seconds at img 57499
+master-1  | [Master] total sync took 0.014966 seconds at img 27499
+slaver-1  | [Slaver] total sync took 0.020332 seconds at img 57499
+slaver-1  | [Slaver] Sent weights to master at img 57599
+master-1  | [Master] Received weights from slaver at img 27599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000559, recv: 0.030009 seconds at img 57599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001035, averaging: 0.003146, send: 0.001039 seconds at img 27599
+master-1  | [Master] total sync took 0.008303 seconds at img 27599
+slaver-1  | [Slaver] total sync took 0.034959 seconds at img 57599
+master-1  | [Master] Received weights from slaver at img 27699
+slaver-1  | [Slaver] Sent weights to master at img 57699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.012109, averaging: 0.002281, send: 0.001255 seconds at img 27699
+master-1  | [Master] total sync took 0.019007 seconds at img 27699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001352, recv: 0.010695 seconds at img 57699
+slaver-1  | [Slaver] total sync took 0.015498 seconds at img 57699
+slaver-1  | [Slaver] Sent weights to master at img 57799
+master-1  | [Master] Received weights from slaver at img 27799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000770, recv: 0.024355 seconds at img 57799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001001, averaging: 0.002445, send: 0.001157 seconds at img 27799
+master-1  | [Master] total sync took 0.007992 seconds at img 27799
+slaver-1  | [Slaver] total sync took 0.030077 seconds at img 57799
+slaver-1  | [Slaver] Sent weights to master at img 57899
+master-1  | [Master] Received weights from slaver at img 27899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.017102, averaging: 0.002373, send: 0.001221 seconds at img 27899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000915, recv: 0.007542 seconds at img 57899
+master-1  | [Master] total sync took 0.024582 seconds at img 27899
+slaver-1  | [Slaver] total sync took 0.017897 seconds at img 57899
+slaver-1  | [Slaver] Sent weights to master at img 57999
+master-1  | [Master] Received weights from slaver at img 27999
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.066631, averaging: 0.002679, send: 0.001198 seconds at img 27999
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000792, recv: 0.004719 seconds at img 57999
+master-1  | [Master] total sync took 0.073846 seconds at img 27999
+slaver-1  | [Slaver] total sync took 0.009048 seconds at img 57999
+slaver-1  | *** Average loss after 58000 images: 0.069675 ***
+master-1  | *** Average loss after 28000 images: 0.092866 ***
+slaver-1  | *** After 58000 images: 94.50% accuracy ***
+master-1  | *** After 28000 images: 94.50% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 58099
+master-1  | [Master] Received weights from slaver at img 28099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000715, averaging: 0.002730, send: 0.002303 seconds at img 28099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000575, recv: 0.083186 seconds at img 58099
+master-1  | [Master] total sync took 0.008923 seconds at img 28099
+slaver-1  | [Slaver] total sync took 0.089775 seconds at img 58099
+slaver-1  | [Slaver] Sent weights to master at img 58199
+master-1  | [Master] Received weights from slaver at img 28199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000666, recv: 0.086220 seconds at img 58199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000770, averaging: 0.002029, send: 0.001016 seconds at img 28199
+master-1  | [Master] total sync took 0.006541 seconds at img 28199
+slaver-1  | [Slaver] total sync took 0.090490 seconds at img 58199
+slaver-1  | [Slaver] Sent weights to master at img 58299
+master-1  | [Master] Received weights from slaver at img 28299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000787, recv: 0.004478 seconds at img 58299
+slaver-1  | [Slaver] total sync took 0.009959 seconds at img 58299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.119343, averaging: 0.002304, send: 0.001265 seconds at img 28299
+master-1  | [Master] total sync took 0.125748 seconds at img 28299
+slaver-1  | [Slaver] Sent weights to master at img 58399
+master-1  | [Master] Received weights from slaver at img 28399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.007296, averaging: 0.002560, send: 0.001212 seconds at img 28399
+master-1  | [Master] total sync took 0.013807 seconds at img 28399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000573, recv: 0.017477 seconds at img 58399
+slaver-1  | [Slaver] total sync took 0.021692 seconds at img 58399
+slaver-1  | [Slaver] Sent weights to master at img 58499
+master-1  | [Master] Received weights from slaver at img 28499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000449, averaging: 0.004676, send: 0.002531 seconds at img 28499
+master-1  | [Master] total sync took 0.010902 seconds at img 28499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000525, recv: 1.040939 seconds at img 58499
+slaver-1  | [Slaver] total sync took 1.044854 seconds at img 58499
+slaver-1  | [Slaver] Sent weights to master at img 58599
+master-1  | [Master] Received weights from slaver at img 28599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001016, recv: 0.371067 seconds at img 58599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000455, averaging: 0.002389, send: 0.002077 seconds at img 28599
+slaver-1  | [Slaver] total sync took 0.375310 seconds at img 58599
+master-1  | [Master] total sync took 0.008037 seconds at img 28599
+slaver-1  | [Slaver] Sent weights to master at img 58699
+master-1  | [Master] Received weights from slaver at img 28699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.003258, recv: 0.004366 seconds at img 58699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.061270, averaging: 0.002800, send: 0.001463 seconds at img 28699
+slaver-1  | [Slaver] total sync took 0.011196 seconds at img 58699
+master-1  | [Master] total sync took 0.069536 seconds at img 28699
+slaver-1  | [Slaver] Sent weights to master at img 58799
+master-1  | [Master] Received weights from slaver at img 28799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000789, recv: 0.004966 seconds at img 58799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.039232, averaging: 0.002764, send: 0.001102 seconds at img 28799
+master-1  | [Master] total sync took 0.047090 seconds at img 28799
+slaver-1  | [Slaver] total sync took 0.009351 seconds at img 58799
+slaver-1  | [Slaver] Sent weights to master at img 58899
+master-1  | [Master] Received weights from slaver at img 28899
+slaver-1  | [Slaver] Received updated weights from master
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001158, averaging: 0.002362, send: 0.001303 seconds at img 28899
+master-1  | [Master] total sync took 0.008345 seconds at img 28899
+slaver-1  | [Slaver] send: 0.000682, recv: 0.016079 seconds at img 58899
+slaver-1  | [Slaver] total sync took 0.023273 seconds at img 58899
+slaver-1  | [Slaver] Sent weights to master at img 58999
+master-1  | [Master] Received weights from slaver at img 28999
+master-1  | [Master] Sent averaged weights to slaver
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000734, recv: 0.019543 seconds at img 58999
+master-1  | [Master] recv: 0.001530, averaging: 0.003559, send: 0.001313 seconds at img 28999
+master-1  | [Master] total sync took 0.011065 seconds at img 28999
+slaver-1  | [Slaver] total sync took 0.027009 seconds at img 58999
+master-1  | *** Average loss after 29000 images: 0.076349 ***
+slaver-1  | *** Average loss after 59000 images: 0.042344 ***
+slaver-1  | *** After 59000 images: 94.80% accuracy ***
+master-1  | *** After 29000 images: 94.70% accuracy ***
+slaver-1  | [Slaver] Sent weights to master at img 59099
+master-1  | [Master] Received weights from slaver at img 29099
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000625, recv: 0.090228 seconds at img 59099
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.001064, averaging: 0.002188, send: 0.001687 seconds at img 29099
+master-1  | [Master] total sync took 0.007936 seconds at img 29099
+slaver-1  | [Slaver] total sync took 0.095107 seconds at img 59099
+slaver-1  | [Slaver] Sent weights to master at img 59199
+master-1  | [Master] Received weights from slaver at img 29199
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001500, recv: 0.005446 seconds at img 59199
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.332183, averaging: 0.002884, send: 0.001414 seconds at img 29199
+master-1  | [Master] total sync took 0.339582 seconds at img 29199
+slaver-1  | [Slaver] total sync took 0.010635 seconds at img 59199
+master-1  | [Master] Received weights from slaver at img 29299
+slaver-1  | [Slaver] Sent weights to master at img 59299
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.295051, averaging: 0.002820, send: 0.001283 seconds at img 29299
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001019, recv: 0.006640 seconds at img 59299
+master-1  | [Master] total sync took 0.303756 seconds at img 29299
+slaver-1  | [Slaver] total sync took 0.017043 seconds at img 59299
+slaver-1  | [Slaver] Sent weights to master at img 59399
+master-1  | [Master] Received weights from slaver at img 29399
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.656646, averaging: 0.002794, send: 0.001105 seconds at img 29399
+master-1  | [Master] total sync took 0.663794 seconds at img 29399
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000855, recv: 0.012085 seconds at img 59399
+slaver-1  | [Slaver] total sync took 0.020187 seconds at img 59399
+slaver-1  | [Slaver] Sent weights to master at img 59499
+master-1  | [Master] Received weights from slaver at img 29499
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000650, recv: 0.236318 seconds at img 59499
+slaver-1  | [Slaver] total sync took 0.240321 seconds at img 59499
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000531, averaging: 0.002287, send: 0.000812 seconds at img 29499
+master-1  | [Master] total sync took 0.006727 seconds at img 29499
+slaver-1  | [Slaver] Sent weights to master at img 59599
+master-1  | [Master] Received weights from slaver at img 29599
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.148559, averaging: 0.003325, send: 0.001672 seconds at img 29599
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.001325, recv: 0.006381 seconds at img 59599
+slaver-1  | [Slaver] total sync took 0.011315 seconds at img 59599
+master-1  | [Master] total sync took 0.158481 seconds at img 29599
+slaver-1  | [Slaver] Sent weights to master at img 59699
+master-1  | [Master] Received weights from slaver at img 29699
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000521, averaging: 0.002918, send: 0.001620 seconds at img 29699
+master-1  | [Master] total sync took 0.008283 seconds at img 29699
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000535, recv: 0.550215 seconds at img 59699
+slaver-1  | [Slaver] total sync took 0.555249 seconds at img 59699
+master-1  | [Master] Received weights from slaver at img 29799
+slaver-1  | [Slaver] Sent weights to master at img 59799
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.002431, recv: 0.004193 seconds at img 59799
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.248789, averaging: 0.002493, send: 0.001106 seconds at img 29799
+slaver-1  | [Slaver] total sync took 0.009453 seconds at img 59799
+master-1  | [Master] total sync took 0.255900 seconds at img 29799
+slaver-1  | [Slaver] Sent weights to master at img 59899
+master-1  | [Master] Received weights from slaver at img 29899
+slaver-1  | [Slaver] Received updated weights from master
+slaver-1  | [Slaver] send: 0.000755, recv: 0.099532 seconds at img 59899
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.000569, averaging: 0.002600, send: 0.001434 seconds at img 29899
+master-1  | [Master] total sync took 0.008283 seconds at img 29899
+slaver-1  | [Slaver] total sync took 0.103719 seconds at img 59899
+slaver-1  | [Slaver] Sent weights to master at img 59999
+master-1  | [Master] Received weights from slaver at img 29999
+slaver-1  | [Slaver] Received updated weights from master
+master-1  | [Master] Sent averaged weights to slaver
+master-1  | [Master] recv: 0.002243, averaging: 0.002512, send: 0.001115 seconds at img 29999
+slaver-1  | [Slaver] send: 0.000639, recv: 0.048726 seconds at img 59999
+master-1  | [Master] total sync took 0.008949 seconds at img 29999
+master-1  | [Master] Epoch 1/1 done.
+slaver-1  | [Slaver] total sync took 0.054041 seconds at img 59999
+slaver-1  | [Slaver] Epoch 1/1 done.
+slaver-1  | [slaver] Training took 331.85 seconds.
+slaver-1  | Successfully saved matrix to hidden
+slaver-1  | Successfully saved matrix to output
+slaver-1  | Successfully written to 'testing_net'
+master-1  | [master] Training took 332.20 seconds.
+master-1  | Successfully saved matrix to hidden
+master-1  | Successfully saved matrix to output
+master-1  | Successfully written to 'testing_net'
+[Kslaver-1 exited with code 0
+[Kmaster-1 exited with code 0
