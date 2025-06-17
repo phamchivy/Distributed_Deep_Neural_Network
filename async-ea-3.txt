@@ -1,0 +1,698 @@
+parameter_server-1  | [Parameter Server] Starting on port 12345
+parameter_server-1  | EASGD initialized: α=0.010, β=0.001
+parameter_server-1  | [Master] Elastic center initialized
+parameter_server-1  | [Parameter Server] Elastic center initialized
+parameter_server-1  | [Parameter Server] Server socket ready, waiting for workers...
+parameter_server-1  | [Parameter Server] Worker connected (request #1)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.019s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.001s
+parameter_server-1  | [Parameter Server] Request #1 completed in 15.904s (0.2% computation)
+parameter_server-1  | [Parameter Server] Worker connected (request #2)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.009s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.014s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.003s
+parameter_server-1  | [Parameter Server] Request #2 completed in 0.032s (79.6% computation)
+worker1-1           | [Worker 1] Starting, server: 172.31.0.10:12345
+worker1-1           | [Worker 1] Loading MNIST data...
+worker1-1           | [Worker 1] Processing images 0 to 29999 (30000 total)
+worker1-1           | EASGD initialized: α=0.010, β=0.001
+worker1-1           | [Worker 1] Network initialized with EASGD: α=0.1, β=0.01
+worker1-1           | [Worker 1] Starting epoch 1
+worker1-1           | [Worker 1] Sent 238200 weights in 0.008s
+worker1-1           | [Worker 1] Received 238200 center weights in 0.004s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #1 completed in 0.051s (total), comm overhead: 7.3%
+worker1-1           | [Worker 1] After 1000 images: accuracy=73.30%
+worker1-1           | [Worker 1] After 1000 images: avg_loss=0.382187
+worker2-1           | [Worker 2] Starting, server: 172.31.0.10:12345
+worker2-1           | [Worker 2] Loading MNIST data...
+worker2-1           | [Worker 2] Processing images 30000 to 59999 (30000 total)
+worker2-1           | EASGD initialized: α=0.010, β=0.001
+worker2-1           | [Worker 2] Network initialized with EASGD: α=0.1, β=0.01
+worker2-1           | [Worker 2] Starting epoch 1
+worker2-1           | [Worker 2] Sent 238200 weights in 0.002s
+worker2-1           | [Worker 2] Received 238200 center weights in 0.003s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #1 completed in 0.051s (total), comm overhead: 5.1%
+worker2-1           | [Worker 2] After 1000 images: accuracy=83.70%
+worker2-1           | [Worker 2] After 1000 images: avg_loss=0.428202
+parameter_server-1  | [Parameter Server] Worker connected (request #3)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.002s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.013s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.002s
+parameter_server-1  | [Parameter Server] Request #3 completed in 12.711s (0.1% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.002s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #2 completed in 0.040s (total), comm overhead: 5.3%
+parameter_server-1  | [Parameter Server] Worker connected (request #4)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.004s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.017s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Request #4 completed in 0.133s (16.4% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.003s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #2 completed in 0.054s (total), comm overhead: 5.8%
+worker1-1           | [Worker 1] After 2000 images: accuracy=85.50%
+worker1-1           | [Worker 1] After 2000 images: avg_loss=0.253127
+worker2-1           | [Worker 2] After 2000 images: accuracy=83.40%
+worker2-1           | [Worker 2] After 2000 images: avg_loss=0.292941
+parameter_server-1  | [Parameter Server] Worker connected (request #5)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.042s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.005s
+parameter_server-1  | [Parameter Server] Request #5 completed in 12.815s (0.4% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.006s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #3 completed in 0.083s (total), comm overhead: 6.7%
+parameter_server-1  | [Parameter Server] Worker connected (request #6)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.010s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.017s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.033s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.005s
+parameter_server-1  | [Parameter Server] Request #6 completed in 0.246s (22.0% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.010s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #3 completed in 0.104s (total), comm overhead: 9.8%
+worker1-1           | [Worker 1] After 3000 images: accuracy=88.10%
+worker1-1           | [Worker 1] After 3000 images: avg_loss=0.192901
+worker2-1           | [Worker 2] After 3000 images: accuracy=88.00%
+worker2-1           | [Worker 2] After 3000 images: avg_loss=0.245941
+parameter_server-1  | [Parameter Server] Worker connected (request #7)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.010s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.017s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.012s
+parameter_server-1  | [Parameter Server] Request #7 completed in 15.704s (0.3% computation)
+parameter_server-1  | [Parameter Server] Worker connected (request #8)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.029s
+worker2-1           | [Worker 2] Received 238200 center weights in 0.004s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.003s
+worker1-1           | [Worker 1] Sent 238200 weights in 0.035s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #4 completed in 0.061s (total), comm overhead: 7.2%
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.020s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.004s
+parameter_server-1  | [Parameter Server] Request #8 completed in 0.029s (91.8% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.004s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #4 completed in 0.084s (total), comm overhead: 5.3%
+worker2-1           | [Worker 2] After 4000 images: accuracy=89.70%
+worker2-1           | [Worker 2] After 4000 images: avg_loss=0.178912
+worker1-1           | [Worker 1] After 4000 images: accuracy=87.30%
+worker1-1           | [Worker 1] After 4000 images: avg_loss=0.173808
+parameter_server-1  | [Parameter Server] Worker connected (request #9)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.006s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.006s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.018s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.004s
+parameter_server-1  | [Parameter Server] Request #9 completed in 15.627s (0.2% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.005s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #5 completed in 0.064s (total), comm overhead: 8.4%
+parameter_server-1  | [Parameter Server] Worker connected (request #10)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.021s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.003s
+parameter_server-1  | [Parameter Server] Request #10 completed in 0.072s (37.3% computation)
+parameter_server-1  | [Parameter Server] === Processed 10 total requests ===
+worker2-1           | [Worker 2] Received 238200 center weights in 0.006s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #5 completed in 0.063s (total), comm overhead: 9.0%
+worker1-1           | [Worker 1] After 5000 images: accuracy=88.80%
+worker1-1           | [Worker 1] After 5000 images: avg_loss=0.167509
+worker2-1           | [Worker 2] After 5000 images: accuracy=87.50%
+worker2-1           | [Worker 2] After 5000 images: avg_loss=0.187021
+parameter_server-1  | [Parameter Server] Worker connected (request #11)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.017s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.002s
+parameter_server-1  | [Parameter Server] Request #11 completed in 14.600s (0.1% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.003s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #6 completed in 0.050s (total), comm overhead: 6.6%
+parameter_server-1  | [Parameter Server] Worker connected (request #12)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.012s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.003s
+parameter_server-1  | [Parameter Server] Request #12 completed in 0.271s (6.1% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.004s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #6 completed in 0.039s (total), comm overhead: 11.1%
+worker1-1           | [Worker 1] After 6000 images: accuracy=89.40%
+worker1-1           | [Worker 1] After 6000 images: avg_loss=0.168025
+worker2-1           | [Worker 2] After 6000 images: accuracy=87.20%
+worker2-1           | [Worker 2] After 6000 images: avg_loss=0.166100
+parameter_server-1  | [Parameter Server] Worker connected (request #13)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.006s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.006s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.019s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.007s
+parameter_server-1  | [Parameter Server] Request #13 completed in 13.869s (0.2% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.010s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #7 completed in 0.067s (total), comm overhead: 14.8%
+parameter_server-1  | [Parameter Server] Worker connected (request #14)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.003s
+worker2-1           | [Worker 2] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.023s
+worker2-1           | [Worker 2] Received 238200 center weights in 0.007s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.018s
+parameter_server-1  | [Parameter Server] Request #14 completed in 0.438s (10.1% computation)
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #7 completed in 0.063s (total), comm overhead: 11.3%
+worker1-1           | [Worker 1] After 7000 images: accuracy=88.30%
+worker1-1           | [Worker 1] After 7000 images: avg_loss=0.139755
+worker2-1           | [Worker 2] After 7000 images: accuracy=89.90%
+worker2-1           | [Worker 2] After 7000 images: avg_loss=0.141434
+parameter_server-1  | [Parameter Server] Worker connected (request #15)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.004s
+worker1-1           | [Worker 1] Sent 238200 weights in 0.004s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.023s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.003s
+parameter_server-1  | [Parameter Server] Request #15 completed in 15.278s (0.2% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.006s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #8 completed in 0.063s (total), comm overhead: 9.1%
+parameter_server-1  | [Parameter Server] Worker connected (request #16)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.003s
+worker2-1           | [Worker 2] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.022s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.002s
+worker2-1           | [Worker 2] Received 238200 center weights in 0.004s
+parameter_server-1  | [Parameter Server] Request #16 completed in 0.485s (5.4% computation)
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #8 completed in 0.067s (total), comm overhead: 5.5%
+worker1-1           | [Worker 1] After 8000 images: accuracy=89.10%
+worker1-1           | [Worker 1] After 8000 images: avg_loss=0.172861
+worker2-1           | [Worker 2] After 8000 images: accuracy=89.10%
+worker2-1           | [Worker 2] After 8000 images: avg_loss=0.190332
+parameter_server-1  | [Parameter Server] Worker connected (request #17)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.001s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.016s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.002s
+parameter_server-1  | [Parameter Server] Request #17 completed in 15.290s (0.1% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.003s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #9 completed in 0.044s (total), comm overhead: 7.3%
+parameter_server-1  | [Parameter Server] Worker connected (request #18)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.002s
+worker2-1           | [Worker 2] Sent 238200 weights in 0.001s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.015s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Request #18 completed in 0.078s (22.7% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.004s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #9 completed in 0.043s (total), comm overhead: 9.2%
+worker1-1           | [Worker 1] After 9000 images: accuracy=89.60%
+worker1-1           | [Worker 1] After 9000 images: avg_loss=0.179781
+worker2-1           | [Worker 2] After 9000 images: accuracy=86.40%
+worker2-1           | [Worker 2] After 9000 images: avg_loss=0.149900
+parameter_server-1  | [Parameter Server] Worker connected (request #19)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.001s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.001s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.014s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.002s
+parameter_server-1  | [Parameter Server] Request #19 completed in 15.019s (0.1% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.003s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #10 completed in 0.044s (total), comm overhead: 6.8%
+parameter_server-1  | [Parameter Server] Worker connected (request #20)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.004s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.004s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.016s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.001s
+parameter_server-1  | [Parameter Server] Request #20 completed in 0.147s (15.0% computation)
+parameter_server-1  | [Parameter Server] === Processed 20 total requests ===
+worker2-1           | [Worker 2] Received 238200 center weights in 0.004s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #10 completed in 0.055s (total), comm overhead: 6.9%
+worker1-1           | [Worker 1] After 10000 images: accuracy=90.70%
+worker1-1           | [Worker 1] After 10000 images: avg_loss=0.131213
+worker2-1           | [Worker 2] After 10000 images: accuracy=87.60%
+worker2-1           | [Worker 2] After 10000 images: avg_loss=0.158959
+parameter_server-1  | [Parameter Server] Worker connected (request #21)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.003s
+worker1-1           | [Worker 1] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.018s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.002s
+parameter_server-1  | [Parameter Server] Request #21 completed in 16.626s (0.1% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.004s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #11 completed in 0.052s (total), comm overhead: 7.0%
+parameter_server-1  | [Parameter Server] Worker connected (request #22)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.002s
+worker2-1           | [Worker 2] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.018s
+worker2-1           | [Worker 2] Received 238200 center weights in 0.003s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Request #22 completed in 0.086s (25.5% computation)
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #11 completed in 0.054s (total), comm overhead: 5.3%
+worker1-1           | [Worker 1] After 11000 images: accuracy=90.20%
+worker1-1           | [Worker 1] After 11000 images: avg_loss=0.120520
+worker2-1           | [Worker 2] After 11000 images: accuracy=90.20%
+worker2-1           | [Worker 2] After 11000 images: avg_loss=0.125745
+parameter_server-1  | [Parameter Server] Worker connected (request #23)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.005s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.019s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.003s
+parameter_server-1  | [Parameter Server] Request #23 completed in 20.193s (0.1% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.007s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #12 completed in 0.066s (total), comm overhead: 10.2%
+parameter_server-1  | [Parameter Server] Worker connected (request #24)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.014s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.003s
+parameter_server-1  | [Parameter Server] Request #24 completed in 0.174s (11.6% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.006s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #12 completed in 0.049s (total), comm overhead: 12.3%
+worker1-1           | [Worker 1] After 12000 images: accuracy=90.00%
+worker1-1           | [Worker 1] After 12000 images: avg_loss=0.136784
+worker2-1           | [Worker 2] After 12000 images: accuracy=88.80%
+worker2-1           | [Worker 2] After 12000 images: avg_loss=0.152357
+parameter_server-1  | [Parameter Server] Worker connected (request #25)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.004s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.004s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.020s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Request #25 completed in 14.875s (0.2% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.003s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #13 completed in 0.053s (total), comm overhead: 6.2%
+parameter_server-1  | [Parameter Server] Worker connected (request #26)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.005s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.019s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.001s
+parameter_server-1  | [Parameter Server] Request #26 completed in 0.353s (7.0% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.003s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #13 completed in 0.056s (total), comm overhead: 5.9%
+worker2-1           | [Worker 2] After 13000 images: accuracy=91.10%
+worker2-1           | [Worker 2] After 13000 images: avg_loss=0.156405
+worker1-1           | [Worker 1] After 13000 images: accuracy=90.40%
+worker1-1           | [Worker 1] After 13000 images: avg_loss=0.158170
+parameter_server-1  | [Parameter Server] Worker connected (request #27)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.018s
+worker2-1           | [Worker 2] Received 238200 center weights in 0.002s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Request #27 completed in 15.582s (0.2% computation)
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #14 completed in 0.057s (total), comm overhead: 4.2%
+parameter_server-1  | [Parameter Server] Worker connected (request #28)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.002s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.032s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.007s
+parameter_server-1  | [Parameter Server] Request #28 completed in 0.256s (15.9% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.006s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #14 completed in 0.082s (total), comm overhead: 7.8%
+worker2-1           | [Worker 2] After 14000 images: accuracy=90.80%
+worker2-1           | [Worker 2] After 14000 images: avg_loss=0.115928
+worker1-1           | [Worker 1] After 14000 images: accuracy=89.70%
+worker1-1           | [Worker 1] After 14000 images: avg_loss=0.153362
+parameter_server-1  | [Parameter Server] Worker connected (request #29)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.004s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.040s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Request #29 completed in 17.854s (0.3% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.004s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #15 completed in 0.144s (total), comm overhead: 2.6%
+parameter_server-1  | [Parameter Server] Worker connected (request #30)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.003s
+worker1-1           | [Worker 1] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.019s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.005s
+parameter_server-1  | [Parameter Server] Request #30 completed in 0.413s (6.6% computation)
+parameter_server-1  | [Parameter Server] === Processed 30 total requests ===
+worker1-1           | [Worker 1] Received 238200 center weights in 0.006s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #15 completed in 0.067s (total), comm overhead: 8.5%
+worker2-1           | [Worker 2] After 15000 images: accuracy=90.90%
+worker2-1           | [Worker 2] After 15000 images: avg_loss=0.128944
+worker1-1           | [Worker 1] After 15000 images: accuracy=89.60%
+worker1-1           | [Worker 1] After 15000 images: avg_loss=0.153978
+parameter_server-1  | [Parameter Server] Worker connected (request #31)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.002s
+worker2-1           | [Worker 2] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.024s
+worker2-1           | [Worker 2] Received 238200 center weights in 0.006s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.020s
+parameter_server-1  | [Parameter Server] Request #31 completed in 17.922s (0.3% computation)
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #16 completed in 0.071s (total), comm overhead: 7.8%
+parameter_server-1  | [Parameter Server] Worker connected (request #32)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.004s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.023s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.008s
+parameter_server-1  | [Parameter Server] Request #32 completed in 0.512s (6.8% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.008s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #16 completed in 0.068s (total), comm overhead: 12.2%
+worker2-1           | [Worker 2] After 16000 images: accuracy=91.10%
+worker2-1           | [Worker 2] After 16000 images: avg_loss=0.151379
+worker1-1           | [Worker 1] After 16000 images: accuracy=91.20%
+worker1-1           | [Worker 1] After 16000 images: avg_loss=0.139798
+parameter_server-1  | [Parameter Server] Worker connected (request #33)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.003s
+worker2-1           | [Worker 2] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.016s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Request #33 completed in 14.950s (0.1% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.004s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #17 completed in 0.049s (total), comm overhead: 7.5%
+parameter_server-1  | [Parameter Server] Worker connected (request #34)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.001s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.002s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.015s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.001s
+parameter_server-1  | [Parameter Server] Request #34 completed in 0.323s (5.4% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.002s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #17 completed in 0.038s (total), comm overhead: 5.5%
+worker2-1           | [Worker 2] After 17000 images: accuracy=92.30%
+worker2-1           | [Worker 2] After 17000 images: avg_loss=0.136418
+worker1-1           | [Worker 1] After 17000 images: accuracy=91.70%
+worker1-1           | [Worker 1] After 17000 images: avg_loss=0.120987
+parameter_server-1  | [Parameter Server] Worker connected (request #35)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.001s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.014s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Request #35 completed in 14.387s (0.1% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.004s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #18 completed in 0.049s (total), comm overhead: 7.6%
+parameter_server-1  | [Parameter Server] Worker connected (request #36)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.002s
+worker1-1           | [Worker 1] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.013s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.002s
+parameter_server-1  | [Parameter Server] Request #36 completed in 0.276s (6.2% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.003s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #18 completed in 0.045s (total), comm overhead: 7.6%
+worker2-1           | [Worker 2] After 18000 images: accuracy=91.40%
+worker2-1           | [Worker 2] After 18000 images: avg_loss=0.128868
+worker1-1           | [Worker 1] After 18000 images: accuracy=91.80%
+worker1-1           | [Worker 1] After 18000 images: avg_loss=0.134887
+parameter_server-1  | [Parameter Server] Worker connected (request #37)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.002s
+worker2-1           | [Worker 2] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.018s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.007s
+parameter_server-1  | [Parameter Server] Request #37 completed in 14.378s (0.2% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.011s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #19 completed in 0.071s (total), comm overhead: 15.1%
+parameter_server-1  | [Parameter Server] Worker connected (request #38)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.004s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.021s
+worker1-1           | [Worker 1] Received 238200 center weights in 0.005s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.004s
+parameter_server-1  | [Parameter Server] Request #38 completed in 0.453s (6.4% computation)
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #19 completed in 0.074s (total), comm overhead: 6.6%
+worker2-1           | [Worker 2] After 19000 images: accuracy=92.50%
+worker2-1           | [Worker 2] After 19000 images: avg_loss=0.113853
+worker1-1           | [Worker 1] After 19000 images: accuracy=92.90%
+worker1-1           | [Worker 1] After 19000 images: avg_loss=0.092018
+parameter_server-1  | [Parameter Server] Worker connected (request #39)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.012s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Request #39 completed in 16.227s (0.1% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.003s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #20 completed in 0.042s (total), comm overhead: 8.0%
+parameter_server-1  | [Parameter Server] Worker connected (request #40)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.014s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.002s
+parameter_server-1  | [Parameter Server] Request #40 completed in 0.320s (5.8% computation)
+parameter_server-1  | [Parameter Server] === Processed 40 total requests ===
+worker1-1           | [Worker 1] Received 238200 center weights in 0.003s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #20 completed in 0.040s (total), comm overhead: 8.1%
+worker2-1           | [Worker 2] After 20000 images: accuracy=92.50%
+worker2-1           | [Worker 2] After 20000 images: avg_loss=0.132967
+worker1-1           | [Worker 1] After 20000 images: accuracy=92.10%
+worker1-1           | [Worker 1] After 20000 images: avg_loss=0.101907
+parameter_server-1  | [Parameter Server] Worker connected (request #41)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.004s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.018s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Request #41 completed in 15.495s (0.2% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.002s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #21 completed in 0.054s (total), comm overhead: 3.9%
+parameter_server-1  | [Parameter Server] Worker connected (request #42)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.002s
+worker1-1           | [Worker 1] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.014s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.002s
+parameter_server-1  | [Parameter Server] Request #42 completed in 0.468s (4.0% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.002s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #21 completed in 0.041s (total), comm overhead: 5.9%
+worker2-1           | [Worker 2] After 21000 images: accuracy=92.80%
+worker2-1           | [Worker 2] After 21000 images: avg_loss=0.126198
+worker1-1           | [Worker 1] After 21000 images: accuracy=93.30%
+worker1-1           | [Worker 1] After 21000 images: avg_loss=0.120980
+parameter_server-1  | [Parameter Server] Worker connected (request #43)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.005s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.005s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.038s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Request #43 completed in 14.042s (0.3% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.004s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #22 completed in 0.102s (total), comm overhead: 3.6%
+parameter_server-1  | [Parameter Server] Worker connected (request #44)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.005s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.016s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.001s
+parameter_server-1  | [Parameter Server] Request #44 completed in 0.598s (3.8% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.003s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #22 completed in 0.047s (total), comm overhead: 6.7%
+worker2-1           | [Worker 2] After 22000 images: accuracy=92.60%
+worker2-1           | [Worker 2] After 22000 images: avg_loss=0.090919
+worker1-1           | [Worker 1] After 22000 images: accuracy=92.80%
+worker1-1           | [Worker 1] After 22000 images: avg_loss=0.094427
+parameter_server-1  | [Parameter Server] Worker connected (request #45)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.001s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.014s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Request #45 completed in 17.045s (0.1% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.004s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #23 completed in 0.040s (total), comm overhead: 9.8%
+parameter_server-1  | [Parameter Server] Worker connected (request #46)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.018s
+worker1-1           | [Worker 1] Received 238200 center weights in 0.004s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.003s
+parameter_server-1  | [Parameter Server] Request #46 completed in 0.652s (3.6% computation)
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #23 completed in 0.055s (total), comm overhead: 8.0%
+worker2-1           | [Worker 2] After 23000 images: accuracy=92.90%
+worker2-1           | [Worker 2] After 23000 images: avg_loss=0.144270
+worker1-1           | [Worker 1] After 23000 images: accuracy=94.10%
+worker1-1           | [Worker 1] After 23000 images: avg_loss=0.123797
+parameter_server-1  | [Parameter Server] Worker connected (request #47)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.027s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.001s
+parameter_server-1  | [Parameter Server] Request #47 completed in 14.736s (0.2% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.003s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #24 completed in 0.075s (total), comm overhead: 4.0%
+parameter_server-1  | [Parameter Server] Worker connected (request #48)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.012s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.006s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.038s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.004s
+parameter_server-1  | [Parameter Server] Request #48 completed in 1.077s (4.4% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.004s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #24 completed in 0.093s (total), comm overhead: 4.1%
+worker2-1           | [Worker 2] After 24000 images: accuracy=92.40%
+worker2-1           | [Worker 2] After 24000 images: avg_loss=0.109943
+worker1-1           | [Worker 1] After 24000 images: accuracy=93.80%
+worker1-1           | [Worker 1] After 24000 images: avg_loss=0.115554
+parameter_server-1  | [Parameter Server] Worker connected (request #49)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.006s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.006s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.024s
+worker2-1           | [Worker 2] Received 238200 center weights in 0.016s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.023s
+parameter_server-1  | [Parameter Server] Request #49 completed in 13.931s (0.4% computation)
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #25 completed in 0.087s (total), comm overhead: 18.6%
+parameter_server-1  | [Parameter Server] Worker connected (request #50)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.005s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.019s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.002s
+parameter_server-1  | [Parameter Server] Request #50 completed in 0.807s (3.2% computation)
+parameter_server-1  | [Parameter Server] === Processed 50 total requests ===
+worker1-1           | [Worker 1] Received 238200 center weights in 0.005s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #25 completed in 0.060s (total), comm overhead: 7.7%
+worker2-1           | [Worker 2] After 25000 images: accuracy=92.90%
+worker2-1           | [Worker 2] After 25000 images: avg_loss=0.105949
+worker1-1           | [Worker 1] After 25000 images: accuracy=94.10%
+worker1-1           | [Worker 1] After 25000 images: avg_loss=0.110326
+parameter_server-1  | [Parameter Server] Worker connected (request #51)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.002s
+worker2-1           | [Worker 2] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.018s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.002s
+parameter_server-1  | [Parameter Server] Request #51 completed in 13.750s (0.2% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.003s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #26 completed in 0.060s (total), comm overhead: 5.5%
+parameter_server-1  | [Parameter Server] Worker connected (request #52)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.019s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.004s
+parameter_server-1  | [Parameter Server] Request #52 completed in 1.065s (2.4% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.006s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #26 completed in 0.059s (total), comm overhead: 9.8%
+worker2-1           | [Worker 2] After 26000 images: accuracy=92.80%
+worker2-1           | [Worker 2] After 26000 images: avg_loss=0.087432
+worker1-1           | [Worker 1] After 26000 images: accuracy=92.60%
+worker1-1           | [Worker 1] After 26000 images: avg_loss=0.091295
+parameter_server-1  | [Parameter Server] Worker connected (request #53)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.005s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.034s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.006s
+parameter_server-1  | [Parameter Server] Request #53 completed in 15.080s (0.3% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.005s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #27 completed in 0.102s (total), comm overhead: 5.4%
+parameter_server-1  | [Parameter Server] Worker connected (request #54)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.003s
+worker1-1           | [Worker 1] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.038s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.015s
+parameter_server-1  | [Parameter Server] Request #54 completed in 1.696s (3.3% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.032s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #27 completed in 0.136s (total), comm overhead: 23.8%
+worker2-1           | [Worker 2] After 27000 images: accuracy=92.90%
+worker2-1           | [Worker 2] After 27000 images: avg_loss=0.090443
+worker1-1           | [Worker 1] After 27000 images: accuracy=93.30%
+worker1-1           | [Worker 1] After 27000 images: avg_loss=0.113090
+parameter_server-1  | [Parameter Server] Worker connected (request #55)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.006s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.006s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.033s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.004s
+parameter_server-1  | [Parameter Server] Request #55 completed in 15.801s (0.3% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.005s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #28 completed in 0.079s (total), comm overhead: 6.4%
+parameter_server-1  | [Parameter Server] Worker connected (request #56)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.004s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.023s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.003s
+parameter_server-1  | [Parameter Server] Request #56 completed in 1.094s (2.7% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.005s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #28 completed in 0.076s (total), comm overhead: 6.2%
+worker2-1           | [Worker 2] After 28000 images: accuracy=93.30%
+worker2-1           | [Worker 2] After 28000 images: avg_loss=0.077706
+worker1-1           | [Worker 1] After 28000 images: accuracy=93.10%
+worker1-1           | [Worker 1] After 28000 images: avg_loss=0.100858
+parameter_server-1  | [Parameter Server] Worker connected (request #57)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.003s
+worker2-1           | [Worker 2] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.014s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.005s
+parameter_server-1  | [Parameter Server] Request #57 completed in 16.749s (0.1% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.009s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #29 completed in 0.062s (total), comm overhead: 14.7%
+parameter_server-1  | [Parameter Server] Worker connected (request #58)
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.003s
+worker1-1           | [Worker 1] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.019s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.002s
+parameter_server-1  | [Parameter Server] Request #58 completed in 1.088s (2.2% computation)
+worker1-1           | [Worker 1] Received 238200 center weights in 0.004s
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #29 completed in 0.063s (total), comm overhead: 6.4%
+worker2-1           | [Worker 2] After 29000 images: accuracy=93.50%
+worker2-1           | [Worker 2] After 29000 images: avg_loss=0.051833
+worker1-1           | [Worker 1] After 29000 images: accuracy=93.70%
+worker1-1           | [Worker 1] After 29000 images: avg_loss=0.094197
+parameter_server-1  | [Parameter Server] Worker connected (request #59)
+worker2-1           | [Worker 2] Sent 238200 weights in 0.002s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 2 in 0.005s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.025s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 2 in 0.001s
+parameter_server-1  | [Parameter Server] Request #59 completed in 18.667s (0.2% computation)
+worker2-1           | [Worker 2] Received 238200 center weights in 0.004s
+worker2-1           | [Worker] Applied elastic averaging with α=0.010
+worker2-1           | [Worker 2] Sync #30 completed in 0.062s (total), comm overhead: 6.0%
+parameter_server-1  | [Parameter Server] Worker connected (request #60)
+worker1-1           | [Worker 1] Sent 238200 weights in 0.003s
+parameter_server-1  | [Parameter Server] Received 238200 weights from worker 1 in 0.003s
+parameter_server-1  | [Parameter Server] Updated elastic center in 0.018s
+worker1-1           | [Worker 1] Received 238200 center weights in 0.004s
+parameter_server-1  | [Parameter Server] Sent 238200 center weights to worker 1 in 0.005s
+parameter_server-1  | [Parameter Server] Request #60 completed in 0.883s (2.9% computation)
+parameter_server-1  | [Parameter Server] === Processed 60 total requests ===
+worker1-1           | [Worker] Applied elastic averaging with α=0.010
+worker1-1           | [Worker 1] Sync #30 completed in 0.053s (total), comm overhead: 8.4%
+worker2-1           | [Worker 2] After 30000 images: accuracy=91.80%
+worker2-1           | [Worker 2] After 30000 images: avg_loss=0.060130
+worker2-1           | [Worker 2] Epoch 1 completed
+worker2-1           | [Worker 2] Training completed in 474.91 seconds, total syncs: 30
+worker1-1           | [Worker 1] After 30000 images: accuracy=93.00%
+worker1-1           | [Worker 1] After 30000 images: avg_loss=0.117180
+worker1-1           | [Worker 1] Epoch 1 completed
+worker1-1           | [Worker 1] Training completed in 476.28 seconds, total syncs: 30
+worker2-1           | Successfully saved matrix to hidden
+worker2-1           | Successfully saved matrix to output
+worker2-1           | Successfully written to 'worker_2_final'
+worker2-1           | [Worker 2] Final test accuracy: 91.80%
+[Kworker2-1 exited with code 0
+worker1-1           | Successfully saved matrix to hidden
+worker1-1           | Successfully saved matrix to output
+worker1-1           | Successfully written to 'worker_1_final'
+worker1-1           | [Worker 1] Final test accuracy: 93.00%
+[Kworker1-1 exited with code 0
+[Kparameter_server-1 exited with code 137
