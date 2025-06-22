@@ -132,6 +132,25 @@ int main(int argc, char** argv) {
             fflush(stdout);
         }
     }
+
+    // THÊM: Save final elastic center như worker
+    printf("[Parameter Server] Saving final elastic center...\n");
+    fflush(stdout);
+    
+    // Update template_net với final elastic center weights
+    int final_center_count;
+    double* final_center_weights = elastic_center_get_weights(&final_center_count);
+    network_set_weights(template_net, final_center_weights, final_center_count);
+    
+    // Save final model như worker
+    char final_model_name[256];
+    sprintf(final_model_name, "elastic_center");
+    network_save(template_net, final_model_name);
+    printf("[Parameter Server] Final elastic center saved to %s\n", final_model_name);
+    fflush(stdout);
+    
+    free(final_center_weights);
+    network_free(template_net);
     
     return 0;
 }
