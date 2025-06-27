@@ -9,10 +9,16 @@ This branch implements a **Master-Slave architecture** using Data Parallelism fo
 ## 🏗️ Architecture Overview
 
 ### Model Architecture
-![Master Slave Architecture](assets/master_slave_architecture.png)
+
+<p align="center">
+  <img src="assets/master_slave_architecture.png" width="700" alt="Description">
+</p>
 
 ### Workflow Diagram
-![Master Slave Workflow](assets/master_slave_diagram.png)
+
+<p align="center">
+  <img src="assets/master_slave_diagram.png" width="700" alt="Description">
+</p>
 
 The master-slave model distributes training data across multiple slave nodes, with the master coordinating parameter updates and synchronization.
 
