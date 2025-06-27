@@ -930,5 +930,7 @@ master-1  | [master] Training took 343.79 seconds.
 master-1  | Successfully saved matrix to hidden
 master-1  | Successfully saved matrix to output
 master-1  | Successfully written to 'testing_net'
-[Kslaver-1 exited with code 0
-[Kmaster-1 exited with code 0
+
+[Kslaver-1 exited with code 0
+
+[Kmaster-1 exited with code 0

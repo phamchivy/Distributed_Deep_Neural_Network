@@ -5,16 +5,12 @@
 #include <stdio.h>
 #include <string.h>
 #include <stdbool.h>
-#include <math.h>
-//#include <mpi.h> 
-#include <time.h> 
+#include "../util/utils.h"
 #include "../matrix/ops.h"
 #include "../neural/activations.h"
 #include "../socket/socket_utils.h"
 
 #define MAXCHAR 1000
-
-
 
 // 784, 300, 10
 NeuralNetwork* network_create(int input, int hidden, int output, double lr) {
@@ -204,12 +200,6 @@ void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size, in
     }
 }
 
-double time_in_socket_seconds() {
-    struct timespec ts;
-    clock_gettime(CLOCK_MONOTONIC, &ts);
-    return ts.tv_sec + ts.tv_nsec * 1e-9;
-}
-
 void network_train_batch_imgs_socket(
     NeuralNetwork* net,
     Img** imgs,
@@ -302,12 +292,12 @@ void network_train_batch_imgs_socket(
             matrix_free(output);
 
             // Mỗi 1000 ảnh thì trao đổi trọng số
-            if ((((i - start_index + 1) % 30000) == 0) || (i == (end_index - 1))) {
+            if ((((i - start_index + 1) % 1000) == 0) || (i == (end_index - 1))) {
                 if (weights_buffer) free(weights_buffer);
                 weights_buffer = network_get_weights(net, &weight_count);
 				
 				double t_start, t_end;
-				t_start = time_in_socket_seconds();
+				t_start = time_in_seconds();
 
                 if (is_master) {
                     // Nhận trọng số từ slaver
@@ -317,25 +307,25 @@ void network_train_batch_imgs_socket(
 					
                     double* slave_weights = (double*)malloc(sizeof(double) * weight_count);
 					
-					t_recv_start = time_in_socket_seconds();
+					t_recv_start = time_in_seconds();
                     recv_all(sockfd, slave_weights, sizeof(double) * weight_count);
-					t_recv_end = time_in_socket_seconds();
+					t_recv_end = time_in_seconds();
 					
                     printf("[Master] Received weights from slaver at img %d\n", i);
 					fflush(stdout);
 
                     // Trung bình
-					t_avg_start = time_in_socket_seconds();
+					t_avg_start = time_in_seconds();
                     for (int j = 0; j < weight_count; j++) {
                         weights_buffer[j] = (weights_buffer[j] + slave_weights[j]) / 2.0;
                     }
-					t_avg_end = time_in_socket_seconds();
+					t_avg_end = time_in_seconds();
                     free(slave_weights);
 
                     // Gửi lại trọng số mới
-					t_send_start = time_in_socket_seconds();
+					t_send_start = time_in_seconds();
                     send_all(sockfd, weights_buffer, sizeof(double) * weight_count);
-					t_send_end = time_in_socket_seconds();
+					t_send_end = time_in_seconds();
 					
                     printf("[Master] Sent averaged weights to slaver\n");
 					fflush(stdout);
@@ -351,17 +341,17 @@ void network_train_batch_imgs_socket(
 					double t_send_start, t_send_end;
 					double t_recv_start, t_recv_end;
 					
-					t_send_start = time_in_socket_seconds();
+					t_send_start = time_in_seconds();
                     send_all(sockfd, weights_buffer, sizeof(double) * weight_count);
-					t_send_end = time_in_socket_seconds();
+					t_send_end = time_in_seconds();
 					
                     printf("[Slaver] Sent weights to master at img %d\n", i);
 					fflush(stdout);
 
                     // Nhận lại trọng số đã trung bình
-					t_recv_start = time_in_socket_seconds();
+					t_recv_start = time_in_seconds();
                     recv_all(sockfd, weights_buffer, sizeof(double) * weight_count);
-					t_recv_end = time_in_socket_seconds();
+					t_recv_end = time_in_seconds();
 					
                     printf("[Slaver] Received updated weights from master\n");
 					fflush(stdout);
@@ -373,7 +363,7 @@ void network_train_batch_imgs_socket(
 					network_set_weights(net, weights_buffer, weight_count);
                 }
 
-				t_end = time_in_socket_seconds();
+				t_end = time_in_seconds();
 				if (is_master) {
 					printf("[Master] total sync took %.6f seconds at img %d\n", t_end - t_start, i);
 				} else {

@@ -1,5 +1,5 @@
 #pragma once
-
+#include <stdbool.h>
 #include "../matrix/matrix.h"
 #include "../util/img.h"
 
@@ -16,6 +16,17 @@ NeuralNetwork* network_create(int input, int hidden, int output, double lr);
 double network_train(NeuralNetwork* net, Matrix* input, Matrix* output);
 // Thêm tham số epochs vào khai báo hàm
 void network_train_batch_imgs(NeuralNetwork* net, Img** imgs, int batch_size, int epochs);
+void network_train_batch_imgs_socket(
+    NeuralNetwork* net,
+    Img** imgs,
+    int batch_size,
+    int epochs,
+    bool is_master,
+    const char* ip,
+    int port,
+    int local_cpu_count, // <--- THÊM THAM SỐ NÀY
+	Img** test_imgs
+);
 Matrix* network_predict_img(NeuralNetwork* net, Img* img);
 double network_predict_imgs(NeuralNetwork* net, Img** imgs, int n);
 Matrix* network_predict(NeuralNetwork* net, Matrix* input_data);
