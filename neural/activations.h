@@ -1,5 +1,4 @@
 #pragma once
-
 #include "../matrix/matrix.h"
 
 double sigmoid(double input);

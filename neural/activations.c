@@ -1,5 +1,4 @@
 #include "activations.h"
-
 #include <math.h>
 #include "../matrix/ops.h"
 

@@ -7,8 +7,6 @@
 #include <stdbool.h>
 #include <math.h>
 #include <time.h>
-//#include <mpi.h> 
-#include <time.h> 
 #include "../matrix/ops.h"
 #include "../neural/activations.h"
 #include "../socket/socket_utils.h"
