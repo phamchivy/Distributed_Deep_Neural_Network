@@ -7,7 +7,7 @@ This branch implements a **single-container model** with configurable OpenMP thr
 ### Neural network architecture
 
 <p align="center">
-  <img src="assets/nn_architecture.png" width="700" alt="Description">
+  <img src="assets/nn_architecture.png" width="600" alt="Description">
 </p>
 
 Neural Network Architecture: 784-300-10, use sigmoid activation function. Loss: MSE.
