@@ -4,6 +4,12 @@
 
 This branch implements a **single-container model** with configurable OpenMP thread count and CPU core allocation to evaluate parallel execution performance.
 
+### Neural network architecture
+
+![](assets/nn_architecture.png)
+
+Neural Network Architecture: 784-300-10, use sigmoid activation function. Loss: MSE.
+
 ---
 
 ## 🚀 How to Run the Project
