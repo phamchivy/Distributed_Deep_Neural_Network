@@ -9,10 +9,14 @@ This branch implements an **Asynchronous Elastic Averaging Stochastic Gradient D
 ## 🏗️ Architecture Overview
 
 ### Model Architecture
-![Async EASGD Architecture](assets/async_easgd_architecture.png)
+<p align="center">
+  <img src="assets/async_easgd_architecture.png" width="500" alt="Description">
+</p>
 
 ### Workflow Diagram
-![Async EASGD Workflow](assets/async_easgd_diagram.png)
+<p align="center">
+  <img src="assets/async_easgd_diagram.png" width="600" alt="Description">
+</p>
 
 ---
 
