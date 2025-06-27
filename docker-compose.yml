@@ -8,8 +8,8 @@ services:
     deploy:
       resources:
         limits:
-          cpus: "4.0"      # Docker Compose v3 yêu cầu phần này khi dùng với swarm mode
-    cpuset: "0-3"          # Chỉ cho phép container dùng CPU core 0 và 1
+          cpus: "4.0"      # Dùng với docker-compose version 3.9
+    cpuset: "0-3"          # Chỉ cho phép container dùng CPU core 0 đến 3
     volumes:
       - ./testing_net_single:/app/testing_net 
   # monitor:

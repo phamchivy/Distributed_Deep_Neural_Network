@@ -801,4 +801,5 @@ slaver-1  |   Class 8: 0.0001
 slaver-1  |   Class 9: 0.0205
 slaver-1  | Predicted: 4 (confidence: 0.9856)
 slaver-1  | Correct: YES
-[Kslaver-1 exited with code 0
+
+[Kslaver-1 exited with code 0

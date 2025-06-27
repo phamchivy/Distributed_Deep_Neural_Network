@@ -1,7 +1,7 @@
-slaver-1  | Untrained network: 11.60%
+slaver-1  | Untrained network: 8.50%
 slaver-1  | Img No. 0
-slaver-1  | Average loss after 1 images: 0.306617
-slaver-1  | *** After 0 images: 8.60% accuracy ***
+slaver-1  | Average loss after 1 images: 0.318790
+slaver-1  | *** After 0 images: 8.70% accuracy ***
 slaver-1  | Img No. 100
 slaver-1  | Img No. 200
 slaver-1  | Img No. 300
@@ -12,8 +12,8 @@ slaver-1  | Img No. 700
 slaver-1  | Img No. 800
 slaver-1  | Img No. 900
 slaver-1  | Img No. 1000
-slaver-1  | Average loss after 1001 images: 0.037903
-slaver-1  | *** After 1000 images: 73.50% accuracy ***
+slaver-1  | Average loss after 1001 images: 0.038161
+slaver-1  | *** After 1000 images: 74.20% accuracy ***
 slaver-1  | Img No. 1100
 slaver-1  | Img No. 1200
 slaver-1  | Img No. 1300
@@ -24,8 +24,8 @@ slaver-1  | Img No. 1700
 slaver-1  | Img No. 1800
 slaver-1  | Img No. 1900
 slaver-1  | Img No. 2000
-slaver-1  | Average loss after 2001 images: 0.025285
-slaver-1  | *** After 2000 images: 82.30% accuracy ***
+slaver-1  | Average loss after 2001 images: 0.025286
+slaver-1  | *** After 2000 images: 82.50% accuracy ***
 slaver-1  | Img No. 2100
 slaver-1  | Img No. 2200
 slaver-1  | Img No. 2300
@@ -36,8 +36,8 @@ slaver-1  | Img No. 2700
 slaver-1  | Img No. 2800
 slaver-1  | Img No. 2900
 slaver-1  | Img No. 3000
-slaver-1  | Average loss after 3001 images: 0.019486
-slaver-1  | *** After 3000 images: 87.40% accuracy ***
+slaver-1  | Average loss after 3001 images: 0.019272
+slaver-1  | *** After 3000 images: 87.70% accuracy ***
 slaver-1  | Img No. 3100
 slaver-1  | Img No. 3200
 slaver-1  | Img No. 3300
@@ -48,8 +48,8 @@ slaver-1  | Img No. 3700
 slaver-1  | Img No. 3800
 slaver-1  | Img No. 3900
 slaver-1  | Img No. 4000
-slaver-1  | Average loss after 4001 images: 0.017146
-slaver-1  | *** After 4000 images: 88.10% accuracy ***
+slaver-1  | Average loss after 4001 images: 0.017222
+slaver-1  | *** After 4000 images: 88.00% accuracy ***
 slaver-1  | Img No. 4100
 slaver-1  | Img No. 4200
 slaver-1  | Img No. 4300
@@ -60,8 +60,8 @@ slaver-1  | Img No. 4700
 slaver-1  | Img No. 4800
 slaver-1  | Img No. 4900
 slaver-1  | Img No. 5000
-slaver-1  | Average loss after 5001 images: 0.016598
-slaver-1  | *** After 5000 images: 88.30% accuracy ***
+slaver-1  | Average loss after 5001 images: 0.016574
+slaver-1  | *** After 5000 images: 88.00% accuracy ***
 slaver-1  | Img No. 5100
 slaver-1  | Img No. 5200
 slaver-1  | Img No. 5300
@@ -72,8 +72,8 @@ slaver-1  | Img No. 5700
 slaver-1  | Img No. 5800
 slaver-1  | Img No. 5900
 slaver-1  | Img No. 6000
-slaver-1  | Average loss after 6001 images: 0.016504
-slaver-1  | *** After 6000 images: 89.00% accuracy ***
+slaver-1  | Average loss after 6001 images: 0.016425
+slaver-1  | *** After 6000 images: 89.20% accuracy ***
 slaver-1  | Img No. 6100
 slaver-1  | Img No. 6200
 slaver-1  | Img No. 6300
@@ -84,8 +84,8 @@ slaver-1  | Img No. 6700
 slaver-1  | Img No. 6800
 slaver-1  | Img No. 6900
 slaver-1  | Img No. 7000
-slaver-1  | Average loss after 7001 images: 0.013845
-slaver-1  | *** After 7000 images: 88.80% accuracy ***
+slaver-1  | Average loss after 7001 images: 0.013661
+slaver-1  | *** After 7000 images: 88.40% accuracy ***
 slaver-1  | Img No. 7100
 slaver-1  | Img No. 7200
 slaver-1  | Img No. 7300
@@ -96,8 +96,8 @@ slaver-1  | Img No. 7700
 slaver-1  | Img No. 7800
 slaver-1  | Img No. 7900
 slaver-1  | Img No. 8000
-slaver-1  | Average loss after 8001 images: 0.016721
-slaver-1  | *** After 8000 images: 89.10% accuracy ***
+slaver-1  | Average loss after 8001 images: 0.016698
+slaver-1  | *** After 8000 images: 89.00% accuracy ***
 slaver-1  | Img No. 8100
 slaver-1  | Img No. 8200
 slaver-1  | Img No. 8300
@@ -108,8 +108,8 @@ slaver-1  | Img No. 8700
 slaver-1  | Img No. 8800
 slaver-1  | Img No. 8900
 slaver-1  | Img No. 9000
-slaver-1  | Average loss after 9001 images: 0.017945
-slaver-1  | *** After 9000 images: 89.50% accuracy ***
+slaver-1  | Average loss after 9001 images: 0.017648
+slaver-1  | *** After 9000 images: 89.20% accuracy ***
 slaver-1  | Img No. 9100
 slaver-1  | Img No. 9200
 slaver-1  | Img No. 9300
@@ -120,8 +120,8 @@ slaver-1  | Img No. 9700
 slaver-1  | Img No. 9800
 slaver-1  | Img No. 9900
 slaver-1  | Img No. 10000
-slaver-1  | Average loss after 10001 images: 0.012653
-slaver-1  | *** After 10000 images: 90.70% accuracy ***
+slaver-1  | Average loss after 10001 images: 0.012758
+slaver-1  | *** After 10000 images: 90.30% accuracy ***
 slaver-1  | Img No. 10100
 slaver-1  | Img No. 10200
 slaver-1  | Img No. 10300
@@ -132,8 +132,8 @@ slaver-1  | Img No. 10700
 slaver-1  | Img No. 10800
 slaver-1  | Img No. 10900
 slaver-1  | Img No. 11000
-slaver-1  | Average loss after 11001 images: 0.011669
-slaver-1  | *** After 11000 images: 89.70% accuracy ***
+slaver-1  | Average loss after 11001 images: 0.011502
+slaver-1  | *** After 11000 images: 90.30% accuracy ***
 slaver-1  | Img No. 11100
 slaver-1  | Img No. 11200
 slaver-1  | Img No. 11300
@@ -144,8 +144,8 @@ slaver-1  | Img No. 11700
 slaver-1  | Img No. 11800
 slaver-1  | Img No. 11900
 slaver-1  | Img No. 12000
-slaver-1  | Average loss after 12001 images: 0.013196
-slaver-1  | *** After 12000 images: 90.30% accuracy ***
+slaver-1  | Average loss after 12001 images: 0.012975
+slaver-1  | *** After 12000 images: 90.50% accuracy ***
 slaver-1  | Img No. 12100
 slaver-1  | Img No. 12200
 slaver-1  | Img No. 12300
@@ -156,8 +156,8 @@ slaver-1  | Img No. 12700
 slaver-1  | Img No. 12800
 slaver-1  | Img No. 12900
 slaver-1  | Img No. 13000
-slaver-1  | Average loss after 13001 images: 0.015273
-slaver-1  | *** After 13000 images: 90.50% accuracy ***
+slaver-1  | Average loss after 13001 images: 0.015358
+slaver-1  | *** After 13000 images: 90.80% accuracy ***
 slaver-1  | Img No. 13100
 slaver-1  | Img No. 13200
 slaver-1  | Img No. 13300
@@ -168,8 +168,8 @@ slaver-1  | Img No. 13700
 slaver-1  | Img No. 13800
 slaver-1  | Img No. 13900
 slaver-1  | Img No. 14000
-slaver-1  | Average loss after 14001 images: 0.015033
-slaver-1  | *** After 14000 images: 90.50% accuracy ***
+slaver-1  | Average loss after 14001 images: 0.014861
+slaver-1  | *** After 14000 images: 90.70% accuracy ***
 slaver-1  | Img No. 14100
 slaver-1  | Img No. 14200
 slaver-1  | Img No. 14300
@@ -180,8 +180,8 @@ slaver-1  | Img No. 14700
 slaver-1  | Img No. 14800
 slaver-1  | Img No. 14900
 slaver-1  | Img No. 15000
-slaver-1  | Average loss after 15001 images: 0.015206
-slaver-1  | *** After 15000 images: 90.30% accuracy ***
+slaver-1  | Average loss after 15001 images: 0.015399
+slaver-1  | *** After 15000 images: 91.50% accuracy ***
 slaver-1  | Img No. 15100
 slaver-1  | Img No. 15200
 slaver-1  | Img No. 15300
@@ -192,8 +192,8 @@ slaver-1  | Img No. 15700
 slaver-1  | Img No. 15800
 slaver-1  | Img No. 15900
 slaver-1  | Img No. 16000
-slaver-1  | Average loss after 16001 images: 0.013517
-slaver-1  | *** After 16000 images: 91.80% accuracy ***
+slaver-1  | Average loss after 16001 images: 0.013383
+slaver-1  | *** After 16000 images: 91.10% accuracy ***
 slaver-1  | Img No. 16100
 slaver-1  | Img No. 16200
 slaver-1  | Img No. 16300
@@ -204,8 +204,8 @@ slaver-1  | Img No. 16700
 slaver-1  | Img No. 16800
 slaver-1  | Img No. 16900
 slaver-1  | Img No. 17000
-slaver-1  | Average loss after 17001 images: 0.011826
-slaver-1  | *** After 17000 images: 92.80% accuracy ***
+slaver-1  | Average loss after 17001 images: 0.011437
+slaver-1  | *** After 17000 images: 93.00% accuracy ***
 slaver-1  | Img No. 17100
 slaver-1  | Img No. 17200
 slaver-1  | Img No. 17300
@@ -216,8 +216,8 @@ slaver-1  | Img No. 17700
 slaver-1  | Img No. 17800
 slaver-1  | Img No. 17900
 slaver-1  | Img No. 18000
-slaver-1  | Average loss after 18001 images: 0.012827
-slaver-1  | *** After 18000 images: 91.60% accuracy ***
+slaver-1  | Average loss after 18001 images: 0.012799
+slaver-1  | *** After 18000 images: 91.90% accuracy ***
 slaver-1  | Img No. 18100
 slaver-1  | Img No. 18200
 slaver-1  | Img No. 18300
@@ -228,7 +228,7 @@ slaver-1  | Img No. 18700
 slaver-1  | Img No. 18800
 slaver-1  | Img No. 18900
 slaver-1  | Img No. 19000
-slaver-1  | Average loss after 19001 images: 0.008585
+slaver-1  | Average loss after 19001 images: 0.008661
 slaver-1  | *** After 19000 images: 93.30% accuracy ***
 slaver-1  | Img No. 19100
 slaver-1  | Img No. 19200
@@ -240,8 +240,8 @@ slaver-1  | Img No. 19700
 slaver-1  | Img No. 19800
 slaver-1  | Img No. 19900
 slaver-1  | Img No. 20000
-slaver-1  | Average loss after 20001 images: 0.009434
-slaver-1  | *** After 20000 images: 92.10% accuracy ***
+slaver-1  | Average loss after 20001 images: 0.009510
+slaver-1  | *** After 20000 images: 92.20% accuracy ***
 slaver-1  | Img No. 20100
 slaver-1  | Img No. 20200
 slaver-1  | Img No. 20300
@@ -252,7 +252,7 @@ slaver-1  | Img No. 20700
 slaver-1  | Img No. 20800
 slaver-1  | Img No. 20900
 slaver-1  | Img No. 21000
-slaver-1  | Average loss after 21001 images: 0.011344
+slaver-1  | Average loss after 21001 images: 0.010916
 slaver-1  | *** After 21000 images: 93.10% accuracy ***
 slaver-1  | Img No. 21100
 slaver-1  | Img No. 21200
@@ -264,8 +264,8 @@ slaver-1  | Img No. 21700
 slaver-1  | Img No. 21800
 slaver-1  | Img No. 21900
 slaver-1  | Img No. 22000
-slaver-1  | Average loss after 22001 images: 0.008568
-slaver-1  | *** After 22000 images: 92.90% accuracy ***
+slaver-1  | Average loss after 22001 images: 0.008946
+slaver-1  | *** After 22000 images: 93.60% accuracy ***
 slaver-1  | Img No. 22100
 slaver-1  | Img No. 22200
 slaver-1  | Img No. 22300
@@ -276,8 +276,8 @@ slaver-1  | Img No. 22700
 slaver-1  | Img No. 22800
 slaver-1  | Img No. 22900
 slaver-1  | Img No. 23000
-slaver-1  | Average loss after 23001 images: 0.011692
-slaver-1  | *** After 23000 images: 93.40% accuracy ***
+slaver-1  | Average loss after 23001 images: 0.011816
+slaver-1  | *** After 23000 images: 93.70% accuracy ***
 slaver-1  | Img No. 23100
 slaver-1  | Img No. 23200
 slaver-1  | Img No. 23300
@@ -288,8 +288,8 @@ slaver-1  | Img No. 23700
 slaver-1  | Img No. 23800
 slaver-1  | Img No. 23900
 slaver-1  | Img No. 24000
-slaver-1  | Average loss after 24001 images: 0.011026
-slaver-1  | *** After 24000 images: 94.00% accuracy ***
+slaver-1  | Average loss after 24001 images: 0.011011
+slaver-1  | *** After 24000 images: 94.20% accuracy ***
 slaver-1  | Img No. 24100
 slaver-1  | Img No. 24200
 slaver-1  | Img No. 24300
@@ -300,8 +300,8 @@ slaver-1  | Img No. 24700
 slaver-1  | Img No. 24800
 slaver-1  | Img No. 24900
 slaver-1  | Img No. 25000
-slaver-1  | Average loss after 25001 images: 0.010309
-slaver-1  | *** After 25000 images: 94.40% accuracy ***
+slaver-1  | Average loss after 25001 images: 0.010533
+slaver-1  | *** After 25000 images: 93.60% accuracy ***
 slaver-1  | Img No. 25100
 slaver-1  | Img No. 25200
 slaver-1  | Img No. 25300
@@ -312,8 +312,8 @@ slaver-1  | Img No. 25700
 slaver-1  | Img No. 25800
 slaver-1  | Img No. 25900
 slaver-1  | Img No. 26000
-slaver-1  | Average loss after 26001 images: 0.008371
-slaver-1  | *** After 26000 images: 92.60% accuracy ***
+slaver-1  | Average loss after 26001 images: 0.008445
+slaver-1  | *** After 26000 images: 92.70% accuracy ***
 slaver-1  | Img No. 26100
 slaver-1  | Img No. 26200
 slaver-1  | Img No. 26300
@@ -324,8 +324,8 @@ slaver-1  | Img No. 26700
 slaver-1  | Img No. 26800
 slaver-1  | Img No. 26900
 slaver-1  | Img No. 27000
-slaver-1  | Average loss after 27001 images: 0.010550
-slaver-1  | *** After 27000 images: 93.80% accuracy ***
+slaver-1  | Average loss after 27001 images: 0.010408
+slaver-1  | *** After 27000 images: 93.70% accuracy ***
 slaver-1  | Img No. 27100
 slaver-1  | Img No. 27200
 slaver-1  | Img No. 27300
@@ -336,8 +336,8 @@ slaver-1  | Img No. 27700
 slaver-1  | Img No. 27800
 slaver-1  | Img No. 27900
 slaver-1  | Img No. 28000
-slaver-1  | Average loss after 28001 images: 0.009385
-slaver-1  | *** After 28000 images: 94.20% accuracy ***
+slaver-1  | Average loss after 28001 images: 0.009287
+slaver-1  | *** After 28000 images: 93.90% accuracy ***
 slaver-1  | Img No. 28100
 slaver-1  | Img No. 28200
 slaver-1  | Img No. 28300
@@ -348,8 +348,8 @@ slaver-1  | Img No. 28700
 slaver-1  | Img No. 28800
 slaver-1  | Img No. 28900
 slaver-1  | Img No. 29000
-slaver-1  | Average loss after 29001 images: 0.008418
-slaver-1  | *** After 29000 images: 94.10% accuracy ***
+slaver-1  | Average loss after 29001 images: 0.008471
+slaver-1  | *** After 29000 images: 93.90% accuracy ***
 slaver-1  | Img No. 29100
 slaver-1  | Img No. 29200
 slaver-1  | Img No. 29300
@@ -360,8 +360,8 @@ slaver-1  | Img No. 29700
 slaver-1  | Img No. 29800
 slaver-1  | Img No. 29900
 slaver-1  | Img No. 30000
-slaver-1  | Average loss after 30001 images: 0.010701
-slaver-1  | *** After 30000 images: 94.40% accuracy ***
+slaver-1  | Average loss after 30001 images: 0.010693
+slaver-1  | *** After 30000 images: 93.70% accuracy ***
 slaver-1  | Img No. 30100
 slaver-1  | Img No. 30200
 slaver-1  | Img No. 30300
@@ -372,8 +372,8 @@ slaver-1  | Img No. 30700
 slaver-1  | Img No. 30800
 slaver-1  | Img No. 30900
 slaver-1  | Img No. 31000
-slaver-1  | Average loss after 31001 images: 0.010076
-slaver-1  | *** After 31000 images: 94.80% accuracy ***
+slaver-1  | Average loss after 31001 images: 0.010122
+slaver-1  | *** After 31000 images: 94.20% accuracy ***
 slaver-1  | Img No. 31100
 slaver-1  | Img No. 31200
 slaver-1  | Img No. 31300
@@ -384,8 +384,8 @@ slaver-1  | Img No. 31700
 slaver-1  | Img No. 31800
 slaver-1  | Img No. 31900
 slaver-1  | Img No. 32000
-slaver-1  | Average loss after 32001 images: 0.010617
-slaver-1  | *** After 32000 images: 94.70% accuracy ***
+slaver-1  | Average loss after 32001 images: 0.011019
+slaver-1  | *** After 32000 images: 94.10% accuracy ***
 slaver-1  | Img No. 32100
 slaver-1  | Img No. 32200
 slaver-1  | Img No. 32300
@@ -396,8 +396,8 @@ slaver-1  | Img No. 32700
 slaver-1  | Img No. 32800
 slaver-1  | Img No. 32900
 slaver-1  | Img No. 33000
-slaver-1  | Average loss after 33001 images: 0.009971
-slaver-1  | *** After 33000 images: 95.40% accuracy ***
+slaver-1  | Average loss after 33001 images: 0.009683
+slaver-1  | *** After 33000 images: 95.10% accuracy ***
 slaver-1  | Img No. 33100
 slaver-1  | Img No. 33200
 slaver-1  | Img No. 33300
@@ -408,8 +408,8 @@ slaver-1  | Img No. 33700
 slaver-1  | Img No. 33800
 slaver-1  | Img No. 33900
 slaver-1  | Img No. 34000
-slaver-1  | Average loss after 34001 images: 0.006502
-slaver-1  | *** After 34000 images: 95.00% accuracy ***
+slaver-1  | Average loss after 34001 images: 0.006608
+slaver-1  | *** After 34000 images: 94.10% accuracy ***
 slaver-1  | Img No. 34100
 slaver-1  | Img No. 34200
 slaver-1  | Img No. 34300
@@ -420,8 +420,8 @@ slaver-1  | Img No. 34700
 slaver-1  | Img No. 34800
 slaver-1  | Img No. 34900
 slaver-1  | Img No. 35000
-slaver-1  | Average loss after 35001 images: 0.008884
-slaver-1  | *** After 35000 images: 94.80% accuracy ***
+slaver-1  | Average loss after 35001 images: 0.009101
+slaver-1  | *** After 35000 images: 94.50% accuracy ***
 slaver-1  | Img No. 35100
 slaver-1  | Img No. 35200
 slaver-1  | Img No. 35300
@@ -432,8 +432,8 @@ slaver-1  | Img No. 35700
 slaver-1  | Img No. 35800
 slaver-1  | Img No. 35900
 slaver-1  | Img No. 36000
-slaver-1  | Average loss after 36001 images: 0.007733
-slaver-1  | *** After 36000 images: 94.70% accuracy ***
+slaver-1  | Average loss after 36001 images: 0.007974
+slaver-1  | *** After 36000 images: 94.30% accuracy ***
 slaver-1  | Img No. 36100
 slaver-1  | Img No. 36200
 slaver-1  | Img No. 36300
@@ -444,7 +444,7 @@ slaver-1  | Img No. 36700
 slaver-1  | Img No. 36800
 slaver-1  | Img No. 36900
 slaver-1  | Img No. 37000
-slaver-1  | Average loss after 37001 images: 0.007542
+slaver-1  | Average loss after 37001 images: 0.007396
 slaver-1  | *** After 37000 images: 94.10% accuracy ***
 slaver-1  | Img No. 37100
 slaver-1  | Img No. 37200
@@ -456,8 +456,8 @@ slaver-1  | Img No. 37700
 slaver-1  | Img No. 37800
 slaver-1  | Img No. 37900
 slaver-1  | Img No. 38000
-slaver-1  | Average loss after 38001 images: 0.010492
-slaver-1  | *** After 38000 images: 95.40% accuracy ***
+slaver-1  | Average loss after 38001 images: 0.010772
+slaver-1  | *** After 38000 images: 95.00% accuracy ***
 slaver-1  | Img No. 38100
 slaver-1  | Img No. 38200
 slaver-1  | Img No. 38300
@@ -468,8 +468,8 @@ slaver-1  | Img No. 38700
 slaver-1  | Img No. 38800
 slaver-1  | Img No. 38900
 slaver-1  | Img No. 39000
-slaver-1  | Average loss after 39001 images: 0.006950
-slaver-1  | *** After 39000 images: 95.10% accuracy ***
+slaver-1  | Average loss after 39001 images: 0.007207
+slaver-1  | *** After 39000 images: 94.90% accuracy ***
 slaver-1  | Img No. 39100
 slaver-1  | Img No. 39200
 slaver-1  | Img No. 39300
@@ -480,8 +480,8 @@ slaver-1  | Img No. 39700
 slaver-1  | Img No. 39800
 slaver-1  | Img No. 39900
 slaver-1  | Img No. 40000
-slaver-1  | Average loss after 40001 images: 0.008324
-slaver-1  | *** After 40000 images: 94.00% accuracy ***
+slaver-1  | Average loss after 40001 images: 0.008719
+slaver-1  | *** After 40000 images: 94.70% accuracy ***
 slaver-1  | Img No. 40100
 slaver-1  | Img No. 40200
 slaver-1  | Img No. 40300
@@ -492,8 +492,8 @@ slaver-1  | Img No. 40700
 slaver-1  | Img No. 40800
 slaver-1  | Img No. 40900
 slaver-1  | Img No. 41000
-slaver-1  | Average loss after 41001 images: 0.007296
-slaver-1  | *** After 41000 images: 94.60% accuracy ***
+slaver-1  | Average loss after 41001 images: 0.007189
+slaver-1  | *** After 41000 images: 94.30% accuracy ***
 slaver-1  | Img No. 41100
 slaver-1  | Img No. 41200
 slaver-1  | Img No. 41300
@@ -504,8 +504,8 @@ slaver-1  | Img No. 41700
 slaver-1  | Img No. 41800
 slaver-1  | Img No. 41900
 slaver-1  | Img No. 42000
-slaver-1  | Average loss after 42001 images: 0.009555
-slaver-1  | *** After 42000 images: 95.40% accuracy ***
+slaver-1  | Average loss after 42001 images: 0.009240
+slaver-1  | *** After 42000 images: 94.70% accuracy ***
 slaver-1  | Img No. 42100
 slaver-1  | Img No. 42200
 slaver-1  | Img No. 42300
@@ -516,8 +516,8 @@ slaver-1  | Img No. 42700
 slaver-1  | Img No. 42800
 slaver-1  | Img No. 42900
 slaver-1  | Img No. 43000
-slaver-1  | Average loss after 43001 images: 0.009589
-slaver-1  | *** After 43000 images: 95.90% accuracy ***
+slaver-1  | Average loss after 43001 images: 0.009595
+slaver-1  | *** After 43000 images: 95.50% accuracy ***
 slaver-1  | Img No. 43100
 slaver-1  | Img No. 43200
 slaver-1  | Img No. 43300
@@ -528,8 +528,8 @@ slaver-1  | Img No. 43700
 slaver-1  | Img No. 43800
 slaver-1  | Img No. 43900
 slaver-1  | Img No. 44000
-slaver-1  | Average loss after 44001 images: 0.006630
-slaver-1  | *** After 44000 images: 95.30% accuracy ***
+slaver-1  | Average loss after 44001 images: 0.006310
+slaver-1  | *** After 44000 images: 94.70% accuracy ***
 slaver-1  | Img No. 44100
 slaver-1  | Img No. 44200
 slaver-1  | Img No. 44300
@@ -540,8 +540,8 @@ slaver-1  | Img No. 44700
 slaver-1  | Img No. 44800
 slaver-1  | Img No. 44900
 slaver-1  | Img No. 45000
-slaver-1  | Average loss after 45001 images: 0.007338
-slaver-1  | *** After 45000 images: 94.90% accuracy ***
+slaver-1  | Average loss after 45001 images: 0.007271
+slaver-1  | *** After 45000 images: 93.90% accuracy ***
 slaver-1  | Img No. 45100
 slaver-1  | Img No. 45200
 slaver-1  | Img No. 45300
@@ -552,8 +552,8 @@ slaver-1  | Img No. 45700
 slaver-1  | Img No. 45800
 slaver-1  | Img No. 45900
 slaver-1  | Img No. 46000
-slaver-1  | Average loss after 46001 images: 0.009699
-slaver-1  | *** After 46000 images: 94.70% accuracy ***
+slaver-1  | Average loss after 46001 images: 0.009634
+slaver-1  | *** After 46000 images: 94.30% accuracy ***
 slaver-1  | Img No. 46100
 slaver-1  | Img No. 46200
 slaver-1  | Img No. 46300
@@ -564,8 +564,8 @@ slaver-1  | Img No. 46700
 slaver-1  | Img No. 46800
 slaver-1  | Img No. 46900
 slaver-1  | Img No. 47000
-slaver-1  | Average loss after 47001 images: 0.009148
-slaver-1  | *** After 47000 images: 95.40% accuracy ***
+slaver-1  | Average loss after 47001 images: 0.009194
+slaver-1  | *** After 47000 images: 95.60% accuracy ***
 slaver-1  | Img No. 47100
 slaver-1  | Img No. 47200
 slaver-1  | Img No. 47300
@@ -576,8 +576,8 @@ slaver-1  | Img No. 47700
 slaver-1  | Img No. 47800
 slaver-1  | Img No. 47900
 slaver-1  | Img No. 48000
-slaver-1  | Average loss after 48001 images: 0.008620
-slaver-1  | *** After 48000 images: 95.30% accuracy ***
+slaver-1  | Average loss after 48001 images: 0.008693
+slaver-1  | *** After 48000 images: 95.40% accuracy ***
 slaver-1  | Img No. 48100
 slaver-1  | Img No. 48200
 slaver-1  | Img No. 48300
@@ -588,8 +588,8 @@ slaver-1  | Img No. 48700
 slaver-1  | Img No. 48800
 slaver-1  | Img No. 48900
 slaver-1  | Img No. 49000
-slaver-1  | Average loss after 49001 images: 0.007287
-slaver-1  | *** After 49000 images: 95.50% accuracy ***
+slaver-1  | Average loss after 49001 images: 0.007417
+slaver-1  | *** After 49000 images: 95.30% accuracy ***
 slaver-1  | Img No. 49100
 slaver-1  | Img No. 49200
 slaver-1  | Img No. 49300
@@ -600,8 +600,8 @@ slaver-1  | Img No. 49700
 slaver-1  | Img No. 49800
 slaver-1  | Img No. 49900
 slaver-1  | Img No. 50000
-slaver-1  | Average loss after 50001 images: 0.009201
-slaver-1  | *** After 50000 images: 95.50% accuracy ***
+slaver-1  | Average loss after 50001 images: 0.009612
+slaver-1  | *** After 50000 images: 95.30% accuracy ***
 slaver-1  | Img No. 50100
 slaver-1  | Img No. 50200
 slaver-1  | Img No. 50300
@@ -612,8 +612,8 @@ slaver-1  | Img No. 50700
 slaver-1  | Img No. 50800
 slaver-1  | Img No. 50900
 slaver-1  | Img No. 51000
-slaver-1  | Average loss after 51001 images: 0.007942
-slaver-1  | *** After 51000 images: 96.20% accuracy ***
+slaver-1  | Average loss after 51001 images: 0.008013
+slaver-1  | *** After 51000 images: 95.90% accuracy ***
 slaver-1  | Img No. 51100
 slaver-1  | Img No. 51200
 slaver-1  | Img No. 51300
@@ -624,8 +624,8 @@ slaver-1  | Img No. 51700
 slaver-1  | Img No. 51800
 slaver-1  | Img No. 51900
 slaver-1  | Img No. 52000
-slaver-1  | Average loss after 52001 images: 0.005895
-slaver-1  | *** After 52000 images: 95.60% accuracy ***
+slaver-1  | Average loss after 52001 images: 0.006102
+slaver-1  | *** After 52000 images: 95.90% accuracy ***
 slaver-1  | Img No. 52100
 slaver-1  | Img No. 52200
 slaver-1  | Img No. 52300
@@ -636,7 +636,7 @@ slaver-1  | Img No. 52700
 slaver-1  | Img No. 52800
 slaver-1  | Img No. 52900
 slaver-1  | Img No. 53000
-slaver-1  | Average loss after 53001 images: 0.009548
+slaver-1  | Average loss after 53001 images: 0.009835
 slaver-1  | *** After 53000 images: 95.50% accuracy ***
 slaver-1  | Img No. 53100
 slaver-1  | Img No. 53200
@@ -648,8 +648,8 @@ slaver-1  | Img No. 53700
 slaver-1  | Img No. 53800
 slaver-1  | Img No. 53900
 slaver-1  | Img No. 54000
-slaver-1  | Average loss after 54001 images: 0.007197
-slaver-1  | *** After 54000 images: 96.30% accuracy ***
+slaver-1  | Average loss after 54001 images: 0.006896
+slaver-1  | *** After 54000 images: 95.90% accuracy ***
 slaver-1  | Img No. 54100
 slaver-1  | Img No. 54200
 slaver-1  | Img No. 54300
@@ -660,8 +660,8 @@ slaver-1  | Img No. 54700
 slaver-1  | Img No. 54800
 slaver-1  | Img No. 54900
 slaver-1  | Img No. 55000
-slaver-1  | Average loss after 55001 images: 0.006183
-slaver-1  | *** After 55000 images: 96.60% accuracy ***
+slaver-1  | Average loss after 55001 images: 0.006291
+slaver-1  | *** After 55000 images: 95.80% accuracy ***
 slaver-1  | Img No. 55100
 slaver-1  | Img No. 55200
 slaver-1  | Img No. 55300
@@ -672,8 +672,8 @@ slaver-1  | Img No. 55700
 slaver-1  | Img No. 55800
 slaver-1  | Img No. 55900
 slaver-1  | Img No. 56000
-slaver-1  | Average loss after 56001 images: 0.006560
-slaver-1  | *** After 56000 images: 95.60% accuracy ***
+slaver-1  | Average loss after 56001 images: 0.006440
+slaver-1  | *** After 56000 images: 95.50% accuracy ***
 slaver-1  | Img No. 56100
 slaver-1  | Img No. 56200
 slaver-1  | Img No. 56300
@@ -684,8 +684,8 @@ slaver-1  | Img No. 56700
 slaver-1  | Img No. 56800
 slaver-1  | Img No. 56900
 slaver-1  | Img No. 57000
-slaver-1  | Average loss after 57001 images: 0.006161
-slaver-1  | *** After 57000 images: 95.70% accuracy ***
+slaver-1  | Average loss after 57001 images: 0.006137
+slaver-1  | *** After 57000 images: 95.40% accuracy ***
 slaver-1  | Img No. 57100
 slaver-1  | Img No. 57200
 slaver-1  | Img No. 57300
@@ -696,8 +696,8 @@ slaver-1  | Img No. 57700
 slaver-1  | Img No. 57800
 slaver-1  | Img No. 57900
 slaver-1  | Img No. 58000
-slaver-1  | Average loss after 58001 images: 0.005257
-slaver-1  | *** After 58000 images: 95.50% accuracy ***
+slaver-1  | Average loss after 58001 images: 0.005199
+slaver-1  | *** After 58000 images: 95.80% accuracy ***
 slaver-1  | Img No. 58100
 slaver-1  | Img No. 58200
 slaver-1  | Img No. 58300
@@ -708,8 +708,8 @@ slaver-1  | Img No. 58700
 slaver-1  | Img No. 58800
 slaver-1  | Img No. 58900
 slaver-1  | Img No. 59000
-slaver-1  | Average loss after 59001 images: 0.003552
-slaver-1  | *** After 59000 images: 95.90% accuracy ***
+slaver-1  | Average loss after 59001 images: 0.003344
+slaver-1  | *** After 59000 images: 95.60% accuracy ***
 slaver-1  | Img No. 59100
 slaver-1  | Img No. 59200
 slaver-1  | Img No. 59300
@@ -719,7 +719,7 @@ slaver-1  | Img No. 59600
 slaver-1  | Img No. 59700
 slaver-1  | Img No. 59800
 slaver-1  | Img No. 59900
-slaver-1  | Training took 874.00 seconds.
+slaver-1  | Training took 477.00 seconds.
 slaver-1  | Successfully saved matrix to hidden
 slaver-1  | Successfully saved matrix to output
 slaver-1  | Successfully written to 'testing_net'
@@ -729,76 +729,77 @@ slaver-1  | Final test accuracy: 96.40%
 slaver-1  | 
 slaver-1  | Image 0 - True label: 7
 slaver-1  | Raw sigmoid outputs:
-slaver-1  |   Class 0: 0.0001
+slaver-1  |   Class 0: 0.0002
 slaver-1  |   Class 1: 0.0000
-slaver-1  |   Class 2: 0.0009
+slaver-1  |   Class 2: 0.0016
 slaver-1  |   Class 3: 0.0004
 slaver-1  |   Class 4: 0.0000
-slaver-1  |   Class 5: 0.0001
+slaver-1  |   Class 5: 0.0000
 slaver-1  |   Class 6: 0.0000
-slaver-1  |   Class 7: 0.9991
+slaver-1  |   Class 7: 0.9997
 slaver-1  |   Class 8: 0.0000
 slaver-1  |   Class 9: 0.0001
-slaver-1  | Predicted: 7 (confidence: 0.9991)
+slaver-1  | Predicted: 7 (confidence: 0.9997)
 slaver-1  | Correct: YES
 slaver-1  | 
 slaver-1  | Image 1 - True label: 2
 slaver-1  | Raw sigmoid outputs:
-slaver-1  |   Class 0: 0.0036
-slaver-1  |   Class 1: 0.0001
-slaver-1  |   Class 2: 0.9521
-slaver-1  |   Class 3: 0.0323
+slaver-1  |   Class 0: 0.0103
+slaver-1  |   Class 1: 0.0005
+slaver-1  |   Class 2: 0.9748
+slaver-1  |   Class 3: 0.0160
 slaver-1  |   Class 4: 0.0000
-slaver-1  |   Class 5: 0.0016
-slaver-1  |   Class 6: 0.0009
+slaver-1  |   Class 5: 0.0041
+slaver-1  |   Class 6: 0.0033
 slaver-1  |   Class 7: 0.0000
-slaver-1  |   Class 8: 0.0002
+slaver-1  |   Class 8: 0.0001
 slaver-1  |   Class 9: 0.0000
-slaver-1  | Predicted: 2 (confidence: 0.9521)
+slaver-1  | Predicted: 2 (confidence: 0.9748)
 slaver-1  | Correct: YES
 slaver-1  | 
 slaver-1  | Image 2 - True label: 1
 slaver-1  | Raw sigmoid outputs:
 slaver-1  |   Class 0: 0.0000
 slaver-1  |   Class 1: 0.9983
-slaver-1  |   Class 2: 0.0023
-slaver-1  |   Class 3: 0.0082
-slaver-1  |   Class 4: 0.0005
-slaver-1  |   Class 5: 0.0020
+slaver-1  |   Class 2: 0.0021
+slaver-1  |   Class 3: 0.0054
+slaver-1  |   Class 4: 0.0001
+slaver-1  |   Class 5: 0.0014
 slaver-1  |   Class 6: 0.0005
-slaver-1  |   Class 7: 0.0009
-slaver-1  |   Class 8: 0.0005
-slaver-1  |   Class 9: 0.0000
+slaver-1  |   Class 7: 0.0007
+slaver-1  |   Class 8: 0.0006
+slaver-1  |   Class 9: 0.0002
 slaver-1  | Predicted: 1 (confidence: 0.9983)
 slaver-1  | Correct: YES
 slaver-1  | 
 slaver-1  | Image 3 - True label: 0
 slaver-1  | Raw sigmoid outputs:
-slaver-1  |   Class 0: 0.9987
+slaver-1  |   Class 0: 0.9979
 slaver-1  |   Class 1: 0.0000
-slaver-1  |   Class 2: 0.0030
-slaver-1  |   Class 3: 0.0003
+slaver-1  |   Class 2: 0.0031
+slaver-1  |   Class 3: 0.0002
 slaver-1  |   Class 4: 0.0000
-slaver-1  |   Class 5: 0.0004
-slaver-1  |   Class 6: 0.0006
-slaver-1  |   Class 7: 0.0007
+slaver-1  |   Class 5: 0.0001
+slaver-1  |   Class 6: 0.0003
+slaver-1  |   Class 7: 0.0006
 slaver-1  |   Class 8: 0.0001
-slaver-1  |   Class 9: 0.0118
-slaver-1  | Predicted: 0 (confidence: 0.9987)
+slaver-1  |   Class 9: 0.0036
+slaver-1  | Predicted: 0 (confidence: 0.9979)
 slaver-1  | Correct: YES
 slaver-1  | 
 slaver-1  | Image 4 - True label: 4
 slaver-1  | Raw sigmoid outputs:
-slaver-1  |   Class 0: 0.0020
+slaver-1  |   Class 0: 0.0008
 slaver-1  |   Class 1: 0.0000
-slaver-1  |   Class 2: 0.0022
+slaver-1  |   Class 2: 0.0028
 slaver-1  |   Class 3: 0.0000
-slaver-1  |   Class 4: 0.9863
+slaver-1  |   Class 4: 0.9928
 slaver-1  |   Class 5: 0.0001
-slaver-1  |   Class 6: 0.0010
+slaver-1  |   Class 6: 0.0006
 slaver-1  |   Class 7: 0.0023
-slaver-1  |   Class 8: 0.0002
-slaver-1  |   Class 9: 0.0233
-slaver-1  | Predicted: 4 (confidence: 0.9863)
+slaver-1  |   Class 8: 0.0001
+slaver-1  |   Class 9: 0.0142
+slaver-1  | Predicted: 4 (confidence: 0.9928)
 slaver-1  | Correct: YES
-[Kslaver-1 exited with code 0
+
+[Kslaver-1 exited with code 0

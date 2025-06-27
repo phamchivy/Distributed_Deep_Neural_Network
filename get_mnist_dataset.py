@@ -17,5 +17,5 @@ def save_to_csv(images, labels, filename):
             writer.writerow(row)
 
 # Ghi ra file CSV
-save_to_csv(x_train, y_train, 'mnist_train.csv')
-save_to_csv(x_test, y_test, 'mnist_test.csv')
+save_to_csv(x_train, y_train, 'data/mnist_train.csv')
+save_to_csv(x_test, y_test, 'data/mnist_test.csv')
