@@ -1,0 +1,74 @@
+master-1  | Image 0 - True label: 7
+master-1  | Raw sigmoid outputs:
+master-1  |   Class 0: 0.0854
+master-1  |   Class 1: 0.0853
+master-1  |   Class 2: 0.0854
+master-1  |   Class 3: 0.0855
+master-1  |   Class 4: 0.0853
+master-1  |   Class 5: 0.0854
+master-1  |   Class 6: 0.0853
+master-1  |   Class 7: 0.2316
+master-1  |   Class 8: 0.0853
+master-1  |   Class 9: 0.0854
+master-1  | Predicted: 7 (confidence: 0.2316)
+master-1  | Correct: YES
+master-1  | 
+master-1  | Image 1 - True label: 2
+master-1  | Raw sigmoid outputs:
+master-1  |   Class 0: 0.0875
+master-1  |   Class 1: 0.0865
+master-1  |   Class 2: 0.2140
+master-1  |   Class 3: 0.0913
+master-1  |   Class 4: 0.0865
+master-1  |   Class 5: 0.0870
+master-1  |   Class 6: 0.0874
+master-1  |   Class 7: 0.0865
+master-1  |   Class 8: 0.0866
+master-1  |   Class 9: 0.0865
+master-1  | Predicted: 2 (confidence: 0.2140)
+master-1  | Correct: YES
+master-1  | 
+master-1  | Image 2 - True label: 1
+master-1  | Raw sigmoid outputs:
+master-1  |   Class 0: 0.0852
+master-1  |   Class 1: 0.2307
+master-1  |   Class 2: 0.0856
+master-1  |   Class 3: 0.0864
+master-1  |   Class 4: 0.0853
+master-1  |   Class 5: 0.0855
+master-1  |   Class 6: 0.0853
+master-1  |   Class 7: 0.0855
+master-1  |   Class 8: 0.0853
+master-1  |   Class 9: 0.0853
+master-1  | Predicted: 1 (confidence: 0.2307)
+master-1  | Correct: YES
+master-1  | 
+master-1  | Image 3 - True label: 0
+master-1  | Raw sigmoid outputs:
+master-1  |   Class 0: 0.2310
+master-1  |   Class 1: 0.0853
+master-1  |   Class 2: 0.0854
+master-1  |   Class 3: 0.0853
+master-1  |   Class 4: 0.0853
+master-1  |   Class 5: 0.0853
+master-1  |   Class 6: 0.0855
+master-1  |   Class 7: 0.0861
+master-1  |   Class 8: 0.0853
+master-1  |   Class 9: 0.0855
+master-1  | Predicted: 0 (confidence: 0.2310)
+master-1  | Correct: YES
+master-1  | 
+master-1  | Image 4 - True label: 4
+master-1  | Raw sigmoid outputs:
+master-1  |   Class 0: 0.0859
+master-1  |   Class 1: 0.0858
+master-1  |   Class 2: 0.0860
+master-1  |   Class 3: 0.0858
+master-1  |   Class 4: 0.2243
+master-1  |   Class 5: 0.0859
+master-1  |   Class 6: 0.0861
+master-1  |   Class 7: 0.0864
+master-1  |   Class 8: 0.0859
+master-1  |   Class 9: 0.0879
+master-1  | Predicted: 4 (confidence: 0.2243)
+master-1  | Correct: YES

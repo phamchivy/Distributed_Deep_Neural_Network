@@ -1,0 +1,74 @@
+slaver-1  | Image 0 - True label: 7
+slaver-1  | Raw sigmoid outputs:
+slaver-1  |   Class 0: 0.0005
+slaver-1  |   Class 1: 0.0000
+slaver-1  |   Class 2: 0.0014
+slaver-1  |   Class 3: 0.0002
+slaver-1  |   Class 4: 0.0000
+slaver-1  |   Class 5: 0.0000
+slaver-1  |   Class 6: 0.0000
+slaver-1  |   Class 7: 0.9995
+slaver-1  |   Class 8: 0.0000
+slaver-1  |   Class 9: 0.0001
+slaver-1  | Predicted: 7 (confidence: 0.9995)
+slaver-1  | Correct: YES
+slaver-1  | 
+slaver-1  | Image 1 - True label: 2
+slaver-1  | Raw sigmoid outputs:
+slaver-1  |   Class 0: 0.0042
+slaver-1  |   Class 1: 0.0005
+slaver-1  |   Class 2: 0.9769
+slaver-1  |   Class 3: 0.0358
+slaver-1  |   Class 4: 0.0000
+slaver-1  |   Class 5: 0.0032
+slaver-1  |   Class 6: 0.0008
+slaver-1  |   Class 7: 0.0000
+slaver-1  |   Class 8: 0.0001
+slaver-1  |   Class 9: 0.0000
+slaver-1  | Predicted: 2 (confidence: 0.9769)
+slaver-1  | Correct: YES
+slaver-1  | 
+slaver-1  | Image 2 - True label: 1
+slaver-1  | Raw sigmoid outputs:
+slaver-1  |   Class 0: 0.0000
+slaver-1  |   Class 1: 0.9989
+slaver-1  |   Class 2: 0.0033
+slaver-1  |   Class 3: 0.0092
+slaver-1  |   Class 4: 0.0009
+slaver-1  |   Class 5: 0.0017
+slaver-1  |   Class 6: 0.0007
+slaver-1  |   Class 7: 0.0010
+slaver-1  |   Class 8: 0.0005
+slaver-1  |   Class 9: 0.0002
+slaver-1  | Predicted: 1 (confidence: 0.9989)
+slaver-1  | Correct: YES
+slaver-1  | 
+slaver-1  | Image 3 - True label: 0
+slaver-1  | Raw sigmoid outputs:
+slaver-1  |   Class 0: 0.9988
+slaver-1  |   Class 1: 0.0000
+slaver-1  |   Class 2: 0.0009
+slaver-1  |   Class 3: 0.0001
+slaver-1  |   Class 4: 0.0000
+slaver-1  |   Class 5: 0.0001
+slaver-1  |   Class 6: 0.0014
+slaver-1  |   Class 7: 0.0003
+slaver-1  |   Class 8: 0.0001
+slaver-1  |   Class 9: 0.0080
+slaver-1  | Predicted: 0 (confidence: 0.9988)
+slaver-1  | Correct: YES
+slaver-1  | 
+slaver-1  | Image 4 - True label: 4
+slaver-1  | Raw sigmoid outputs:
+slaver-1  |   Class 0: 0.0020
+slaver-1  |   Class 1: 0.0000
+slaver-1  |   Class 2: 0.0013
+slaver-1  |   Class 3: 0.0000
+slaver-1  |   Class 4: 0.9865
+slaver-1  |   Class 5: 0.0001
+slaver-1  |   Class 6: 0.0006
+slaver-1  |   Class 7: 0.0018
+slaver-1  |   Class 8: 0.0000
+slaver-1  |   Class 9: 0.0202
+slaver-1  | Predicted: 4 (confidence: 0.9865)
+slaver-1  | Correct: YES

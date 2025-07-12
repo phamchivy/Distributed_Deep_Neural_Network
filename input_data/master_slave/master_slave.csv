@@ -1,0 +1,5 @@
+CPU(s),Time (s),Accuracy (%)
+1 cpu 1 thread,374.00s,94.74%
+2 cpus 2 thread,345.16s,94.55%
+3 cpus 3 thread,318.08s,94.66%
+4 cpus 4 thread,281.26s,94.46%
